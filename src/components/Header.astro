@@ -1,9 +1,15 @@
 ---
-import { SITE_TITLE, NAV_ITEMS } from '../consts';
+import { SITE_TITLE, BLOG_SECTIONS, sectionHref } from '../consts';
 import Search from './Search.astro';
 
-function isArticleLabel(item: typeof NAV_ITEMS[number]) {
-  return item.label === '文章';
+const currentPath = Astro.url.pathname;
+
+function isActive(section: (typeof BLOG_SECTIONS)[number]): boolean {
+  const href = sectionHref(section);
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath === href || currentPath.startsWith(`${href}/`);
 }
 ---
 
@@ -16,36 +22,20 @@ function isArticleLabel(item: typeof NAV_ITEMS[number]) {
         </span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-1" aria-label="主导航">
-        {NAV_ITEMS.map((item) => (
-          isArticleLabel(item) ? (
-            <div class="relative group">
-              <span class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 group-hover:text-primary dark:group-hover:text-primary group-hover:bg-primary/5 transition-colors cursor-pointer flex items-center gap-1">
-                {item.label}
-                <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-              <div class="absolute top-full left-0 mt-1 w-36 py-2 bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <a href="/categories" class="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors">
-                  分类
-                </a>
-                <a href="/tags" class="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors">
-                  标签
-                </a>
-                <a href="/archives" class="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors">
-                  归档
-                </a>
-              </div>
-            </div>
-          ) : (
-            <a
-              href={item.href}
-              class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5 transition-colors"
-            >
-              {item.label}
-            </a>
-          )
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        {BLOG_SECTIONS.filter((section) =>
+          ['Archives', 'Friendly Link', 'About'].includes(section.label)
+        ).map((section) => (
+          <a
+            href={sectionHref(section)}
+            class={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              isActive(section)
+                ? 'text-primary bg-primary/5'
+                : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5'
+            }`}
+          >
+            {section.label}
+          </a>
         ))}
       </nav>
 
@@ -53,7 +43,7 @@ function isArticleLabel(item: typeof NAV_ITEMS[number]) {
         <button
           id="search-trigger"
           class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="搜索"
+          aria-label="Search"
         >
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -63,7 +53,7 @@ function isArticleLabel(item: typeof NAV_ITEMS[number]) {
         <button
           id="theme-toggle"
           class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="切换主题"
+          aria-label="Toggle theme"
         >
           <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -75,8 +65,8 @@ function isArticleLabel(item: typeof NAV_ITEMS[number]) {
 
         <button
           id="mobile-menu-btn"
-          class="md:hidden p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="菜单"
+          class="lg:hidden p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label="Menu"
         >
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -85,30 +75,19 @@ function isArticleLabel(item: typeof NAV_ITEMS[number]) {
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="hidden lg:hidden pb-4">
       <nav class="flex flex-col gap-1">
-        {NAV_ITEMS.map((item) => (
-          <div>
-            <a
-              href={isArticleLabel(item) ? undefined : item.href}
-              class={`block px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors ${isArticleLabel(item) ? 'cursor-pointer' : ''}`}
-            >
-              {item.label}
-            </a>
-            {isArticleLabel(item) && (
-              <div class="ml-4 space-y-0">
-                <a href="/categories" class="block px-3 py-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
-                  分类
-                </a>
-                <a href="/tags" class="block px-3 py-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
-                  标签
-                </a>
-                <a href="/archives" class="block px-3 py-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
-                  归档
-                </a>
-              </div>
-            )}
-          </div>
+        {BLOG_SECTIONS.map((section) => (
+          <a
+            href={sectionHref(section)}
+            class={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              isActive(section)
+                ? 'text-primary bg-primary/5'
+                : 'text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5'
+            }`}
+          >
+            {section.label}
+          </a>
         ))}
       </nav>
     </div>

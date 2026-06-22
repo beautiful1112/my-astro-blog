@@ -1,29 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE_AUTHOR } from '../consts';
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { SITE_AUTHOR, SOCIAL_LINKS } from '../consts';
 ---
 
-<BaseLayout title="关于">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8">
-    <article class="prose max-w-none">
-      <h1>关于</h1>
+<BlogLayout title="About">
+  <article class="prose max-w-none">
+      <h1>About</h1>
       <p>
-        你好，我是 {SITE_AUTHOR}。这里是基于 Astro 构建的现代化博客。
+        Hi, I'm {SITE_AUTHOR}. I write about networking, automation, and DevOps — sharing what I learn along the way.
       </p>
       <p>
-        这里会记录我的学习笔记、技术分享和生活随笔。希望你能在这里找到有用的内容。
+        This blog covers routing &amp; switching, Docker, Kubernetes, Ansible, NetDevOps, and personal reflections on the journey.
       </p>
-      <h2>关于本站</h2>
+      <h2>Connect</h2>
       <ul>
-        <li>框架：<a href="https://astro.build">Astro</a></li>
-        <li>样式：Tailwind CSS</li>
-        <li>部署：静态站点</li>
-      </ul>
-      <h2>联系</h2>
-      <p>如有任何问题或建议，欢迎通过以下方式联系：</p>
-      <ul>
-        <li><a href="https://github.com/santisify">GitHub</a></li>
+        {SOCIAL_LINKS.filter((link) => link.icon !== 'rss').map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</a>
+          </li>
+        ))}
       </ul>
     </article>
-  </div>
-</BaseLayout>
+</BlogLayout>

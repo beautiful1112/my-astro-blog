@@ -5,7 +5,7 @@
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
   <xsl:template match="/">
-    <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -105,7 +105,7 @@
           <p><xsl:value-of select="/rss/channel/description" /></p>
           <div class="pill">RSS Feed</div>
           <div class="meta">
-            <xsl:value-of select="count(/rss/channel/item)" /> 篇文章 •
+            <xsl:value-of select="count(/rss/channel/item)" /> posts •
             <xsl:value-of select="/rss/channel/lastBuildDate" />
           </div>
         </div>
@@ -130,21 +130,21 @@
               </div>
             </xsl:if>
             <div class="link-row">
-              <a href="{link}">阅读全文 →</a>
+              <a href="{link}">Read full post →</a>
             </div>
           </div>
         </xsl:for-each>
 
         <div class="footer">
           <p>
-            <xsl:value-of select="count(/rss/channel/item)" /> 篇文章 ·
+            <xsl:value-of select="count(/rss/channel/item)" /> posts ·
             <a>
               <xsl:attribute name="href"><xsl:value-of select="/rss/channel/link" /></xsl:attribute>
               <xsl:value-of select="/rss/channel/title" />
             </a>
           </p>
           <p style="margin-top:6px">
-            通过 <a href="https://aboutfeeds.com" target="_blank" rel="noopener">RSS 阅读器</a> 订阅本博客
+            Subscribe with an <a href="https://aboutfeeds.com" target="_blank" rel="noopener">RSS reader</a>
           </p>
         </div>
       </body>

@@ -1,5 +1,3 @@
-import path from 'node:path';
-
 const blogRaw = import.meta.glob<{ default: any }>('../content/blog/**/*.{png,jpg,jpeg,gif,webp,svg}', {
   eager: true,
   query: '?url',
@@ -31,10 +29,8 @@ export function resolveCover(collection: string, entryId: string, cover?: string
   if (!cover) return undefined;
   if (!cover.startsWith('./') && !cover.startsWith('../')) return cover;
 
-  const idParts = entryId.split('/');
-  idParts.pop();
-  const contentDir = idParts.length > 0 ? `${collection}/${idParts.join('/')}/` : `${collection}/`;
-  const lookupKey = path.normalize(`${contentDir}${cover}`);
+  const relativePath = cover.replace(/^\.\//, '');
+  const lookupKey = `${collection}/${entryId}/${relativePath}`.replace(/\\/g, '/');
 
   return imageMap[lookupKey] || cover;
 }

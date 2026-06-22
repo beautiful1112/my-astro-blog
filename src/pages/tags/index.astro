@@ -1,10 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import { SITE_TAGS } from '../../consts';
 
 const allPosts = await getCollection('blog');
 
 const tagMap = new Map<string, number>();
+for (const tag of SITE_TAGS) {
+  tagMap.set(tag, 0);
+}
 for (const post of allPosts) {
   for (const tag of post.data.tags || []) {
     tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
@@ -13,18 +17,18 @@ for (const post of allPosts) {
 
 const tags = Array.from(tagMap.entries())
   .map(([name, count]) => ({ name, count }))
-  .sort((a, b) => b.count - a.count);
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<BlogLayout title="标签">
+<BlogLayout title="Tags">
   <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
     <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-    标签
+    Tags
   </h1>
   <div class="flex flex-wrap gap-3">
     {tags.map((tag) => (
       <a
-        href={`/tags/${tag.name}`}
+        href={`/tags/${encodeURIComponent(tag.name)}`}
         class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm px-4 py-2.5 group"
       >
         <span class="font-medium group-hover:text-primary transition-colors">

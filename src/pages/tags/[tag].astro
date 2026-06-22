@@ -3,10 +3,11 @@ import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import PostList from '../../components/PostList.astro';
 import { resolveCover } from '../_imageStore';
+import { SITE_TAGS } from '../../consts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  const tags = new Set<string>();
+  const tags = new Set<string>(SITE_TAGS);
   for (const post of posts) {
     for (const tag of post.data.tags || []) {
       tags.add(tag);
@@ -35,10 +36,14 @@ const postData = filtered.map((p) => ({
 <BlogLayout title={tag}>
   <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
     <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-    标签：{tag}
+    Tag: {tag}
     <span class="text-base font-normal text-gray-400">
-      ({filtered.length} 篇)
+      ({filtered.length} posts)
     </span>
   </h1>
-  <PostList posts={postData} />
+  {filtered.length > 0 ? (
+    <PostList posts={postData} />
+  ) : (
+    <p class="text-gray-500 dark:text-gray-400">No posts with this tag yet.</p>
+  )}
 </BlogLayout>

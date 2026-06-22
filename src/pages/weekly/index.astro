@@ -12,16 +12,16 @@ const weeklyData = sorted.map((p) => ({
   slug: p.id,
   data: {
     ...p.data,
-    category: '周刊',
+    category: 'Weekly',
     cover: resolveCover('weekly', p.id, p.data.cover),
   },
 }));
 ---
 
-<BlogLayout title="周刊">
+<BlogLayout title="Weekly">
   <h1 class="text-2xl font-bold mb-8 flex items-center gap-2">
     <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
-    周刊
+    Weekly
   </h1>
   <PostList posts={weeklyData as any} routePrefix="/weekly/" />
 </BlogLayout>

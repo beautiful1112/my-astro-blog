@@ -35,7 +35,7 @@ export async function GET() {
     ...weeklyPosts.map((p) => ({
       title: p.data.title,
       description: p.data.description || '',
-      category: '周刊',
+      category: 'Weekly',
       tags: p.data.tags || [],
       slug: p.id,
       type: 'weekly',
