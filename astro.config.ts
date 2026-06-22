@@ -5,12 +5,16 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { unified } from '@astrojs/markdown-remark';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'http://localhost:4321',
   integrations: [mdx()],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   markdown: {
     processor: unified({
       remarkPlugins: [remarkMath],
@@ -21,4 +25,6 @@ export default defineConfig({
       wrap: true,
     },
   },
+
+  adapter: cloudflare(),
 });
