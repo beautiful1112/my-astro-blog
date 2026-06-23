@@ -4,7 +4,7 @@ description: PIM-SM redundancy scenario — VRRP, Last-Hop Routers, and multicas
 date: 2025-12-10
 tags: [Multicast, troubleshooting]
 category: Routing & Switching
-cover: ./images/03-image-cgxi.png
+cover: ./images/image-topo.png
 ---
 
 ## Introduction
@@ -19,7 +19,7 @@ In the previous episode, we covered the fundamentals of multicast networks for t
 
 Ok, let's focus on the PIM-SM. There is a trading firm using PIM-SM as its multicast route protocol. The X trading firm has a single server joining two multicast groups using PIM-SM. Two routers act as Last-Hop Routers (LHR) and utilize VRRP for redundancy. The RP is determined using static-rp. The network topology is as follows:
 
-![PIM-SM trading network topology with VRRP LHRs](./images/03-image-cgxi.png)
+![PIM-SM trading network topology with VRRP LHRs](./images/image-topo.png)
 
 The network engineer, Alex, of X wants R3 to forward 239.1.1.1 and R4 to forward 239.2.2.2. But when he finished the configuration, he found some issues. The receiving server can receive both multicast groups data.
 

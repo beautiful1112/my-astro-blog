@@ -4,7 +4,7 @@ description: Answers to the PIM-SM VRRP redundancy scenario — PIM DR election,
 date: 2025-12-26
 tags: [Multicast, troubleshooting]
 category: Routing & Switching
-cover: ./images/03-image-cgxi.png
+cover: ./images/image-topo.png
 ---
 
 ## Introduction
@@ -21,7 +21,7 @@ It can be found in my repo [AIautomation](https://github.com/beautiful1112/AIaut
 
 Go back to our scenario, when Alex had configured, he found that the VRRP standby router was forwarding two multicast streams. He was confused. First, he thought the VRRP active router should be forwarding the multicast stream. Second, he wanted the VRRP active router to handle multicast traffic for 239.1.1.1, while the VRRP standby router should handle 239.2.2.2. The current situation clearly didn't match his expectations. And more limitations for this scenario are that we can't change or add more VLANs because of some layman's wrong decisions. Additionally, these two multicast addresses actually send the same market data. The company definitely listened to both multicast addresses at the same time to ensure their devices do not interrupt data reception.
 
-![PIM-SM trading network topology](./images/03-image-cgxi.png)
+![PIM-SM trading network topology](./images/image-topo.png)
 
 ## Question 1
 

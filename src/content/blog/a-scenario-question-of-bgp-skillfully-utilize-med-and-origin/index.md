@@ -4,7 +4,7 @@ description: "Use MED and origin type to steer outbound traffic across dual ISPs
 date: 2025-11-22
 tags: [BGP]
 category: Routing & Switching
-cover: ./images/01-image-cgxi.png
+cover: ./images/image-bgp.png
 ---
 
 ## Introduction
@@ -25,7 +25,7 @@ Very complicated situation, huh? Parry Wang shared the MED solution to deal with
 
 ## Topology
 
-![BGP dual-ISP topology — US, ASIA, ISP A, ISP B, and Company X](./images/01-image-cgxi.png)
+![BGP dual-ISP topology — US, ASIA, ISP A, ISP B, and Company X](./images/image-bgp.png)
 
 ## Configuration
 

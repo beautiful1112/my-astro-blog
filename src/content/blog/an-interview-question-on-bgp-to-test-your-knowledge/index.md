@@ -4,12 +4,12 @@ description: "BGP scenario interview question — redirect HQ–DC1 traffic via 
 date: 2025-11-07
 tags: [BGP]
 category: Routing & Switching
-cover: ./images/01-image-cgxi.png
+cover: ./images/bgp-topology.png
 ---
 
 # Introduction
 
-I’ve watched a video on YouTube called “Some boring network engineering interview questions and how to replace them with smarter”. This speaker said that we should use scenario questions and open-ended questions to replace boring questions. Many tech interviewers tend to ask questions that rely on rote memorization. While some individuals can flawlessly recall theories, they often struggle when confronted with real-world scenarios.
+I’ve watched a video on YouTube called [“Some boring network engineering interview questions and how to replace them with smarter”](https://www.youtube.com/watch?v=g35UumfZ-H4&t=1s). This speaker said that we should use scenario questions and open-ended questions to replace boring questions. Many tech interviewers tend to ask questions that rely on rote memorization. While some individuals can flawlessly recall theories, they often struggle when confronted with real-world scenarios.
 
 So I’ve been asked this scenario question to test BGP knowledge. Let's go!
 
@@ -18,7 +18,7 @@ So I’ve been asked this scenario question to test BGP knowledge. Let's go!
 ## Topology
 
 
-![BGP scenario topology — DC1, DC2, and HQ](./images/01-image-cgxi.png)
+![BGP scenario topology — AS65001 (DC1), AS65002 (DC2), and AS65003 (HQ)](./images/bgp-topology.png)
 
 ## Configuration
 
