@@ -1,0 +1,11 @@
+# 14. Configuration and observation
+
+[← IP Multicast master index](../Multicast_Deep_Dive.md)
+
+## Knowledge points
+
+1. [Linux multicast inspection](01_Linux_Inspection.md)
+2. [Router and switch state to inspect](02_Network_Device_State.md)
+3. [Minimal PIM-SSM configuration pattern](03_PIM_SSM_Config_Pattern.md)
+4. [Minimal PIM-SM ASM configuration pattern](04_PIM_SM_ASM_Config_Pattern.md)
+5. [Safe multicast testing tools](05_Testing_Tools.md)

@@ -3,7 +3,7 @@ title: NETCONF beginner
 description: A hands-on introduction to NETCONF with Python, ncclient, and Huawei S5720 — from YANG models to your first interface query.
 date: 2023-12-13
 tags: [NETCONF]
-category: NetDevOps
+category: Automation
 cover: ./images/11.png
 ---
 

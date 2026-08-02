@@ -1,0 +1,24 @@
+# Core multicast standards
+
+[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
+
+---
+
+- [RFC 1112 - Host Extensions for IP Multicasting](https://www.rfc-editor.org/rfc/rfc1112.html)
+- [RFC 2236 - IGMPv2](https://www.rfc-editor.org/rfc/rfc2236.html)
+- [RFC 3376 - IGMPv3](https://www.rfc-editor.org/rfc/rfc3376.html)
+- [RFC 2710 - MLDv1](https://www.rfc-editor.org/rfc/rfc2710.html)
+- [RFC 3810 - MLDv2](https://www.rfc-editor.org/rfc/rfc3810.html)
+- [RFC 2113 - IPv4 Router Alert Option](https://www.rfc-editor.org/rfc/rfc2113.html)
+- [RFC 3678 - Socket Interface Extensions for Multicast Filters](https://www.rfc-editor.org/rfc/rfc3678.html)
+- [RFC 4604 - IGMPv3/MLDv2 for SSM](https://www.rfc-editor.org/rfc/rfc4604.html)
+- [RFC 4607 - Source-Specific Multicast](https://www.rfc-editor.org/rfc/rfc4607.html)
+- [RFC 7761 - PIM-SM](https://www.rfc-editor.org/rfc/rfc7761.html)
+- [RFC 3973 - PIM-DM](https://www.rfc-editor.org/rfc/rfc3973.html)
+- [RFC 5015 - BIDIR-PIM](https://www.rfc-editor.org/rfc/rfc5015.html)
+- [RFC 5059 - PIM BSR](https://www.rfc-editor.org/rfc/rfc5059.html)
+- [RFC 4541 - IGMP/MLD Snooping Considerations](https://www.rfc-editor.org/rfc/rfc4541.html)
+- [RFC 2365 - Administratively Scoped Multicast](https://www.rfc-editor.org/rfc/rfc2365.html)
+- [RFC 4291 - IPv6 Addressing Architecture](https://www.rfc-editor.org/rfc/rfc4291.txt)
+- [RFC 7346 - IPv6 Multicast Scopes](https://www.rfc-editor.org/rfc/rfc7346.html)
+

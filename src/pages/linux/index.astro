@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { noteHref, noteTitle } from '../../utils/notes';
+
+const notes = (await getCollection('linux'))
+  .filter((n) => !n.data.draft)
+  .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+---
+
+<BlogLayout title="Linux">
+  <h1 class="text-2xl font-bold mb-2 flex items-center gap-2">
+    <span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
+    Linux
+  </h1>
+  <p class="text-sm text-gray-400 dark:text-gray-500 mb-8">
+    Linux operations notes, incident postmortems, and system recovery write-ups.
+  </p>
+
+  {
+    notes.length > 0 ? (
+      <ul class="space-y-3">
+        {notes.map((note) => (
+          <li>
+            <a
+              href={noteHref('/linux', note.id)}
+              class="text-lg text-primary hover:underline"
+            >
+              {noteTitle(note.id, note.body, note.data.title)}
+            </a>
+            <p class="text-xs text-gray-400 font-mono mt-0.5">{note.id}</p>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="text-gray-500 dark:text-gray-400">No Linux notes yet.</p>
+    )
+  }
+</BlogLayout>

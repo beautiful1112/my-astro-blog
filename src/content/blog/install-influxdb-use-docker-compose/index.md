@@ -3,7 +3,7 @@ title: Install influxdb use docker-compose
 description: Deploy InfluxDB 2.7.4 with Docker Compose — create the data directory, write the compose file, and verify the container is running.
 date: 2024-01-27
 tags: [Influxdb]
-category: Docker
+category: Container
 cover: ./images/influxdb-logo.webp
 ---
 

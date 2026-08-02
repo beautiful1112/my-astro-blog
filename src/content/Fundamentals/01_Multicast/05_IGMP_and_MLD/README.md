@@ -1,0 +1,32 @@
+# 05. IGMP and MLD
+
+[← IP Multicast master index](../Multicast_Deep_Dive.md)
+
+## Knowledge points
+
+1. [What membership protocols do](01_Membership_Protocol_Purpose.md)
+2. [IGMP wire facts](02_IGMP_Wire_Facts.md)
+3. [IGMPv1, IGMPv2, and IGMPv3](03_IGMP_Versions.md)
+4. [IGMP queries and timers](04_Queries_and_Timers.md)
+5. [Querier election and the works-then-stops failure](05_Querier_Election_and_Failure.md)
+6. [IGMP version compatibility](06_Version_Compatibility.md)
+7. [MLD for IPv6](07_MLD_for_IPv6.md)
+8. [Static joins and IGMP proxy](08_Static_Joins_and_IGMP_Proxy.md)
+9. [IGMPv1 message format](09_IGMPv1_Message_Format.md)
+10. [IGMPv2 message formats](10_IGMPv2_Message_Formats.md)
+11. [IGMPv3 Membership Query format](11_IGMPv3_Query_Format.md)
+12. [IGMPv3 Membership Report format](12_IGMPv3_Report_Format.md)
+13. [IGMPv3 Group Record types](13_IGMPv3_Group_Record_Types.md)
+14. [IGMPv3 socket state and interface-state merge](14_IGMPv3_Socket_and_Interface_State.md)
+15. [IGMPv3 router-side listener state](15_IGMPv3_Router_State.md)
+16. [IGMPv1 join, refresh, and leave process](16_IGMPv1_Protocol_Process.md)
+17. [IGMPv2 join, query, and leave process](17_IGMPv2_Protocol_Process.md)
+18. [IGMPv3 source-filter protocol process](18_IGMPv3_Protocol_Process.md)
+19. [Report suppression in IGMP versions](19_Report_Suppression.md)
+20. [IGMPv3 Max Resp Code and QQIC encoding](20_IGMPv3_Timer_Code_Encoding.md)
+21. [IGMP packet-capture decoding workflow](21_IGMP_Packet_Capture_Decoding.md)
+22. [MLDv1 message format](22_MLDv1_Message_Format.md)
+23. [MLDv2 Query and Report formats](23_MLDv2_Query_and_Report_Formats.md)
+24. [IGMP and MLD message-destination matrix](24_IGMP_MLD_Destination_Matrix.md)
+25. [IGMPv3 report size, packing, and MTU behavior](25_IGMPv3_Report_Size_and_MTU.md)
+26. [IGMP/MLD security and message validation](26_IGMP_MLD_Security_and_Validation.md)

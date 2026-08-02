@@ -1,0 +1,37 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+import { noteTitle } from '../../utils/notes';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('linux');
+  return notes
+    .filter((n) => !n.data.draft)
+    .map((note) => ({
+      params: { slug: note.id },
+    }));
+}
+
+const { slug } = Astro.params;
+const note = await getEntry('linux', slug!);
+
+if (!note) {
+  return Astro.redirect('/404');
+}
+
+const title = noteTitle(note.id, note.body, note.data.title);
+const { Content, headings } = await render(note);
+---
+
+<PostLayout title={title} description={note.data.description} headings={headings}>
+  <header class="mb-6">
+    <a
+      href="/linux"
+      class="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-3"
+    >
+      Linux
+    </a>
+    <p class="text-xs text-gray-400 dark:text-gray-500 font-mono">{note.id}</p>
+  </header>
+  <Content />
+</PostLayout>

@@ -29,7 +29,25 @@ const weeklyCollection = defineCollection({
   }),
 });
 
+const noteSchema = z.object({
+  title: z.string().optional(),
+  description: z.string().optional(),
+  draft: z.boolean().default(false),
+});
+
+const fundamentalsCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/Fundamentals' }),
+  schema: noteSchema,
+});
+
+const linuxCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/Linux' }),
+  schema: noteSchema,
+});
+
 export const collections = {
   blog: blogCollection,
   weekly: weeklyCollection,
+  fundamentals: fundamentalsCollection,
+  linux: linuxCollection,
 };

@@ -3,7 +3,7 @@ title: An experiment for network AIops
 description: A local AIops demo using Hermes, Gemma 26B, Prometheus, and MCP — SNMP monitoring, alert-driven troubleshooting, and automated remediation on EVE-NG.
 date: 2026-05-23
 tags: [AIops]
-category: NetDevOps
+category: Automation
 cover: ./images/cover.png
 pinned: true
 ---

@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { unified } from '@astrojs/markdown-remark';
+import { remarkRewriteMdLinks } from './src/utils/remarkRewriteMdLinks';
 
 export default defineConfig({
   site: 'http://localhost:4321',
@@ -13,7 +14,7 @@ export default defineConfig({
   },
   markdown: {
     processor: unified({
-      remarkPlugins: [remarkMath],
+      remarkPlugins: [remarkMath, remarkRewriteMdLinks],
       rehypePlugins: [rehypeKatex],
     }),
     shikiConfig: {

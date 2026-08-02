@@ -3,7 +3,7 @@ title: Install grafana use docker-compose
 description: Step-by-step guide to deploying Grafana with Docker Compose, including directory setup, compose configuration, and fixing file permission errors.
 date: 2024-01-29
 tags: [Grafana]
-category: Docker
+category: Container
 cover: ./images/grafana-logo.png
 ---
 

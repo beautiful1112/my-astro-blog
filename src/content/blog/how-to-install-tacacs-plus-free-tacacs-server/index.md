@@ -3,7 +3,7 @@ title: How to install tacacs_plus (free tacacs server)
 description: Install and configure the open-source tacacs_plus server on Ubuntu 20.04 — compile from source, set up users and groups, and verify login from network devices.
 date: 2024-09-17
 tags: [Tacacs]
-category: NetDevOps
+category: Automation
 cover: ./images/tacacs-implementation.png
 ---
 
