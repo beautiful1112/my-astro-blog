@@ -33,7 +33,11 @@ function rewriteMarkdownUrl(fileDir: string, basePath: string, url: string): str
 
   const withoutExt = rawPath.replace(/\.mdx?$/i, '');
   const resolved = path.posix.normalize(path.posix.join(fileDir, withoutExt));
-  const cleaned = resolved.replace(/^\.\//, '').replace(/\/$/, '');
+  // Astro content collection ids / static routes are lowercase
+  const cleaned = resolved
+    .replace(/^\.\//, '')
+    .replace(/\/$/, '')
+    .toLowerCase();
   const hashSuffix = hash ? `#${hash}` : '';
   return `${basePath}/${cleaned}${hashSuffix}`.replace(/\/{2,}/g, '/');
 }

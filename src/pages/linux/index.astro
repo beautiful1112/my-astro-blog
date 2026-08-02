@@ -19,16 +19,20 @@ const notes = (await getCollection('linux'))
 
   {
     notes.length > 0 ? (
-      <ul class="space-y-3">
+      <ul class="space-y-4">
         {notes.map((note) => (
           <li>
             <a
               href={noteHref('/linux', note.id)}
-              class="text-lg text-primary hover:underline"
+              class="block rounded-xl border border-gray-200 dark:border-gray-700 px-5 py-4 hover:border-primary/40 transition-colors"
             >
-              {noteTitle(note.id, note.body, note.data.title)}
+              <p class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                {noteTitle(note.id, note.body, note.data.title)}
+              </p>
+              {note.data.description && (
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{note.data.description}</p>
+              )}
             </a>
-            <p class="text-xs text-gray-400 font-mono mt-0.5">{note.id}</p>
           </li>
         ))}
       </ul>

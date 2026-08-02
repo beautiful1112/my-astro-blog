@@ -42,7 +42,7 @@ const postData = filtered.map((p) => ({
     </span>
   </h1>
   {filtered.length > 0 ? (
-    <PostList posts={postData} />
+    <PostList posts={postData} showPinned />
   ) : (
     <p class="text-gray-500 dark:text-gray-400">No posts with this tag yet.</p>
   )}

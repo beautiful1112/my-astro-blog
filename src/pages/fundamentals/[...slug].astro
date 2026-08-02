@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
-import { noteTitle } from '../../utils/notes';
+import { formatRootLabel, noteTitle } from '../../utils/notes';
 
 export async function getStaticPaths() {
   const notes = await getCollection('fundamentals');
@@ -21,6 +21,8 @@ if (!note) {
 
 const title = noteTitle(note.id, note.body, note.data.title);
 const { Content, headings } = await render(note);
+const parts = note.id.split('/');
+const crumbs = parts.slice(0, -1).map((part) => formatRootLabel(part));
 ---
 
 <PostLayout title={title} description={note.data.description} headings={headings}>
@@ -31,7 +33,13 @@ const { Content, headings } = await render(note);
     >
       Fundamentals
     </a>
-    <p class="text-xs text-gray-400 dark:text-gray-500 font-mono">{note.id}</p>
+    {
+      crumbs.length > 0 && (
+        <p class="text-xs text-gray-400 dark:text-gray-500 capitalize">
+          {crumbs.join(' / ')}
+        </p>
+      )
+    }
   </header>
   <Content />
 </PostLayout>

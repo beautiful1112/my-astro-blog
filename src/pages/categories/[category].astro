@@ -63,7 +63,7 @@ const displayName = categoryName.split('/').pop()!;
     </span>
   </h1>
   {filtered.length > 0 ? (
-    <PostList posts={postData} />
+    <PostList posts={postData} showPinned />
   ) : (
     <p class="text-gray-500 dark:text-gray-400">No posts in this section yet. Check back soon.</p>
   )}
