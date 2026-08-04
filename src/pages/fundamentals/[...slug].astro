@@ -1,7 +1,11 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
-import { formatRootLabel, noteTitle } from '../../utils/notes';
+import {
+  buildNoteTopics,
+  noteTitle,
+  resolveNoteNav,
+} from '../../utils/notes';
 
 export async function getStaticPaths() {
   const notes = await getCollection('fundamentals');
@@ -19,24 +23,64 @@ if (!note) {
   return Astro.redirect('/404');
 }
 
+const allNotes = await getCollection('fundamentals');
+const topics = buildNoteTopics(
+  allNotes
+    .filter((n) => !n.data.draft)
+    .map((n) => ({ id: n.id, title: noteTitle(n.id, n.body, n.data.title) })),
+);
+const nav = resolveNoteNav(note.id, topics);
+
 const title = noteTitle(note.id, note.body, note.data.title);
 const { Content, headings } = await render(note);
-const parts = note.id.split('/');
-const crumbs = parts.slice(0, -1).map((part) => formatRootLabel(part));
 ---
 
 <PostLayout title={title} description={note.data.description} headings={headings}>
   <header class="mb-6">
-    <a
-      href="/fundamentals"
-      class="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-3"
-    >
-      Fundamentals
-    </a>
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      <a
+        href="/fundamentals"
+        class="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
+      >
+        Fundamentals
+      </a>
+      {
+        nav && (
+          <a
+            href={nav.topicHref}
+            class="inline-block text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full hover:text-primary transition-colors capitalize"
+          >
+            {nav.topicLabel}
+          </a>
+        )
+      }
+    </div>
+
     {
-      crumbs.length > 0 && (
+      nav && (
+        <nav class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm mb-4">
+          <a href={nav.topicHref} class="text-primary hover:underline">
+            ↑ {nav.topicLabel} master index
+          </a>
+          {
+            nav.moduleHref && !nav.isModuleIndex && (
+              <>
+                <span class="text-gray-300 dark:text-gray-600">·</span>
+                <a href={nav.moduleHref} class="text-primary hover:underline">
+                  ← {nav.moduleLabel}
+                </a>
+              </>
+            )
+          }
+        </nav>
+      )
+    }
+
+    {
+      nav?.moduleLabel && !nav.isDeepDive && (
         <p class="text-xs text-gray-400 dark:text-gray-500 capitalize">
-          {crumbs.join(' / ')}
+          {nav.topicLabel}
+          {nav.moduleLabel ? ` / ${nav.moduleLabel}` : ''}
         </p>
       )
     }

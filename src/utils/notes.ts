@@ -22,6 +22,10 @@ export function noteHref(base: '/fundamentals' | '/linux', id: string): string {
   return `${base}/${id.toLowerCase()}`;
 }
 
+export function topicHref(topicId: string): string {
+  return `/fundamentals/topic/${topicId.toLowerCase()}`;
+}
+
 export function formatRootLabel(root: string): string {
   return root
     .replace(/_/g, ' ')
@@ -49,11 +53,22 @@ export interface NoteTopic {
   looseNotes: NoteMeta[];
 }
 
-function isReadme(id: string): boolean {
-  return id.toLowerCase().endsWith('/readme') || id.toLowerCase() === 'readme';
+export interface NoteNav {
+  topicId: string;
+  topicLabel: string;
+  topicHref: string;
+  moduleLabel?: string;
+  moduleHref?: string;
+  isModuleIndex: boolean;
+  isDeepDive: boolean;
 }
 
-function isDeepDive(id: string): boolean {
+export function isReadme(id: string): boolean {
+  const lower = id.toLowerCase();
+  return lower.endsWith('/readme') || lower === 'readme';
+}
+
+export function isDeepDive(id: string): boolean {
   const leaf = id.split('/').pop()?.toLowerCase() ?? '';
   return leaf.endsWith('_deep_dive') || leaf.endsWith('-deep-dive');
 }
@@ -88,7 +103,6 @@ export function buildNoteTopics(notes: NoteMeta[]): NoteTopic[] {
         list.push(note);
         moduleMap.set(moduleId, list);
       } else if (parts.length === 2 && !isDeepDive(note.id)) {
-        // topic/file.md (non deep-dive) — treat as loose
         looseNotes.push(note);
       } else {
         looseNotes.push(note);
@@ -124,4 +138,41 @@ export function buildNoteTopics(notes: NoteMeta[]): NoteTopic[] {
   }
 
   return topics;
+}
+
+/** Resolve chrome links for a Fundamentals note from its collection id. */
+export function resolveNoteNav(id: string, topics: NoteTopic[]): NoteNav | null {
+  const parts = id.split('/');
+  if (parts.length === 0) return null;
+
+  const topicId = parts[0]!;
+  const topic = topics.find((t) => t.id === topicId);
+  const topicLabel = topic?.label ?? formatRootLabel(topicId);
+
+  if (isDeepDive(id) || parts.length === 1) {
+    return {
+      topicId,
+      topicLabel,
+      topicHref: topicHref(topicId),
+      isModuleIndex: false,
+      isDeepDive: isDeepDive(id),
+    };
+  }
+
+  const moduleId = `${parts[0]}/${parts[1]}`;
+  const mod = topic?.modules.find((m) => m.id === moduleId);
+  const moduleLabel = mod?.label ?? formatRootLabel(parts[1]!);
+  const moduleHref = mod?.indexId
+    ? noteHref('/fundamentals', mod.indexId)
+    : undefined;
+
+  return {
+    topicId,
+    topicLabel,
+    topicHref: topicHref(topicId),
+    moduleLabel,
+    moduleHref,
+    isModuleIndex: isReadme(id),
+    isDeepDive: false,
+  };
 }
