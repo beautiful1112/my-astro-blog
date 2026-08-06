@@ -20,4 +20,3 @@ Use separate VRFs, communities, prefix policy, queues, and monitoring where appr
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

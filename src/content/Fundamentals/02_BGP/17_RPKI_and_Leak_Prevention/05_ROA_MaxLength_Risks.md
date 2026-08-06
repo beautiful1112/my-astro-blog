@@ -12,4 +12,3 @@ Prefer the least permissive authorization matching actual advertisements. Invent
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

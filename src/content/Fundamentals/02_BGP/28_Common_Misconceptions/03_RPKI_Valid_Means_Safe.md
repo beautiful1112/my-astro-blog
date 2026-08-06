@@ -14,4 +14,3 @@ Use Valid as one security signal inside layered policy, not as universal trust.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

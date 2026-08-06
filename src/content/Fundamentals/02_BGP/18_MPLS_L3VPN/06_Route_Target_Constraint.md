@@ -14,4 +14,3 @@ Troubleshoot the RT-membership advertisement before assuming the VPN route was n
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

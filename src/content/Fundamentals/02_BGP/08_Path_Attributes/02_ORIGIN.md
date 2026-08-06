@@ -16,4 +16,3 @@ Changing ORIGIN to manipulate traffic is possible but weak and opaque. Prefer ex
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

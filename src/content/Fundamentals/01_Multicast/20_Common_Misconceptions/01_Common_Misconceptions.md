@@ -1,9 +1,5 @@
 # Common multicast misconceptions
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 | Misconception | Correction |
 |---|---|
 | Sender joins to send | Join controls reception. |

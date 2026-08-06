@@ -10,4 +10,3 @@ Origin validation checks whether the origin ASN is authorized for the prefix and
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

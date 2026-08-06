@@ -1,9 +1,5 @@
 # Lab 5: PIM-SM phases
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Goal
 
 Observe every PIM-SM ASM transition and prove which state/data event causes the next one.

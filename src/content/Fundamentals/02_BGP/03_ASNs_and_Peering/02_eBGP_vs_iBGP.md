@@ -13,4 +13,3 @@ These are protocol behaviors and widespread defaults, but exact TTL, next-hop ha
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

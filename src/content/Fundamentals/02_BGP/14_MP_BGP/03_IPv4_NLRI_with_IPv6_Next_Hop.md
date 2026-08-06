@@ -15,4 +15,3 @@ A functioning IPv6 BGP transport does not by itself prove IPv4-over-IPv6 next-ho
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

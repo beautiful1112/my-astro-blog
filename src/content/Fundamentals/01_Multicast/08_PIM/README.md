@@ -1,7 +1,5 @@
 # 08. PIM modes and tree construction
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [PIM control-plane facts](01_PIM_Control_Facts.md)

@@ -1,7 +1,5 @@
 # 25. Interview questions
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Interview: Why Does BGP Use TCP?](01_Why_Does_BGP_Use_TCP.md)

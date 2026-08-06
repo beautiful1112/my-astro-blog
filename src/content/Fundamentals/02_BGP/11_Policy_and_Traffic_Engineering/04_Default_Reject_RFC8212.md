@@ -16,4 +16,3 @@ Vendor defaults and legacy behavior differ, so treat default reject as a design 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

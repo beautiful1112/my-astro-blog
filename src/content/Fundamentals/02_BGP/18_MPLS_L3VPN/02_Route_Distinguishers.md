@@ -11,4 +11,3 @@ An RD does not decide which VRF imports a route. Route targets do that.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

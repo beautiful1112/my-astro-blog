@@ -1,9 +1,5 @@
 # Static joins and IGMP proxy
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Static membership
 
 A static membership forces multicast interest independent of dynamic host reports. Depending on the platform, a static command may:

@@ -1,7 +1,5 @@
 # 13. Route reflection and confederations
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Route-Reflector Roles](01_Route_Reflector_Roles.md)

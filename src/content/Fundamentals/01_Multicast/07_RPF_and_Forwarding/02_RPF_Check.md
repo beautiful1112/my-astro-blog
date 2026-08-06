@@ -1,9 +1,5 @@
 # Reverse Path Forwarding check
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 For `(S,G)`, the router asks: if I sent unicast toward `S` using the MRIB, which interface and neighbor would I use? The multicast packet must arrive from that direction. Otherwise it is normally discarded as an RPF failure.
 
 ```text

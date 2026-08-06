@@ -1,7 +1,5 @@
 # 15. Deterministic troubleshooting
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Define the exact multicast flow](01_Define_the_Flow.md)

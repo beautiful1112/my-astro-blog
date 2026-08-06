@@ -14,4 +14,3 @@ BGP distributes reachability; the encapsulation and underlay deliver packets to 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

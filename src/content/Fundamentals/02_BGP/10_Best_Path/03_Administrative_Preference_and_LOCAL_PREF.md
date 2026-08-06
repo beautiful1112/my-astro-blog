@@ -12,4 +12,3 @@ A local weight override can make two routers in the same AS choose different exi
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

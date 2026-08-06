@@ -1,7 +1,5 @@
 # 18. Labs and mastery exercises
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Lab 1: Ethernet mapping](01_Ethernet_Mapping.md)

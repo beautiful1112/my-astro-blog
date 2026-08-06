@@ -1,7 +1,5 @@
 # 23. Deterministic troubleshooting
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP Troubleshooting Framework](01_Troubleshooting_Framework.md)

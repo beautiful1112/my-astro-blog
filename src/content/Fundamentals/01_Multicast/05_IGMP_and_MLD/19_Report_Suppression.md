@@ -1,9 +1,5 @@
 # Report suppression in IGMP versions
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## IGMPv1 and IGMPv2
 
 Reports are sent to the multicast group G. Other group members can hear them.

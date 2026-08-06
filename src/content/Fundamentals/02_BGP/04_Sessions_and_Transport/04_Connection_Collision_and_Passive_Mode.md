@@ -6,4 +6,3 @@ Passive mode prevents a peer from initiating while still accepting inbound conne
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

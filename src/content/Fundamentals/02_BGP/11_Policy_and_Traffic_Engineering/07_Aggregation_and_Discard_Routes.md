@@ -15,4 +15,3 @@ Test partial failure: a summary can remain reachable while one component destina
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

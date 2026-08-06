@@ -1,9 +1,5 @@
 # RPF selection, ECMP, and neighbor resolution
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 An RPF check is more than “a route to the source exists.” The multicast control plane must select an upstream interface and, for PIM joins, an upstream neighbor for the tree root.
 
 ## Selection inputs

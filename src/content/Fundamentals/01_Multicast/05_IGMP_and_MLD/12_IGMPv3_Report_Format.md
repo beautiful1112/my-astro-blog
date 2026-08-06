@@ -1,9 +1,5 @@
 # IGMPv3 Membership Report format
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv3 replaces the one-group report with a container holding **M Group Records**.
 
 ## Report header

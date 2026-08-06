@@ -18,4 +18,3 @@ Use a sourced ping, TCP state, packet capture, and both router logs to locate th
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

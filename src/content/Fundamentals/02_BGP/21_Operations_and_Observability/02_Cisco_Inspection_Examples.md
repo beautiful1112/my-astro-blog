@@ -16,4 +16,3 @@ Important: **received-routes** may require inbound soft reconfiguration and can 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

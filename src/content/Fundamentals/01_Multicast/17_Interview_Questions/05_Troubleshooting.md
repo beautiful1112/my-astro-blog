@@ -1,9 +1,5 @@
 # Interview questions: troubleshooting
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 **IGMP Report seen, but no data—what next?** Verify snooping/LHR OIF, PIM Join/RPF, then trace data counters from the source.
 
 **Mroute exists but no packets—why?** No source traffic, wrong RPF, null OIL, TTL/policy, or missing hardware programming.

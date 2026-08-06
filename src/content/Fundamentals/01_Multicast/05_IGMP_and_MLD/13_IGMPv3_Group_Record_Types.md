@@ -1,9 +1,5 @@
 # IGMPv3 Group Record types
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 The Record Type tells the router whether the record describes **current state** or a **state change**.
 
 | Value | Name | Category | Meaning of listed sources |

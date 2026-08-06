@@ -22,4 +22,3 @@ The reachability of the destination depends on reachability of the BGP next hop.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

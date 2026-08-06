@@ -1,9 +1,5 @@
 # PIM Join/Prune processing
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM Join/Prune messages create and remove multicast tree state one hop at a time. A message is sent to the all-PIM-routers group on a link but contains the address of the **upstream neighbor** that must process the request.
 
 ## Message organization

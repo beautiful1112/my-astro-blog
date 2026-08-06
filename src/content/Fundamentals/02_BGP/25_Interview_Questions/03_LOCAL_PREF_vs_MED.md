@@ -10,4 +10,3 @@ LOCAL_PREF is an AS-internal exit preference: higher wins, it is distributed thr
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

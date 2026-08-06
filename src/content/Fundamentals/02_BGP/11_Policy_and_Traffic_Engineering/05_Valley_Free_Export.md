@@ -14,4 +14,3 @@ A route leak often occurs when a route learned from one peer or provider is inco
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

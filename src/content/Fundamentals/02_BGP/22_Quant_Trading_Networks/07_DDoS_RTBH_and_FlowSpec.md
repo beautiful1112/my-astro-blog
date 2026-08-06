@@ -14,4 +14,3 @@ For an order gateway, an incorrect mitigation may be as damaging as the attack. 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

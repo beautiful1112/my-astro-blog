@@ -1,7 +1,5 @@
 # 13. Security and operational controls
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Multicast security threats](01_Threats.md)

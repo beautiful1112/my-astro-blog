@@ -10,4 +10,3 @@ A TTL-security mismatch produces a session that cannot establish even when addre
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

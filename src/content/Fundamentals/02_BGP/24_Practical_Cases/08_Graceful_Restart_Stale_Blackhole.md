@@ -22,4 +22,3 @@ Graceful Restart assumes forwarding survives. If that premise is false, faster w
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -14,4 +14,3 @@ Syntactic validation cannot prove the entire path is genuine; it narrows the att
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

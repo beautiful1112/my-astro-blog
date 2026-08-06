@@ -13,4 +13,3 @@ For a quantitative trading site, label each route and circuit by failure domain;
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

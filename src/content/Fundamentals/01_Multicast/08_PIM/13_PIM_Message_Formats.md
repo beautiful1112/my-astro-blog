@@ -1,9 +1,5 @@
 # PIM message formats and capture decoding
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM version 2 messages share a four-byte header:
 
 ```text

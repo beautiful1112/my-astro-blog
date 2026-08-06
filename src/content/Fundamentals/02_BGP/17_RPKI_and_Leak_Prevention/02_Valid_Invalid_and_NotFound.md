@@ -12,4 +12,3 @@ NotFound means “no validated authorization data,” not “malicious.”
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

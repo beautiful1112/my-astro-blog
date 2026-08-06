@@ -1,9 +1,5 @@
 # Layer-2 design for market data
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - Keep loss-sensitive multicast VLANs small and intentional.
 - Provide redundant queriers in L2-only feed networks.
 - Verify `(VLAN,G)` and, where supported, `(VLAN,S,G)` scale.

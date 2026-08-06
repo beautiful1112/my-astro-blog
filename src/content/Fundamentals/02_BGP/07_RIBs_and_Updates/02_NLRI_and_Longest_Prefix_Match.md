@@ -8,4 +8,3 @@ This distinction explains many traffic-engineering surprises and hijack impacts.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

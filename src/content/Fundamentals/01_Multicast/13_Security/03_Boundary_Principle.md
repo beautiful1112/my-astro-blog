@@ -1,9 +1,5 @@
 # The three-level boundary principle
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Apply policy at three levels:
 
 1. **Source admission:** who may send which groups?

@@ -1,9 +1,5 @@
 # Rendezvous Point purpose
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 An RP solves ASM's discovery problem. A receiver knows only group `G`, while a source knows neither the receivers nor their locations. A common group-to-RP mapping gives both sides a deterministic meeting point:
 
 - receiver `(*,G)` Joins travel toward `RP(G)`;

@@ -1,9 +1,5 @@
 # PIM control-plane facts
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM builds multicast trees by following reachability supplied by the multicast routing information base (MRIB). It is **protocol independent** because the MRIB can come from an IGP, static multicast routes, or multiprotocol BGP; PIM is not tied to one unicast routing protocol.
 
 ## Wire behavior

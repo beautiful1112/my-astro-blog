@@ -1,9 +1,5 @@
 # Reliability above IP multicast
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Common mechanisms are:
 
 - packet/message sequence numbers;

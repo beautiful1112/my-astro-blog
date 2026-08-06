@@ -1,9 +1,5 @@
 # Linux multicast inspection
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```bash
 ip -br address
 ip route get 192.0.2.10

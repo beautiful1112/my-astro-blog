@@ -16,4 +16,3 @@ Treat the community catalog as an API: document ownership, direction, permitted 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

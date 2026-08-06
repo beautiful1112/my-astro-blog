@@ -13,4 +13,3 @@ RPKI origin validation may report leaked routes as Valid because the origin did 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

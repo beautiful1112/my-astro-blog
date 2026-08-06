@@ -1,9 +1,5 @@
 # Unicast, broadcast, anycast, and multicast
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 | Model | Destination meaning | Replication | Common use |
 |---|---|---|---|
 | Unicast | one interface | one copy per destination | SSH, TCP, APIs |

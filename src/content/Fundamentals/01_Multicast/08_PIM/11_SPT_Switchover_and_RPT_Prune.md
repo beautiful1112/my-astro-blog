@@ -1,9 +1,5 @@
 # SPT switchover and RPT prune
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM-SM can move an ASM receiver branch from the RP tree to a source-rooted shortest-path tree. The goal is to improve path, latency, and RP/core load without delivering duplicate copies.
 
 ## Trigger policy

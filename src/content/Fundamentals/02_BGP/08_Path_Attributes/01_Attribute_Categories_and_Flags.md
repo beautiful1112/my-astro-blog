@@ -24,4 +24,3 @@ An unknown optional transitive attribute is propagated with the Partial bit set.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

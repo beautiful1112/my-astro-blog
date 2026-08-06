@@ -24,4 +24,3 @@ Remove R1's exact loopback route. Its advertisement should withdraw even though 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

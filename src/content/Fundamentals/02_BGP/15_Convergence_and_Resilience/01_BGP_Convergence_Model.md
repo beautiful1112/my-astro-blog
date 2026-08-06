@@ -17,4 +17,3 @@ Measure the user-visible loss interval, not only the BGP log timestamps.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

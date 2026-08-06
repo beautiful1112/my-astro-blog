@@ -1,7 +1,5 @@
 # 16. Practical cases
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Case 1: Same-VLAN multicast with no router](01_Same_VLAN_No_Router.md)

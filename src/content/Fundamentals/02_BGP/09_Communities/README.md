@@ -1,7 +1,5 @@
 # 09. Communities
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Standard Communities](01_Standard_Communities.md)

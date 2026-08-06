@@ -1,7 +1,5 @@
 # 29. Primary references
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Core BGP RFCs](01_Core_BGP_RFCs.md)

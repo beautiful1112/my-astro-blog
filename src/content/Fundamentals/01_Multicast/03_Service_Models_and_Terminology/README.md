@@ -1,7 +1,5 @@
 # 03. Service models and terminology
 
-
-
 ## Knowledge points
 
 1. [Unicast, broadcast, anycast, and multicast](01_Delivery_Models.md)

@@ -13,4 +13,3 @@ Features such as as-override, allowas-in, and remove-private-as deliberately cha
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

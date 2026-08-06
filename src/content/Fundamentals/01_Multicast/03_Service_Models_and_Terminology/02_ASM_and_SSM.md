@@ -1,9 +1,5 @@
 # ASM and SSM
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Any-Source Multicast
 
 A receiver requests `G`, represented by `(*,G)`, and accepts any source. PIM-SM uses an RP so sources and receivers can discover each other. ASM supports many-to-many communication but adds RP/shared-tree complexity and permits unwanted sources unless policy blocks them.

@@ -18,4 +18,3 @@ Always distinguish the routing table, protocol route view, and forwarding table.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -18,4 +18,3 @@ Use the exact FRR release documentation because command forms and JSON schemas e
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

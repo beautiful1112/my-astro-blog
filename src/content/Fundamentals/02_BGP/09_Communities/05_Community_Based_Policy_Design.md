@@ -18,4 +18,3 @@ For a trading firm, tags can express exchange region, carrier, circuit class, DD
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

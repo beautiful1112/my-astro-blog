@@ -18,4 +18,3 @@ You should be able to:
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

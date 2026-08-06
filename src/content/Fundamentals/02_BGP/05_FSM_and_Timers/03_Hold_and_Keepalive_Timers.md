@@ -8,4 +8,3 @@ Aggressive timers accelerate failure detection but increase false resets during 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

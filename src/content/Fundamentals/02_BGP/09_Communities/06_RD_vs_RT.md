@@ -15,4 +15,3 @@ Using the same displayed number for both is an operational convention, not a pro
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

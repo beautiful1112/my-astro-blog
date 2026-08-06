@@ -1,9 +1,5 @@
 # Multicast VPNs over MPLS
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Multicast VPN designs distinguish:
 
 - **C-multicast:** customer multicast routes/PIM behavior;

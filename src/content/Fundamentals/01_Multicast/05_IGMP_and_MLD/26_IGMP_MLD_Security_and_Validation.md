@@ -1,9 +1,5 @@
 # IGMP/MLD security and message validation
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMP and MLD normally trust on-link control messages. An on-link host can often join a group legitimately, so the main risks are control-plane load, false state, downgrade, and forged querier behavior.
 
 ## Forged Query

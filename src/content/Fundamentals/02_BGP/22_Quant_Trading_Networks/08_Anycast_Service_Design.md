@@ -15,4 +15,3 @@ When one site withdraws, traffic shifts according to external policy and may ove
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

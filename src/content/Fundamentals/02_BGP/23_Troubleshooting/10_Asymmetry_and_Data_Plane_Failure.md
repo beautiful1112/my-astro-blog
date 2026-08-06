@@ -13,4 +13,3 @@ Control-plane evidence must be paired with packet and counter evidence. A route 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

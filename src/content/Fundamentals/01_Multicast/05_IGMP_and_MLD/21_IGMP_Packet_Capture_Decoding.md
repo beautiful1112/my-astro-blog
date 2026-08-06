@@ -1,9 +1,5 @@
 # IGMP packet-capture decoding workflow
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Use this workflow on each packet rather than trusting the decoder's summary label.
 
 ## 1. Identify the link and direction

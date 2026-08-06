@@ -1,9 +1,5 @@
 # IGMP queries and timers
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Three query scopes
 
 | Query | Group field | Sources | Purpose |

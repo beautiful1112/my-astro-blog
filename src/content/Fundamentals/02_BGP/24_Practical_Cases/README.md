@@ -1,7 +1,5 @@
 # 24. Practical cases
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Case: Established Session, Zero Prefixes](01_Established_Session_Zero_Prefixes.md)

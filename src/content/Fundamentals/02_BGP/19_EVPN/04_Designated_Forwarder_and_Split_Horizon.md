@@ -14,4 +14,3 @@ DF election and convergence affect duplicate or lost BUM traffic. Inspect:
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

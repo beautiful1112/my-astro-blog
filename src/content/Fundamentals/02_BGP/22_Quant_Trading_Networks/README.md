@@ -1,7 +1,5 @@
 # 22. Quantitative-trading networks
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP's Role in Quantitative-Trading Infrastructure](01_BGP_Role_in_Trading_Infrastructure.md)

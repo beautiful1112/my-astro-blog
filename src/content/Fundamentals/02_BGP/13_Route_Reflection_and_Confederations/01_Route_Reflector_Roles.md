@@ -15,4 +15,3 @@ An RR selects paths from its own viewpoint. Session scale improves, but clients 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

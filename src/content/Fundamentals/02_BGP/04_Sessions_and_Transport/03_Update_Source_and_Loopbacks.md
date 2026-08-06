@@ -8,4 +8,3 @@ For eBGP loopbacks, multihop and loop prevention must be explicit. For iBGP, sta
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

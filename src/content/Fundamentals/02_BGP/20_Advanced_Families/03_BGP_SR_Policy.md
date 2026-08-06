@@ -17,4 +17,3 @@ RFC 9830, published in 2025, is the current BGP advertisement specification for 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

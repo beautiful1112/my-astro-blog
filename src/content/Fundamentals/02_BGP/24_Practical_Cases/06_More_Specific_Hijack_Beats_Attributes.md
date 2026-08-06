@@ -22,4 +22,3 @@ Longest-prefix match occurs in forwarding after BGP has selected a path for each
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

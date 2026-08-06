@@ -1,9 +1,5 @@
 # Multicast symptom matrix
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 | Symptom | Likely causes |
 |---|---|
 | Nobody receives | source/group/interface/TTL, FHR or RP failure |

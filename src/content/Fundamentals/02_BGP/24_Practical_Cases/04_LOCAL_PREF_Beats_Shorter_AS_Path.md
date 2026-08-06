@@ -22,4 +22,3 @@ BGP selection is lexicographic. A later shorter AS path cannot overcome an earli
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

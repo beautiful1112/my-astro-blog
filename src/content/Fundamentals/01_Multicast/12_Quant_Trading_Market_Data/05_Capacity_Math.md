@@ -1,9 +1,5 @@
 # Multicast capacity math
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Do not size only by average Mbps.
 
 ```text

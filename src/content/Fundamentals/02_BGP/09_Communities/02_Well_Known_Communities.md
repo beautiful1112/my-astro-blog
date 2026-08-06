@@ -13,4 +13,3 @@ Do not infer behavior from a text label alone. Confirm the numeric value, platfo
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # IGMPv3 source-filter protocol process
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv3 has two reporting paths:
 
 - **State-Change Reports** are triggered by a local interface-state change.

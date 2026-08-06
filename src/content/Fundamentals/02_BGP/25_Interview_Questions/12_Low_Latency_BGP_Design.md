@@ -10,4 +10,3 @@ I would classify every peer and critical prefix, encode deterministic path inten
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

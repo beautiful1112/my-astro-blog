@@ -1,9 +1,5 @@
 # Default Layer-2 multicast behavior
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 A switch can learn where unicast source MACs live, but a multicast destination does not identify one port. Without multicast-aware state, bridging normally floods multicast to eligible ports in the VLAN.
 
 IGMP/MLD snooping examines membership control packets and builds entries such as:

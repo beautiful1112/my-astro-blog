@@ -1,9 +1,5 @@
 # Reading PIM-SM state
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Multicast route output is a compressed view of several state machines. Flags and names vary by platform, so first identify the invariant: which tree the entry represents, its root, the expected incoming interface, and the reasons for every outgoing interface.
 
 ```text

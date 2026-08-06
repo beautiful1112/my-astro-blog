@@ -14,4 +14,3 @@ Keep responsibilities explicit: the IGP reaches the BGP next hop; BGP decides wh
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

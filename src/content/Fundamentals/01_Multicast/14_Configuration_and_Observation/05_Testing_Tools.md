@@ -1,9 +1,5 @@
 # Safe multicast testing tools
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - sequenced purpose-built sender/receiver;
 - `iperf` UDP where the installed version supports multicast;
 - `socat` or small socket programs for joins;

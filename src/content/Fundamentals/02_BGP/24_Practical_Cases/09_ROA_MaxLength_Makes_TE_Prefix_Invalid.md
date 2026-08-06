@@ -22,4 +22,3 @@ Origin validation checks both ASN and maximum length.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # A/B line arbitration
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```text
 Expected=100
 A:100 -> process; Expected=101

@@ -1,9 +1,5 @@
 # PIM timers and convergence
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM is mostly soft state. Timers provide recovery when explicit control messages are lost, while triggered messages make normal changes faster. The RFC values below are reference defaults; platform features and configuration can change effective behavior.
 
 | Function | Common RFC value | Failure it detects or bounds |

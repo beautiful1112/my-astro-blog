@@ -8,4 +8,3 @@ A refresh can cause significant CPU and update load. Change control should estim
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

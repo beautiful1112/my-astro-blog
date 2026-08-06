@@ -10,4 +10,3 @@ LLGR is a continuity mechanism, not a substitute for redundant paths.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

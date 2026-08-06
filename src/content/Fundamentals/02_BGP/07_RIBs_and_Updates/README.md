@@ -1,7 +1,5 @@
 # 07. RIBs and UPDATE processing
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Adj-RIB-In, Loc-RIB, and Adj-RIB-Out](01_Three_Conceptual_RIBs.md)

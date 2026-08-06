@@ -1,9 +1,5 @@
 # Define the exact multicast flow
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Start every incident with:
 
 ```text

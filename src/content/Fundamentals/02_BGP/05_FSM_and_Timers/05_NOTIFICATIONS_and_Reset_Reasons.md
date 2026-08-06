@@ -6,4 +6,3 @@ Modern error handling avoids resetting an entire session for some malformed UPDA
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

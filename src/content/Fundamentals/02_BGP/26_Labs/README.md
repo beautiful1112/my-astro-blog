@@ -1,7 +1,5 @@
 # 26. Labs and mastery exercises
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Lab: Basic eBGP Origination](01_Basic_eBGP_Origination.md)

@@ -8,4 +8,3 @@ Treat ASN translation as policy with loop-prevention consequences, not cosmetic 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

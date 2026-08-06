@@ -1,9 +1,5 @@
 # Multicast security controls
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - Prefer SSM and allowlist `(S,G)` tuples.
 - Validate source addresses and block unauthorized multicast senders.
 - Apply group/source boundaries and ACLs between zones.

@@ -1,7 +1,5 @@
 # 02. Fundamentals
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [What BGP is](01_What_BGP_Is.md)

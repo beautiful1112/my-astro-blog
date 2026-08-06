@@ -1,9 +1,5 @@
 # IGMP/MLD snooping complete process
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMP/MLD snooping constrains Layer-2 multicast by observing membership control traffic. It is not a routing protocol: it derives `(VLAN,G)` or `(VLAN,S,G)` replication state inside a bridge domain.
 
 ## State the switch needs

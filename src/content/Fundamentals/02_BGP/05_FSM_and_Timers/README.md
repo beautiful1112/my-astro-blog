@@ -1,7 +1,5 @@
 # 05. Finite state machine and timers
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP finite-state machine](01_Finite_State_Machine.md)

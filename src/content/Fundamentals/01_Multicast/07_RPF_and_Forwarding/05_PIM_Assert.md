@@ -1,9 +1,5 @@
 # PIM Assert on shared LANs
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM Assert prevents duplicate forwarding when more than one router sends the same multicast flow onto a multiaccess LAN. It is a reactive, per-tree election triggered when a router receives a packet from that LAN even though the LAN is in its own outgoing-interface list.
 
 ```text

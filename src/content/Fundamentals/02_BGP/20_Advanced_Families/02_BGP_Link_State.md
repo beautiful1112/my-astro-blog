@@ -10,4 +10,3 @@ RFC 9552 is the current base BGP-LS specification and obsoletes RFC 7752.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

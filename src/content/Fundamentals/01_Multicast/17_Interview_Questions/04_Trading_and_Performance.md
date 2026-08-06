@@ -1,9 +1,5 @@
 # Interview questions: trading and performance
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 **Why UDP multicast instead of TCP?** Efficient one-to-many delivery without sender state per receiver or TCP head-of-line blocking; applications recover loss.
 
 **How do A/B feeds help?** Earliest-copy arbitration uses the other independent line to fill path-specific gaps.

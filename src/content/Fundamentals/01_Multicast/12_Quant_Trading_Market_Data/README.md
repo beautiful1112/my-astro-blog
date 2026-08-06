@@ -1,7 +1,5 @@
 # 12. Quantitative-trading market data
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Why exchanges use multicast](01_Why_Exchanges_Use_Multicast.md)

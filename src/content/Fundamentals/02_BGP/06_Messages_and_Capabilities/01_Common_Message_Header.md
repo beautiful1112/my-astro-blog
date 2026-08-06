@@ -12,4 +12,3 @@ A corrupt length or type is a header error and normally terminates the session.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

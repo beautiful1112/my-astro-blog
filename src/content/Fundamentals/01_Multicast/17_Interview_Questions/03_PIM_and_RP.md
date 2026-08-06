@@ -1,9 +1,5 @@
 # Interview questions: PIM and RP
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 **Why “protocol independent”?** PIM consumes an MRIB supplied by another routing system.
 
 **Describe PIM-SM registration.** FHR encapsulates initial data in Registers to the RP; RP decapsulates, forwards on RPT, joins toward source, then sends Register-Stop.

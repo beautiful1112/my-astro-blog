@@ -10,4 +10,3 @@ Possible reasons include an unresolved next hop, a more-preferred route from ano
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

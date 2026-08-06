@@ -24,4 +24,3 @@ Fail edge A and measure control-plane and traffic-loss intervals before and afte
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # Router and switch state to inspect
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Cisco-like commands:
 
 ```text

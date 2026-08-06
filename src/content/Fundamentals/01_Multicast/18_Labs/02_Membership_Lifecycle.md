@@ -1,9 +1,5 @@
 # Lab 2: Membership lifecycle
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 1. Capture IGMP.
 2. Join an ASM group and identify unsolicited reports.
 3. Observe General Queries and randomized responses.

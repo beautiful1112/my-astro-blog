@@ -1,7 +1,5 @@
 # 08. Path attributes
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Path-Attribute Categories and Flags](01_Attribute_Categories_and_Flags.md)

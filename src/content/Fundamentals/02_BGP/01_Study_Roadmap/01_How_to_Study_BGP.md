@@ -18,4 +18,3 @@ Never treat “the BGP session is Established” as proof that useful routing is
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

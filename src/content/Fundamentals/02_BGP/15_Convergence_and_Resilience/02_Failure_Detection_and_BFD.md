@@ -13,4 +13,3 @@ Tune detection from a loss-budget requirement and platform scale test. For tradi
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

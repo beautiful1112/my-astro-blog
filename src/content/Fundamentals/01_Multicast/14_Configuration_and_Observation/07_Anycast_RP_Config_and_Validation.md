@@ -1,9 +1,5 @@
 # Anycast RP configuration and validation pattern
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 An Anycast-RP configuration has a shared address plane and a unique synchronization plane. The following pseudoconfiguration emphasizes invariants rather than one vendor's exact syntax.
 
 ```text

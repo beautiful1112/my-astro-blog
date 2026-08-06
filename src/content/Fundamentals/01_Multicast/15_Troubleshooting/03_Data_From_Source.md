@@ -1,9 +1,5 @@
 # Follow data from source downstream
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 1. Verify `(S,G,port)`, egress interface, TTL, and packet size at the source.
 2. Confirm the FHR sees traffic and it passes RPF.
 3. For ASM, verify Registers at the correct RP.

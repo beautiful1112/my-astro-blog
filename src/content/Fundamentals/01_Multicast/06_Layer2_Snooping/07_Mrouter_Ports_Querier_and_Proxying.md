@@ -1,9 +1,5 @@
 # Mrouter ports, snooping querier, and proxying
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Listener ports say where receivers live. Multicast-router ports say where membership reports and routed multicast control/data must travel. A switch needs both kinds of state.
 
 ## How mrouter ports are learned

@@ -12,4 +12,3 @@ Collect timestamps and compare both ends. Avoid changing policy until the failin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

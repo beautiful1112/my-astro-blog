@@ -17,4 +17,3 @@ If a legitimate route is rejected for “own AS in path,” investigate accident
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -13,4 +13,3 @@ Inspect the main route table's reason and competing sources. “Best in BGP” m
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

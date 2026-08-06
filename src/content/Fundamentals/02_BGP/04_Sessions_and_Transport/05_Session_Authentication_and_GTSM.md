@@ -12,4 +12,3 @@ Authentication protects the transport peer, not the truth of the routes it is au
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

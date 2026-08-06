@@ -1,9 +1,5 @@
 # Legacy multicast routing protocols
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - **DVMRP:** early distance-vector flood-and-prune protocol.
 - **MOSPF:** OSPF extension computing multicast trees from link-state membership.
 - **CBT:** historical core-based shared-tree protocol.

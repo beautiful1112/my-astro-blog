@@ -15,4 +15,3 @@ Inspect the per-neighbor advertised-route view, not only the local BGP table.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

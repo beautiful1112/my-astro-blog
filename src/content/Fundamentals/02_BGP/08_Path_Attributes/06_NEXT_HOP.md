@@ -17,4 +17,3 @@ Check the exact BGP next hop, its recursive route, the final connected adjacency
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

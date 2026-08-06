@@ -1,9 +1,5 @@
 # IGMP wire facts
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## IPv4 encapsulation
 
 IGMP is carried directly in IPv4:

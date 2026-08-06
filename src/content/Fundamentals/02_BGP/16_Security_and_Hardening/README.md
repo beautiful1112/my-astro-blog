@@ -1,7 +1,5 @@
 # 16. Security and hardening
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP Threat Model](01_BGP_Threat_Model.md)

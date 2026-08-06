@@ -1,7 +1,5 @@
 # 12. eBGP and iBGP
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [eBGP Advertisement and AS Loops](01_eBGP_Advertisement_and_AS_Loops.md)

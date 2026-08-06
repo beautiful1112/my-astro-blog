@@ -17,4 +17,3 @@ Reference set reviewed on 2026-07-24.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -15,4 +15,3 @@ Labeled unicast is not the same as VPN NLRI: VPN routes add an RD and commonly c
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,7 +1,5 @@
 # 14. Configuration and observation
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Linux multicast inspection](01_Linux_Inspection.md)

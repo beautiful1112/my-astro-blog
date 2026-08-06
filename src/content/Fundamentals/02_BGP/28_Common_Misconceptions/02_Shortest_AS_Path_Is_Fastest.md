@@ -8,4 +8,3 @@ Use measured performance and explicit policy for latency intent. Treat AS_PATH a
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

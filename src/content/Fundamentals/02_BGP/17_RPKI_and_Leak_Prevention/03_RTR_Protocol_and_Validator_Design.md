@@ -15,4 +15,3 @@ Validator availability and RPKI data validity are separate. A cache can be reach
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

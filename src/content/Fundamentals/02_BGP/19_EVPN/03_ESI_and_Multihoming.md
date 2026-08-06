@@ -14,4 +14,3 @@ The ESI must be unique to the actual segment. Accidental reuse can merge unrelat
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

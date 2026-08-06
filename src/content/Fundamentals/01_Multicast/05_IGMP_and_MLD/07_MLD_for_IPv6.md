@@ -1,9 +1,5 @@
 # MLD for IPv6
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 MLD is the IPv6 local-link listener protocol. It is carried as ICMPv6 rather than as a separate IPv6 Next Header value.
 
 ## Version mapping

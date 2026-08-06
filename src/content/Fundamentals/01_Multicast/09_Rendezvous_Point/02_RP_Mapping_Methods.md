@@ -1,9 +1,5 @@
 # Group-to-RP mapping methods
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 RP discovery answers one control-plane question: **which RP address should this router use for group `G`?** It does not make the RP reachable, synchronize active-source state between different RPs, or guarantee that every router installed the same mapping.
 
 | Method | Distribution model | Strength | Main failure concern |

@@ -16,4 +16,3 @@ This is not how Internet eBGP normally selects paths. Learn it after mastering s
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

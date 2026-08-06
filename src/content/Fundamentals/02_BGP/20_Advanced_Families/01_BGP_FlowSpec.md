@@ -17,4 +17,3 @@ FlowSpec is more selective than destination RTBH but operationally more complex.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

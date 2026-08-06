@@ -12,4 +12,3 @@ Incorrect relationship classification is a primary cause of route leaks.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,7 +1,5 @@
 # 14. Multiprotocol BGP
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [AFI, SAFI, and Multiprotocol BGP](01_AFI_SAFI_and_MP_Attributes.md)

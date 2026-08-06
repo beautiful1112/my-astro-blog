@@ -22,4 +22,3 @@ MED is mainly a hint between adjacent ASes with multiple interconnects, not a un
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

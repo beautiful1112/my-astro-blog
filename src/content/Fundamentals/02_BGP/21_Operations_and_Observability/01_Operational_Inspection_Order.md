@@ -15,4 +15,3 @@ This avoids the unproductive conclusion “BGP is up, so routing is fine.”
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

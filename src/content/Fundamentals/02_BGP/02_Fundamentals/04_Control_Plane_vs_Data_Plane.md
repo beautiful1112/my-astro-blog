@@ -15,4 +15,3 @@ Troubleshooting must identify the exact stage at which the route stopped progres
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

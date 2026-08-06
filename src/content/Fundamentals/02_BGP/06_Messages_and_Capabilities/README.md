@@ -1,7 +1,5 @@
 # 06. Messages and capabilities
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP common message header](01_Common_Message_Header.md)

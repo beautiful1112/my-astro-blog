@@ -8,4 +8,3 @@ When diagnosing a disappearance, distinguish explicit withdrawal, implicit repla
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

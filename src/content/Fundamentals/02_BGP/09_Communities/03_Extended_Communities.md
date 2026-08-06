@@ -15,4 +15,3 @@ An extended community is a policy attribute. It is not automatically a VPN ident
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

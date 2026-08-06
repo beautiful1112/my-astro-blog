@@ -6,4 +6,3 @@ This improves robustness but can hide a persistent malformed-route problem behin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

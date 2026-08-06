@@ -12,4 +12,3 @@ Preserve accurate clocks and identifiers for router, peer, VRF, AFI/SAFI, RD, an
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

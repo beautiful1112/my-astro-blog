@@ -16,4 +16,3 @@ Compare received, accepted, and advertised counters on both ends.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,7 +1,5 @@
 # 03. ASNs and peering
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Autonomous System numbers](01_AS_Number_Space.md)

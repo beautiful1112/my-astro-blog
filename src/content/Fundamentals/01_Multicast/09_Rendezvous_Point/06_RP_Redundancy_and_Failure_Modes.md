@@ -1,9 +1,5 @@
 # RP redundancy and failure modes
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 RP redundancy must solve three different problems. A design that solves only one can look redundant while new multicast flows still fail.
 
 | Plane | Required outcome | Typical mechanisms |

@@ -1,7 +1,5 @@
 # 21. Operations and observability
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Operational Inspection Order](01_Operational_Inspection_Order.md)

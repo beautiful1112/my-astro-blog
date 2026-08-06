@@ -10,4 +10,3 @@ iBGP does not prepend the local ASN, so a route learned from one ordinary iBGP p
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

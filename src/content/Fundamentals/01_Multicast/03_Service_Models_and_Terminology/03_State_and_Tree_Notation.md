@@ -1,9 +1,5 @@
 # State and tree notation
 
-
-
----
-
 - `(*,G)`: shared state for all sources to group `G`; RPF is normally toward the RP.
 - `(S,G)`: source-specific state; RPF is toward `S`.
 - `(S,G,rpt)`: prune state for a source on the RP tree after SPT transition.

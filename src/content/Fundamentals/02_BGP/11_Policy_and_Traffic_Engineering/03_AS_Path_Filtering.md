@@ -14,4 +14,3 @@ AS-path filtering is not cryptographic validation. A peer can construct a syntac
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

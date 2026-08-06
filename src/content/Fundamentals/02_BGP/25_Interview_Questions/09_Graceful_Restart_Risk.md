@@ -10,4 +10,3 @@ Peers retain stale routes because they assume the restarting router's forwarding
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

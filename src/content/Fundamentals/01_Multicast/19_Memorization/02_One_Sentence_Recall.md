@@ -1,9 +1,5 @@
 # One-sentence recall
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - **IGMP/MLD:** local-link receiver interest.
 - **Snooping:** switch-port replication optimization.
 - **PIM:** router-to-router tree construction.

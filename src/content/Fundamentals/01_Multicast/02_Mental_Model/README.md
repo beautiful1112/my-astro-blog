@@ -1,7 +1,5 @@
 # 02. Essential mental model
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [What multicast is](01_What_Multicast_Is.md)

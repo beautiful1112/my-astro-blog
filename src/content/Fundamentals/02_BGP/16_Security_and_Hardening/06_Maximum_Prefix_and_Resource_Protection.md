@@ -16,4 +16,3 @@ For a default-only peer, a threshold of hundreds is already suspicious; for a fu
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

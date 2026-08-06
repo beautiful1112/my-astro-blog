@@ -6,4 +6,3 @@ Four-octet speakers advertise the 4-byte ASN capability. When needed for an old 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

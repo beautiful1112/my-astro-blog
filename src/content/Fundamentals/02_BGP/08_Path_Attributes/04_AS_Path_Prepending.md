@@ -16,4 +16,3 @@ For low-latency trading connectivity, communities documented by a provider often
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

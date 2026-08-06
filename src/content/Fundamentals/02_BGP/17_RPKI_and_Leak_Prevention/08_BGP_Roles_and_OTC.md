@@ -14,4 +14,3 @@ Deployment requires compatible implementations and correct role assignment. It s
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

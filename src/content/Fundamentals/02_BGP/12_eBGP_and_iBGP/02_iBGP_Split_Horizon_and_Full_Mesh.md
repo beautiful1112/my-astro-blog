@@ -12,4 +12,3 @@ At scale, the full mesh becomes operationally expensive. Route reflectors reduce
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

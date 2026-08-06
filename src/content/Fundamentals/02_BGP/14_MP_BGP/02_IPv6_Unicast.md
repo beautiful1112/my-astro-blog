@@ -14,4 +14,3 @@ Dual-stack peers may use one or separate transport sessions depending on platfor
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

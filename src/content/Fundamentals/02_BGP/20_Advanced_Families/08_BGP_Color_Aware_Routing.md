@@ -15,4 +15,3 @@ RFC 9871 is Experimental, published in November 2025. Treat implementation suppo
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -14,4 +14,3 @@ Separate market-data ingestion, order entry, and bulk traffic policies; their to
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -13,4 +13,3 @@ Treat every family as a separate routing context with its own activation, import
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

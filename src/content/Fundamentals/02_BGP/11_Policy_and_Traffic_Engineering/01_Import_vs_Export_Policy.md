@@ -22,4 +22,3 @@ Write policy from an explicit default-deny posture. A session becoming Establish
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

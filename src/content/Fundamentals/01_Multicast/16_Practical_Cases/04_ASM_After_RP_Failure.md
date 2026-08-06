@@ -1,9 +1,5 @@
 # Case 4: Existing ASM data survives RP failure
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Symptom
 
 Established receivers continue receiving `S -> G`, but a new receiver gets nothing. Restarting an existing receiver can also make it fail. Monitoring still reports normal packet rate on the established receiver and the RP loopback may answer ping.

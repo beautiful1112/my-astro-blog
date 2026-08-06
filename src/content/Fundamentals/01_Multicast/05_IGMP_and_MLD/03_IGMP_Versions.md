@@ -1,9 +1,5 @@
 # IGMPv1, IGMPv2, and IGMPv3
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Capability comparison
 
 | Capability | IGMPv1 | IGMPv2 | IGMPv3 |

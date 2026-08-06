@@ -1,9 +1,5 @@
 # PIM Hello, DR election, and LAN behavior
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM Hellos establish per-interface neighbor state and advertise capabilities. They are sent periodically to the all-PIM-routers link-local group and are not forwarded beyond the link.
 
 ## Important Hello options

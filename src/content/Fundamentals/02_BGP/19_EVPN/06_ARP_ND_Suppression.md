@@ -14,4 +14,3 @@ Suppression reduces flooding; it does not eliminate the need for correct endpoin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

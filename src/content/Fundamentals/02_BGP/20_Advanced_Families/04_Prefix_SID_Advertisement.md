@@ -16,4 +16,3 @@ Conflicting or reused SID allocations can create forwarding to the wrong endpoin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

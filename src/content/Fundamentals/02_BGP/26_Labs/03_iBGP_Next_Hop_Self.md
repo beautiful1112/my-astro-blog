@@ -24,4 +24,3 @@ Instead of next-hop-self, advertise the external link into the IGP and compare t
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

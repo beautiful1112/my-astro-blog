@@ -14,4 +14,3 @@ Anycast proximity is routing proximity, not guaranteed geographic distance or lo
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -10,4 +10,3 @@ Operationally, correlate update timestamps with detection, best-path changes, an
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

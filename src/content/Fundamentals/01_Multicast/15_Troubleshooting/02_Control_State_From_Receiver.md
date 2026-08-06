@@ -1,9 +1,5 @@
 # Follow control state from receiver upstream
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 1. Did the socket join the intended interface?
 2. Is the IGMP/MLD Report visible on the access link?
 3. Does the switch have the listener and mrouter ports?

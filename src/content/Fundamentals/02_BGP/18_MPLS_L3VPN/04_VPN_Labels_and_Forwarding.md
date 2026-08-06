@@ -13,4 +13,3 @@ Trace labels hop by hop when IP-only diagnostics stop at the provider edge.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

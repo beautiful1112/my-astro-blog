@@ -23,4 +23,3 @@ An earlier attribute prevents later attributes from being considered. MED scope 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

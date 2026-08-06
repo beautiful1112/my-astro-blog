@@ -1,9 +1,5 @@
 # Minimal Python multicast lab
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Learning receiver—not a production low-latency handler:
 
 ```python

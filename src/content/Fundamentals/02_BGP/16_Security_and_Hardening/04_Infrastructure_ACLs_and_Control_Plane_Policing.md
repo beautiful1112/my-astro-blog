@@ -14,4 +14,3 @@ Measure normal and failure traffic, then set class-specific thresholds with head
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

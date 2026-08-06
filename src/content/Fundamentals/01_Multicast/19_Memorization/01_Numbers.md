@@ -1,9 +1,5 @@
 # Numbers to memorize
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```text
 IPv4 multicast:       224.0.0.0/4
 IPv4 SSM:             232.0.0.0/8

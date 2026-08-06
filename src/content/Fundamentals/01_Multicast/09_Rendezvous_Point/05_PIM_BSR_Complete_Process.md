@@ -1,9 +1,5 @@
 # PIM Bootstrap Router complete process
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 The PIM Bootstrap Router mechanism dynamically distributes group-to-RP mappings inside a PIM domain. It has two distinct elections: one router becomes the BSR, while one or more candidate RPs advertise the group ranges they can serve.
 
 ## Roles

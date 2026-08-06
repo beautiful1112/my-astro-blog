@@ -12,4 +12,3 @@ Multiple prefixes sharing identical attributes can be packed into one UPDATE. Ch
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

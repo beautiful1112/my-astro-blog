@@ -13,4 +13,3 @@ Do not test only the advertised destination. Reachability to the next hop is the
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

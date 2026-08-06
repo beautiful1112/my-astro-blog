@@ -1,9 +1,5 @@
 # PIM Dense Mode
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM Dense Mode assumes receivers are present on most branches. It starts from data and removes unwanted branches, the opposite of sparse mode's explicit-join behavior.
 
 ## Flood-and-prune process

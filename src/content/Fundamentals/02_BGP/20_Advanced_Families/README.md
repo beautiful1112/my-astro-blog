@@ -1,7 +1,5 @@
 # 20. Advanced families and extensions
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP FlowSpec](01_BGP_FlowSpec.md)

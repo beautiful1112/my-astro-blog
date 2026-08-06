@@ -1,9 +1,5 @@
 # The three multicast control planes
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 | Plane | Scope | Main state | Question answered |
 |---|---|---|---|
 | Host membership | host to local router | IGMP for IPv4; MLD for IPv6 | Does this local link have listeners for `G` or `(S,G)`? |

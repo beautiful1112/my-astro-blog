@@ -1,9 +1,5 @@
 # IPv4 multicast address space
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IPv4 multicast is `224.0.0.0/4` (`224.0.0.0` through `239.255.255.255`). Important blocks:
 
 | Range | Meaning |

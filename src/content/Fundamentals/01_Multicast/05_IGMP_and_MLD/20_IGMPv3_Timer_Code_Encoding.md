@@ -1,9 +1,5 @@
 # IGMPv3 Max Resp Code and QQIC encoding
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv3 uses compact floating-style encodings so one-byte fields can represent both fine short intervals and large values.
 
 ## Max Resp Code

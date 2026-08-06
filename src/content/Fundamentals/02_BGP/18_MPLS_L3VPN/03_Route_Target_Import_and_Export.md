@@ -15,4 +15,3 @@ A missing route can exist in VPNv4 BGP yet be absent from a VRF because the RT d
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

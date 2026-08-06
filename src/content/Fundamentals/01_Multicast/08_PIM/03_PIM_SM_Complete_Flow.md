@@ -1,9 +1,5 @@
 # PIM Sparse Mode complete flow
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM-SM assumes receivers are sparse and sends no data onto a branch until explicit interest exists. In Any-Source Multicast (ASM), an RP gives unknown sources and unknown receivers a common meeting point. The phases below are logical phases: sources and receivers can appear in either order, and several phases can run at once for different `(S,G)` flows.
 
 ## Example topology

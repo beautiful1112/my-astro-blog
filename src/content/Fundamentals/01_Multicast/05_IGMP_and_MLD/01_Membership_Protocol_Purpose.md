@@ -1,9 +1,5 @@
 # What membership protocols do
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMP for IPv4 and MLD for IPv6 tell multicast routers what receiver interest exists on a **directly attached link**.
 
 They answer:

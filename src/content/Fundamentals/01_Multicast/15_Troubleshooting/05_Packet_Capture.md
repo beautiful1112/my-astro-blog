@@ -1,9 +1,5 @@
 # Packet-capture interpretation
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Useful Wireshark filters:
 
 ```text

@@ -16,4 +16,3 @@ Always document whether missing MED is treated as zero, worst, or another value 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

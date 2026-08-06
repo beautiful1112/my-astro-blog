@@ -1,9 +1,5 @@
 # MTU and fragmentation
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Avoid IP fragmentation for market data:
 
 - one missing fragment loses the complete datagram;

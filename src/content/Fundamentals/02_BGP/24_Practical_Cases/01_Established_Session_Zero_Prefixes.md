@@ -22,4 +22,3 @@ Session state and route exchange are separate. Never solve this by adding permit
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

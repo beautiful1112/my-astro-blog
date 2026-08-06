@@ -22,4 +22,3 @@ Use these terms precisely in incident notes.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

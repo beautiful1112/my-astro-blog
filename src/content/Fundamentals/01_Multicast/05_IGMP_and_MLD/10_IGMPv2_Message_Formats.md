@@ -1,9 +1,5 @@
 # IGMPv2 message formats
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv2 keeps the fixed **8-byte** size but redefines the first byte as a full message Type and uses the second byte for a response-time value.
 
 ~~~text

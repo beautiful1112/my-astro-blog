@@ -1,9 +1,5 @@
 # Five-step interview narrative
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 When asked how multicast works:
 
 1. A sender transmits one best-effort packet to `G`; it need not join.

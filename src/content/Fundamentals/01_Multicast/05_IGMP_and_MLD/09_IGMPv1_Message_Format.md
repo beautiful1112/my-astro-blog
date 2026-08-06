@@ -1,9 +1,5 @@
 # IGMPv1 message format
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv1 uses one fixed **8-byte** message layout for both Query and Report.
 
 ~~~text

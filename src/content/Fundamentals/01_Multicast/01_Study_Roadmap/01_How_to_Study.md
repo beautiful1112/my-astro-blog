@@ -1,9 +1,5 @@
 # How to study multicast
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Use three passes:
 
 1. Build the mental model: packet flow, service models, membership, Layer 2, and RPF.

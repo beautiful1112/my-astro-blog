@@ -14,4 +14,3 @@ Capabilities are directional where defined. ADD-PATH, for example, can be send, 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

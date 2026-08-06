@@ -13,4 +13,3 @@ Monitor both route count and update rate. A peer can remain below the maximum wh
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

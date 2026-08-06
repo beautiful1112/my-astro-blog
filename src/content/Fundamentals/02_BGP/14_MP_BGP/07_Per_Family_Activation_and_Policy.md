@@ -15,4 +15,3 @@ This explains the common symptom “the BGP session is up, but no VPNv4/IPv6/EVP
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

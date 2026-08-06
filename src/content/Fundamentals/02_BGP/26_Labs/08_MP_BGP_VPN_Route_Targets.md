@@ -20,4 +20,3 @@ Two PEs share an MPLS/SR underlay and each hosts two VRFs.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

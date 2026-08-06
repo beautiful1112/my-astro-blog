@@ -19,4 +19,3 @@ Confederations and route reflection can be combined, but most designs should use
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

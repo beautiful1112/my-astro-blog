@@ -1,9 +1,5 @@
 # Follow-up discussion prompts
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 1. Walk through an IGMPv3 source-specific join capture.
 2. Derive any IPv4 multicast MAC without a calculator.
 3. Draw FHR, RP, transit, and LHR state before and after SPT switchover.

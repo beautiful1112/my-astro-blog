@@ -1,9 +1,5 @@
 # IGMPv3 report size, packing, and MTU behavior
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv3 Reports are variable because they can bundle many groups and sources.
 
 ## Size formulas

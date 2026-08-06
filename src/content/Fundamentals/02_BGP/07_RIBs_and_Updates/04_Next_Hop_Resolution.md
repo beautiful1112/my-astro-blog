@@ -6,4 +6,3 @@ Resolution may be recursive through an IGP route, tunnel, MPLS transport, or ano
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

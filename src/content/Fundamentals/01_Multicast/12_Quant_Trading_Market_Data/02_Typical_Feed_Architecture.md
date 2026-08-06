@@ -1,9 +1,5 @@
 # Typical market-data architecture
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```mermaid
 flowchart LR
     E["Exchange engine"] --> A["Feed A"]

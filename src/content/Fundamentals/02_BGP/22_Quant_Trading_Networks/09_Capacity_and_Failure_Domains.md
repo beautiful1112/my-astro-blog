@@ -14,4 +14,3 @@ BGP can select a backup that lacks capacity or shares the same cut fiber. Model 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

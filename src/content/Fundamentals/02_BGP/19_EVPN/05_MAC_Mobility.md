@@ -14,4 +14,3 @@ Duplicate-MAC detection can freeze or suppress learning after a threshold. Durin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

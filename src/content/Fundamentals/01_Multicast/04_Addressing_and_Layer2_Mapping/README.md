@@ -1,7 +1,5 @@
 # 04. Addressing and Layer-2 mapping
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [IPv4 multicast address space](01_IPv4_Multicast_Address_Space.md)

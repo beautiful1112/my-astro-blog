@@ -1,9 +1,5 @@
 # IGMPv3 router-side listener state
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 An IGMPv3 router aggregates all host reports on a link into one conceptual record per group:
 
 **(multicast address, group timer, filter mode, source records)**

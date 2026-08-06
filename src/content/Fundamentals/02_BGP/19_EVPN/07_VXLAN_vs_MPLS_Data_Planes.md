@@ -15,4 +15,3 @@ When routes look correct but traffic fails, verify underlay reachability, tunnel
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

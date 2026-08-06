@@ -15,4 +15,3 @@ When troubleshooting, inspect all paths on the RR—not only what the client rec
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # PIM BSR configuration pattern
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 This Cisco IOS-like example illustrates roles and policy; exact commands and defaults vary by platform.
 
 ```text

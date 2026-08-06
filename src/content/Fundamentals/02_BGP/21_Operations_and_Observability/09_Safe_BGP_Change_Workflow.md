@@ -16,4 +16,3 @@ For high-value trading paths, schedule around market activity and define abort t
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

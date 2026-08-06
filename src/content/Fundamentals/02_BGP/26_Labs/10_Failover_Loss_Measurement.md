@@ -23,4 +23,3 @@ The operational metric is data-plane loss under each failure model, not one prot
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

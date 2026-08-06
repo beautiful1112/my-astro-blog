@@ -10,4 +10,3 @@ Use unique managed keys, protected delivery, coordinated rotation, and tested fa
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

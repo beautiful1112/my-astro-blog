@@ -8,4 +8,3 @@ RPKI origin validation answers “is this origin authorized by current validated
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

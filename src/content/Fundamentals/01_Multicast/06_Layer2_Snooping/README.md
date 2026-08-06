@@ -1,7 +1,5 @@
 # 06. Layer-2 multicast and snooping
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Default Layer-2 multicast behavior](01_Default_Bridge_Behavior.md)

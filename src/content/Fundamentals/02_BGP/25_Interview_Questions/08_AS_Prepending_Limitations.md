@@ -10,4 +10,3 @@ Remote networks may apply LOCAL_PREF before path length, use a different provide
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

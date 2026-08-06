@@ -1,7 +1,5 @@
 # 11. Policy and traffic engineering
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Import vs Export Policy](01_Import_vs_Export_Policy.md)

@@ -1,9 +1,5 @@
 # IPv4-to-Ethernet multicast mapping
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IPv4 multicast maps to `01:00:5e:00:00:00` through `01:00:5e:7f:ff:ff`. Copy only the **low 23 bits** of the IPv4 group.
 
 For `239.1.2.3`:

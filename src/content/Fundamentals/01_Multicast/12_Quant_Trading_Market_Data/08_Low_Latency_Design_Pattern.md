@@ -1,9 +1,5 @@
 # Low-latency multicast design pattern
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 For a controlled one-source feed with many in-facility receivers:
 
 - SSM and IGMPv3;

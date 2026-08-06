@@ -1,7 +1,5 @@
 # 21. Primary references
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Core multicast standards](01_Core_Standards.md)

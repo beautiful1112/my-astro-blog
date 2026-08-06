@@ -1,9 +1,5 @@
 # Querier election and the works-then-stops failure
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Election
 
 Every IGMPv2/v3 multicast router initially considers itself the querier. A router that hears a valid General Query from a **lower source IPv4 address** becomes non-querier. If that lower-address querier is not heard for the Other Querier Present Interval, the router resumes querying.

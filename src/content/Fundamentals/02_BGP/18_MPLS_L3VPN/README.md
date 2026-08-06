@@ -1,7 +1,5 @@
 # 18. MPLS Layer 3 VPN
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [MPLS L3VPN Control Plane](01_L3VPN_Control_Plane.md)

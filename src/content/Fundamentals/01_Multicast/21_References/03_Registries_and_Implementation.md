@@ -1,9 +1,5 @@
 # Registries and implementation guidance
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - [IANA IPv4 Multicast Registry](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)
 - [IANA IPv6 Multicast Registry](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml)
 - [IANA Ethernet Numbers](https://www.iana.org/assignments/ethernet-numbers/ethernet-numbers.xhtml)

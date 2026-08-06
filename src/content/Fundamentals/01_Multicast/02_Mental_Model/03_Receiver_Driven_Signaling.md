@@ -1,9 +1,5 @@
 # Receiver-driven signaling and data direction
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Receiver interest and data move in opposite conceptual directions:
 
 ```mermaid

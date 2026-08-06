@@ -14,4 +14,3 @@ Maintain source-of-truth objects and generate filters where possible. When chang
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

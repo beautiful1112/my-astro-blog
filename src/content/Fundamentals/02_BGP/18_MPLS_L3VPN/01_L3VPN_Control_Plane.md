@@ -13,4 +13,3 @@ The separation of VPN service routes from the provider core is a major scaling p
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

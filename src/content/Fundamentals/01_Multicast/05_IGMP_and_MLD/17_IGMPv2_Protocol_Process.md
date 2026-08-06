@@ -1,9 +1,5 @@
 # IGMPv2 join, query, and leave process
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## Join and refresh
 
 The join/periodic process resembles v1:

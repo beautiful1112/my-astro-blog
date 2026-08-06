@@ -13,4 +13,3 @@ Multihop improves session resilience but can conceal broken forwarding paths if 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

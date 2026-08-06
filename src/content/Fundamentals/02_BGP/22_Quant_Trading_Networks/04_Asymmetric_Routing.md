@@ -16,4 +16,3 @@ Avoid forcing symmetry unless the application or security architecture actually 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

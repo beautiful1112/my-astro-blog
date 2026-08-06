@@ -15,4 +15,3 @@ The target metric is maximum packet-loss interval under a defined failure, not m
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

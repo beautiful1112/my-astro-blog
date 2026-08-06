@@ -1,7 +1,5 @@
 # 17. Interview questions
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Interview questions: fundamentals](01_Fundamentals.md)

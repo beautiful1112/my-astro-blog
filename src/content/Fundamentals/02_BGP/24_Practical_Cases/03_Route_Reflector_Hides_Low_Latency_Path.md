@@ -22,4 +22,3 @@ Route reflection changes visibility, so RR location can affect data-plane qualit
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -10,4 +10,3 @@ An RR usually selects one best path and advertises it to clients. A client may n
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -6,4 +6,3 @@ NOTIFICATION contains error code, subcode, and optional diagnostic data. Once se
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

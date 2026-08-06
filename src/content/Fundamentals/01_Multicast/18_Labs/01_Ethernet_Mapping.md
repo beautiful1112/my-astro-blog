@@ -1,9 +1,5 @@
 # Lab 1: Ethernet mapping
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Calculate the destination MAC for:
 
 ```text

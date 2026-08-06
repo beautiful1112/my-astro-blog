@@ -10,4 +10,3 @@ I would select the exact AFI/SAFI and check negotiated capability, family activa
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

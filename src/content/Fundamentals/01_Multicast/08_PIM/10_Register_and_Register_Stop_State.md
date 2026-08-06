@@ -1,9 +1,5 @@
 # PIM Register and Register-Stop state
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 PIM Register messages solve ASM source discovery. The source-side DR (FHR) unicasts initial source packets to the RP, allowing the RP to learn `(S,G)` even when no native multicast tree yet connects them.
 
 ## Data Register format and path

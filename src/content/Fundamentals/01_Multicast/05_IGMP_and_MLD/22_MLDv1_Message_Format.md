@@ -1,9 +1,5 @@
 # MLDv1 message format
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 MLDv1 uses ICMPv6 Query, Report, and Done messages with a fixed **24-byte ICMPv6 body**.
 
 ~~~text

@@ -1,9 +1,5 @@
 # Minimal PIM-SM ASM configuration pattern
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```text
 ip multicast-routing
 ip pim rp-address 10.255.0.1

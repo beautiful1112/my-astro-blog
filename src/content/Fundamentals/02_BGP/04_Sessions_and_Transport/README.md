@@ -1,7 +1,5 @@
 # 04. Sessions and transport
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP transport over TCP 179](01_TCP_179.md)

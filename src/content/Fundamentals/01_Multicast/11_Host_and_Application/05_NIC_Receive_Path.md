@@ -1,9 +1,5 @@
 # NIC receive path
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ```text
 wire -> PHY/MAC -> NIC multicast filter -> RX descriptor ring
      -> driver/NAPI -> kernel stack -> socket receive queue

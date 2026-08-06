@@ -1,9 +1,5 @@
 # Core multicast standards
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - [RFC 1112 - Host Extensions for IP Multicasting](https://www.rfc-editor.org/rfc/rfc1112.html)
 - [RFC 2236 - IGMPv2](https://www.rfc-editor.org/rfc/rfc2236.html)
 - [RFC 3376 - IGMPv3](https://www.rfc-editor.org/rfc/rfc3376.html)

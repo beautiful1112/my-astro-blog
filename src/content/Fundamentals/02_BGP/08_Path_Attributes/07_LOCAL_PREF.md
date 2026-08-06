@@ -18,4 +18,3 @@ If the lowest-latency circuit should be primary, encode that intent explicitly a
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

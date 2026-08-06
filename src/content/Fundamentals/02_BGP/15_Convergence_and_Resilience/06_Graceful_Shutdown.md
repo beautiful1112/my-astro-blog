@@ -15,4 +15,3 @@ Graceful shutdown addresses planned maintenance. It does not improve unplanned f
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

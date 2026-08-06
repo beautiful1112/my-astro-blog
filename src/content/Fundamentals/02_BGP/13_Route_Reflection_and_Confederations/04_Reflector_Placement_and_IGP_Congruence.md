@@ -15,4 +15,3 @@ The RR need not forward user traffic, but its topology perspective still influen
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

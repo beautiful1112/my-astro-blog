@@ -1,7 +1,5 @@
 # 17. RPKI and route-leak prevention
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [RPKI, ROAs, and VRPs](01_RPKI_ROAs_and_VRPs.md)

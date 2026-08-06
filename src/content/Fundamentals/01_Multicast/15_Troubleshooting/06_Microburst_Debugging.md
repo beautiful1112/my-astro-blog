@@ -1,9 +1,5 @@
 # Debugging multicast microbursts
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Correlate:
 
 - exchange/application sequences;

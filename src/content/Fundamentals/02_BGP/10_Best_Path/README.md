@@ -1,7 +1,5 @@
 # 10. Best-path selection
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Eligibility Before Best-Path Selection](01_Eligibility_Before_Selection.md)

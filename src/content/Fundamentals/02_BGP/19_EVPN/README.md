@@ -1,7 +1,5 @@
 # 19. Ethernet VPN
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [What EVPN Provides](01_What_EVPN_Provides.md)

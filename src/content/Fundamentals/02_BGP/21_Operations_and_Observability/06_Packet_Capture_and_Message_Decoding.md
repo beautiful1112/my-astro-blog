@@ -16,4 +16,3 @@ For a reset, capture both directions and correlate packet time with router logs.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

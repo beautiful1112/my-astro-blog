@@ -16,4 +16,3 @@ Do not “fix” the symptom with permit-any. Prove the route is authorized and 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

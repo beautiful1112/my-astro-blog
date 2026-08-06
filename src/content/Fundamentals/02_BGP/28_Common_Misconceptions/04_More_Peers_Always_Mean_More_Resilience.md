@@ -15,4 +15,3 @@ Resilience comes from independent failure domains, sufficient backup capacity, u
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -17,4 +17,3 @@ Baseline per peer and family. Alert on deviations from the peer's own normal beh
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

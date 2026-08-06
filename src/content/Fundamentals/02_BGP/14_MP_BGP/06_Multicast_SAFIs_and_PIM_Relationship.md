@@ -15,4 +15,3 @@ Keep the control roles separate when debugging: membership, source/tree signalin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -14,4 +14,3 @@ Trace a missing route as received → accepted → best → installed → advert
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

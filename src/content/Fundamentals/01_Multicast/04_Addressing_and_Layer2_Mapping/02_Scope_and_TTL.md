@@ -1,9 +1,5 @@
 # Multicast scope and TTL
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - Address scope defines where a group is valid and must be bounded.
 - TTL limits the routed hop count of a particular IPv4 packet; IPv6 uses Hop Limit.
 - `224.0.0.0/24` is never routed regardless of TTL.

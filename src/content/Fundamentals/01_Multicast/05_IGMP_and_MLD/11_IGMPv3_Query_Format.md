@@ -1,9 +1,5 @@
 # IGMPv3 Membership Query format
 
-
-
----
-
 An IGMPv3 Query has a 12-byte base followed by **N** IPv4 source addresses.
 
 ~~~text

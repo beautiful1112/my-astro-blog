@@ -16,4 +16,3 @@ In latency-sensitive environments, two equal control-plane paths may have unequa
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

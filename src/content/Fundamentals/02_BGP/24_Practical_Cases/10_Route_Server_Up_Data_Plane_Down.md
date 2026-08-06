@@ -22,4 +22,3 @@ Route-server control-plane success does not prove participant-to-participant for
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

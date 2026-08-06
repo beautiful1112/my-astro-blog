@@ -1,9 +1,5 @@
 # IGMP and MLD message-destination matrix
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 ## IPv4 IGMP
 
 | Version/message | Network-layer destination | Group inside message |

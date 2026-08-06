@@ -1,7 +1,5 @@
 # 15. Convergence and resilience
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP Convergence Model](01_BGP_Convergence_Model.md)

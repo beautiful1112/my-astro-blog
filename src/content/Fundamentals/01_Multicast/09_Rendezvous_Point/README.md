@@ -1,7 +1,5 @@
 # 09. Rendezvous Points and resilience
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Rendezvous Point purpose](01_RP_Purpose.md)

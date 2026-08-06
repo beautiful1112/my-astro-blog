@@ -18,4 +18,3 @@ State transitions plus last-reset reason provide a faster diagnosis than repeate
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

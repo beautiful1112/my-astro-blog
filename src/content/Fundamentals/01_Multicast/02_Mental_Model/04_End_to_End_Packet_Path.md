@@ -1,9 +1,5 @@
 # End-to-end packet path
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 For UDP from `192.0.2.10` to `232.10.10.10:15000`:
 
 1. The application selects an egress interface and multicast TTL.

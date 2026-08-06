@@ -1,7 +1,5 @@
 # 11. Host, transport, and application behavior
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [UDP and multicast](01_UDP_and_Multicast.md)

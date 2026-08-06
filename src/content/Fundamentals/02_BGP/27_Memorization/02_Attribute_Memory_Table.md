@@ -19,4 +19,3 @@ Always verify the platform's actual sequence.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

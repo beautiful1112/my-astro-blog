@@ -22,4 +22,3 @@ Fast detection that creates false failures reduces availability.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

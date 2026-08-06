@@ -14,4 +14,3 @@ The same customer prefix can exist in multiple VPNs because different RDs make t
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

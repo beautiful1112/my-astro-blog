@@ -1,9 +1,5 @@
 # Multicast Source Discovery Protocol
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 MSDP distributes knowledge of active IPv4 ASM sources between PIM-SM domains or physical members of an Anycast-RP service. It does not build multicast trees; it tells an RP that source `S` is active for group `G`, after which ordinary PIM can join the source.
 
 ## Session and messages

@@ -8,4 +8,3 @@ Unsupported or malformed parameters can trigger an OPEN Message Error and sessio
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

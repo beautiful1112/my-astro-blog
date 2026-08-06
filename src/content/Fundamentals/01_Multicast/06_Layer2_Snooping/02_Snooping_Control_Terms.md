@@ -1,9 +1,5 @@
 # Snooping control terms
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - **Mrouter port:** port toward a multicast router/querier, learned from Queries/PIM or configured.
 - **Listener port:** port on which a valid Report was observed.
 - **Snooping querier:** switch function generating Queries when no L3 multicast router exists; it need not route data.

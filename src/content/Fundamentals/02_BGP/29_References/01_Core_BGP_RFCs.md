@@ -16,4 +16,3 @@ Read RFC 4271 first, then use later RFCs to update the original behavior.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

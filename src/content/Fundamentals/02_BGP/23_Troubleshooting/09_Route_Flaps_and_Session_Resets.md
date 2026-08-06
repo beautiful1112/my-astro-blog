@@ -16,4 +16,3 @@ Correlate both peers, interface counters, BFD, CPU, control-plane policers, and 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # Low-latency host considerations
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - **RX rings:** absorb bursts but excessive depth can hide queueing/staleness.
 - **Socket buffer:** protects scheduling pauses but can add latency.
 - **RSS/RPS/XPS:** a single flow may concentrate on one queue.

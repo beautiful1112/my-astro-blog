@@ -20,4 +20,3 @@ Never point a production router at fabricated trust data.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

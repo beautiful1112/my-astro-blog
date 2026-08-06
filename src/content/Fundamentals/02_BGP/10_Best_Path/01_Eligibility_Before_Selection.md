@@ -16,4 +16,3 @@ Troubleshoot in order: received, accepted, eligible, best, installed, and advert
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

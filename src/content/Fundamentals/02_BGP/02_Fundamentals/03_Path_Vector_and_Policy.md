@@ -8,4 +8,3 @@ The same UPDATE can be accepted and preferred by one router, accepted but non-be
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

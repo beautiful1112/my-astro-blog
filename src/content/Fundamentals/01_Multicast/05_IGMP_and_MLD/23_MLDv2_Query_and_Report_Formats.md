@@ -1,9 +1,5 @@
 # MLDv2 Query and Report formats
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 MLDv2 mirrors IGMPv3 semantics with 128-bit IPv6 group/source addresses and ICMPv6 framing.
 
 ## Query

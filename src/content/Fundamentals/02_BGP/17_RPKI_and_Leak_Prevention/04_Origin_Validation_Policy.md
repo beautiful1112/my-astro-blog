@@ -14,4 +14,3 @@ Define behavior when validator sessions fail and test cache expiry.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

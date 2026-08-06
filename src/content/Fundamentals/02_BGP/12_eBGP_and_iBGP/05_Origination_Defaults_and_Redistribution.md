@@ -15,4 +15,3 @@ Default-originate can create a dependency promise: the receiver may send all unk
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

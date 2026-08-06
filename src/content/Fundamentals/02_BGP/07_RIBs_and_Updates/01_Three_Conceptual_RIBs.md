@@ -8,4 +8,3 @@ These are conceptual. An implementation need not store three literal copies. CLI
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

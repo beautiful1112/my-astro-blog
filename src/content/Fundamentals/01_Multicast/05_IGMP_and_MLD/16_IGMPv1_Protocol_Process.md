@@ -1,9 +1,5 @@
 # IGMPv1 join, refresh, and leave process
 
-
-
----
-
 ## Join
 
 When a host first joins G on an interface:

@@ -11,4 +11,3 @@ Redundant RRs may share a cluster ID when they represent one logical cluster, bu
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

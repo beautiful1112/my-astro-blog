@@ -1,9 +1,5 @@
 # IGMPv3 socket state and interface-state merge
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IGMPv3 distinguishes what each application socket requests from what the host reports for the interface.
 
 ## Per-socket state

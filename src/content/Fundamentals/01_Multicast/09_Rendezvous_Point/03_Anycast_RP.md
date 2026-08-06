@@ -1,9 +1,5 @@
 # Anycast RP
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Anycast RP makes several physical routers appear as one logical RP. Every member owns the same anycast RP address, normally on a loopback, and advertises an equal prefix into the routing domain. Each also has a unique address for synchronization and management.
 
 ```text

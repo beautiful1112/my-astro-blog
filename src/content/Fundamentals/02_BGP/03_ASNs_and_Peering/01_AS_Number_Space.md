@@ -8,4 +8,3 @@ Private-use ranges are intended for closed routing domains and must normally be 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

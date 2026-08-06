@@ -1,7 +1,5 @@
 # 27. Memorization sheets
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [BGP Core Facts to Memorize](01_BGP_Core_Facts.md)

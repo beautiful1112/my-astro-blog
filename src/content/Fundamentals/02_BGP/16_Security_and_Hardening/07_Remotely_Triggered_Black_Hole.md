@@ -15,4 +15,3 @@ RTBH preserves surrounding infrastructure by sacrificing reachability to the att
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

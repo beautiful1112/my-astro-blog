@@ -1,9 +1,5 @@
 # Multicast socket operations
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Receiver sequence:
 
 1. create a datagram socket;

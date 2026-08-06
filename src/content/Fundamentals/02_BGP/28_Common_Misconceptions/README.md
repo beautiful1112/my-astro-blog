@@ -1,7 +1,5 @@
 # 28. Common misconceptions
 
-[← BGP master index](../BGP_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Misconception: Established Means Routing Works](01_Session_Up_Means_Routing_Works.md)

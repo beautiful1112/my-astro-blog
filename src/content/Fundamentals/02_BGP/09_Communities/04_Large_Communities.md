@@ -16,4 +16,3 @@ Example design: **64500:100:20** could mean “ingress region 100, preference cl
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

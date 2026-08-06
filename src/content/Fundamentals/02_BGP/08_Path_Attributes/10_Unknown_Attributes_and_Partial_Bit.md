@@ -12,4 +12,3 @@ When packet captures show an unknown attribute, decode its flags before declarin
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

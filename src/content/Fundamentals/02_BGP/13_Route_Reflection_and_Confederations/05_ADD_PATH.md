@@ -18,4 +18,3 @@ ADD-PATH does not mean “send every path.” Common modes send best plus backup
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

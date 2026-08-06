@@ -14,4 +14,3 @@ Always attach session state to per-family route and forwarding evidence.
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

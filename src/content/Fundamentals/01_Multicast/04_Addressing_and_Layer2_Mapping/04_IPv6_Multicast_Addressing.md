@@ -1,9 +1,5 @@
 # IPv6 multicast addressing
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 IPv6 multicast is `ff00::/8`:
 
 ```text

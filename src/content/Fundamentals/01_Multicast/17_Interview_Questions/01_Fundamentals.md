@@ -1,9 +1,5 @@
 # Interview questions: fundamentals
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 **Does a sender need to join?** No. Joining controls reception; sending selects a multicast destination and egress interface.
 
 **Why no ARP for the group?** The multicast Ethernet destination is calculated from the group.

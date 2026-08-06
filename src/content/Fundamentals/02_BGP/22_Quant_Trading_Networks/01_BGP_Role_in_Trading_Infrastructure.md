@@ -15,4 +15,3 @@ A good trading design translates business intent—venue priority, circuit class
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

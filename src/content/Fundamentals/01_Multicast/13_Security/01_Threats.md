@@ -1,9 +1,5 @@
 # Multicast security threats
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 - unauthorized receiver joins and data leakage;
 - unauthorized ASM source injection;
 - spoofed source addresses undermining SSM;

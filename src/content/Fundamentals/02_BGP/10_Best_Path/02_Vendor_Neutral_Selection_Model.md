@@ -18,4 +18,3 @@ In interviews, state the common sequence, then explicitly say you would verify t
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

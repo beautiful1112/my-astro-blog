@@ -22,4 +22,3 @@ RPKI can show these routes Valid because their origins remain legitimate. Leak p
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

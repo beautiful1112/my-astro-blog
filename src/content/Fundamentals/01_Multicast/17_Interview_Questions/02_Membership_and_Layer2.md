@@ -1,9 +1,5 @@
 # Interview questions: membership and Layer 2
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 **What does IGMPv3 add?** INCLUDE/EXCLUDE source filtering and native SSM signaling.
 
 **How is the IGMP querier elected?** Lowest IPv4 address for IGMPv2/v3.

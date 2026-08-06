@@ -13,4 +13,3 @@ If production traffic depends on a router-ID or neighbor-address tie-break, poli
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

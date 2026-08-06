@@ -1,9 +1,5 @@
 # Multicast forwarding rules and OIL inheritance
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 For each multicast packet, a router conceptually performs two decisions:
 
 1. **acceptance:** did `(S,G)` arrive on an eligible RPF interface?

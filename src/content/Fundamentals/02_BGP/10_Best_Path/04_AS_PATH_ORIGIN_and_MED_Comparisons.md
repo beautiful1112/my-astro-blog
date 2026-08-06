@@ -17,4 +17,3 @@ These are lexicographic comparisons, not a weighted score. Once one path wins on
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

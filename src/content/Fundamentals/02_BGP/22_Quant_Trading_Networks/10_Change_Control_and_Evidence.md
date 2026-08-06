@@ -14,4 +14,3 @@ Configuration success is not completion. The change is complete only when contro
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # RP placement considerations
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 RP placement affects ASM discovery, initial packet latency, shared-tree path stretch, Register load, failure convergence, and operational ownership. It does not affect a steady-state SPT path after the RP has been bypassed.
 
 ## Reachability first

@@ -13,4 +13,3 @@ Use BGP Roles where supported and distinguish route-server control-plane reachab
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -17,4 +17,3 @@ BGP Roles and OTC help signal this relationship constraint. Prefix/export policy
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

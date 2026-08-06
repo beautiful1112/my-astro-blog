@@ -1,9 +1,5 @@
 # Well-known multicast control groups
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 | Group | Meaning |
 |---|---|
 | `224.0.0.1` | all IPv4 multicast-capable systems on-link |

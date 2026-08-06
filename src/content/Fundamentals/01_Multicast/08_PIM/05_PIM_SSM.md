@@ -1,9 +1,5 @@
 # PIM Source-Specific Multicast
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Source-Specific Multicast changes the receiver request from “send me group `G` from any source” to “send me group `G` only from source `S`.” The receiver learns `(S,G)` out of band—from configuration, DNS/service discovery, or an application feed definition—so the network does not need an RP to discover the source.
 
 ## Complete flow

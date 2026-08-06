@@ -1,9 +1,5 @@
 # IGMP version compatibility
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Compatibility is tracked in two directions:
 
 - A host tracks the **oldest querier version** heard on each interface.

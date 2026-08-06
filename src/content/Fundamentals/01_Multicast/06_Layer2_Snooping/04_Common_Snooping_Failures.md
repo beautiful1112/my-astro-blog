@@ -1,9 +1,5 @@
 # Common Layer-2 multicast failures
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 1. No querier: membership state ages out.
 2. Mrouter port not learned: reports/data do not cross the uplink.
 3. Fast leave on a shared port: one listener removes all listeners behind it.

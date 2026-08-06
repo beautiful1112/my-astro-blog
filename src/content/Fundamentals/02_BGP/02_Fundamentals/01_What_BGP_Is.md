@@ -8,4 +8,3 @@ Base BGP supports destination-based forwarding. It advertises reachability; the 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -14,4 +14,3 @@ Define exact allowed prefixes and both directions. A forward route without a ret
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

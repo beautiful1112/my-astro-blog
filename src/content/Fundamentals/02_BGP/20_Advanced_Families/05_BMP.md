@@ -15,4 +15,3 @@ Protect the monitoring path because BMP exposes detailed topology and routing in
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

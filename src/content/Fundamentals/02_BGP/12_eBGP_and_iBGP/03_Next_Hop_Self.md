@@ -14,4 +14,3 @@ It is not automatically correct everywhere. Preserving external next hops can en
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # Minimal PIM-SSM configuration pattern
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 Illustrative Cisco IOS-like syntax:
 
 ```text

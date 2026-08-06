@@ -20,4 +20,3 @@ For trading flows, avoid destabilizing global routing to solve a local latency p
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

@@ -1,9 +1,5 @@
 # Bidirectional PIM
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
-
----
-
 BIDIR-PIM builds one bidirectional shared tree per group, rooted at an RP **address**. Any source can inject data upward on the tree, and the traffic then travels down all interested branches. The core can avoid per-source `(S,G)` state, which suits many-to-many applications with many sources.
 
 ## How it differs from PIM-SM ASM

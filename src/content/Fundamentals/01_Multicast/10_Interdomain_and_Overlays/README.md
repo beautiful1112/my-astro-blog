@@ -1,7 +1,5 @@
 # 10. Interdomain multicast and overlays
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Multicast Source Discovery Protocol](01_MSDP.md)

@@ -6,4 +6,3 @@ Implementations may apply exponential backoff, idle-hold, or peer dampening afte
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

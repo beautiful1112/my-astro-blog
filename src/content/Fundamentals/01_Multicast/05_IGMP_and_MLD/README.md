@@ -1,7 +1,5 @@
 # 05. IGMP and MLD
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [What membership protocols do](01_Membership_Protocol_Purpose.md)

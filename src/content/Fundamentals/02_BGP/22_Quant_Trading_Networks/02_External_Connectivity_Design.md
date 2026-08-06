@@ -15,4 +15,3 @@ Do not reuse a generic “external peer” policy across relationships. A route 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

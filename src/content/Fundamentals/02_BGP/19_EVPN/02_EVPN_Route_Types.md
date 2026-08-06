@@ -14,4 +14,3 @@ Route behavior depends on RD, RT, ESI, Ethernet Tag, label or VNI, next hop, and
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

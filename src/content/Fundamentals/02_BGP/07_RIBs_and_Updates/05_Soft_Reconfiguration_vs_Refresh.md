@@ -8,4 +8,3 @@ Before a policy change, know whether the platform can show true pre-policy route
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

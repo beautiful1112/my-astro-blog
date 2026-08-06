@@ -14,4 +14,3 @@ Implementation support, eligible backup criteria, and FIB scale vary. Verify act
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)

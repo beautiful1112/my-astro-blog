@@ -1,7 +1,5 @@
 # 07. Multicast forwarding and RPF
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
-
 ## Knowledge points
 
 1. [Why multicast needs RPF](01_Why_RPF_Is_Needed.md)

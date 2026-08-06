@@ -22,4 +22,3 @@ Confirm whether the static route is intentional. Adjust route-source preference 
 
 ---
 
-[← Module index](README.md) | [↑ BGP master index](../BGP_Deep_Dive.md)
