@@ -1,6 +1,6 @@
 # State and tree notation
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
+
 
 ---
 

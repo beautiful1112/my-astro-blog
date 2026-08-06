@@ -1,6 +1,6 @@
 # IGMPv3 Membership Query format
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
+
 
 ---
 

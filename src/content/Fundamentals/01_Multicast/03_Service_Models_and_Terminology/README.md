@@ -1,6 +1,6 @@
 # 03. Service models and terminology
 
-[← IP Multicast master index](../Multicast_Deep_Dive.md)
+
 
 ## Knowledge points
 

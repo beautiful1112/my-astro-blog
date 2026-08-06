@@ -2,8 +2,8 @@
 
 > **Audience:** Network-engineering and quantitative-trading infrastructure interviews  
 > **Goal:** Understand packet behavior, control-plane state, design trade-offs, failure modes, and low-latency market-data applications—not merely configuration syntax.  
-> **Revision:** 1.2 - 2026-07-26  
-> **Structure:** 128 focused knowledge-point documents in 22 numbered modules.
+> **Revision:** 2.0 - 2026-08-05
+> **Structure:** 142 focused knowledge-point documents in 22 numbered modules.
 
 The original monolithic guide has been divided so each topic can be studied, discussed, and revised independently.
 
@@ -78,6 +78,8 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Layer-2 leave processing](06_Layer2_Snooping/03_Leave_Processing.md)
 - [Common Layer-2 multicast failures](06_Layer2_Snooping/04_Common_Snooping_Failures.md)
 - [Layer-2 design for market data](06_Layer2_Snooping/05_Market_Data_L2_Design.md)
+- [IGMP/MLD snooping complete process](06_Layer2_Snooping/06_IGMP_MLD_Snooping_Complete_Process.md)
+- [Mrouter ports, snooping querier, and proxying](06_Layer2_Snooping/07_Mrouter_Ports_Querier_and_Proxying.md)
 
 ### [07. Multicast forwarding and RPF](07_RPF_and_Forwarding/README.md)
 
@@ -86,6 +88,8 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [MRIB selection and asymmetric paths](07_RPF_and_Forwarding/03_MRIB_and_Asymmetry.md)
 - [Multicast RIB versus forwarding hardware](07_RPF_and_Forwarding/04_Control_Plane_vs_MFIB.md)
 - [PIM Assert on shared LANs](07_RPF_and_Forwarding/05_PIM_Assert.md)
+- [RPF selection, ECMP, and neighbor resolution](07_RPF_and_Forwarding/06_RPF_Selection_ECMP_and_Unnumbered_Links.md)
+- [Multicast forwarding rules and OIL inheritance](07_RPF_and_Forwarding/07_Forwarding_Rules_and_OIL_Inheritance.md)
 
 ### [08. PIM modes and tree construction](08_PIM/README.md)
 
@@ -96,6 +100,12 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [PIM Source-Specific Multicast](08_PIM/05_PIM_SSM.md)
 - [Bidirectional PIM](08_PIM/06_BIDIR_PIM.md)
 - [Legacy multicast routing protocols](08_PIM/07_Legacy_Multicast_Routing.md)
+- [PIM Hello, DR election, and LAN behavior](08_PIM/08_PIM_Hello_DR_and_LAN_Behavior.md)
+- [PIM Join/Prune processing](08_PIM/09_Join_Prune_Processing.md)
+- [PIM Register and Register-Stop state](08_PIM/10_Register_and_Register_Stop_State.md)
+- [SPT switchover and RPT prune](08_PIM/11_SPT_Switchover_and_RPT_Prune.md)
+- [PIM timers and convergence](08_PIM/12_PIM_Timers_and_Convergence.md)
+- [PIM message formats and capture decoding](08_PIM/13_PIM_Message_Formats.md)
 
 ### [09. Rendezvous Points and resilience](09_Rendezvous_Point/README.md)
 
@@ -103,6 +113,8 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Group-to-RP mapping methods](09_Rendezvous_Point/02_RP_Mapping_Methods.md)
 - [Anycast RP](09_Rendezvous_Point/03_Anycast_RP.md)
 - [RP placement considerations](09_Rendezvous_Point/04_RP_Placement.md)
+- [PIM Bootstrap Router complete process](09_Rendezvous_Point/05_PIM_BSR_Complete_Process.md)
+- [RP redundancy and failure modes](09_Rendezvous_Point/06_RP_Redundancy_and_Failure_Modes.md)
 
 ### [10. Interdomain multicast and overlays](10_Interdomain_and_Overlays/README.md)
 
@@ -147,6 +159,8 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Minimal PIM-SSM configuration pattern](14_Configuration_and_Observation/03_PIM_SSM_Config_Pattern.md)
 - [Minimal PIM-SM ASM configuration pattern](14_Configuration_and_Observation/04_PIM_SM_ASM_Config_Pattern.md)
 - [Safe multicast testing tools](14_Configuration_and_Observation/05_Testing_Tools.md)
+- [PIM BSR configuration pattern](14_Configuration_and_Observation/06_PIM_BSR_Config_Pattern.md)
+- [Anycast RP configuration and validation pattern](14_Configuration_and_Observation/07_Anycast_RP_Config_and_Validation.md)
 
 ### [15. Deterministic troubleshooting](15_Troubleshooting/README.md)
 

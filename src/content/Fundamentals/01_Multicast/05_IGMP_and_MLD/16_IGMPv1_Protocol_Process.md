@@ -1,6 +1,6 @@
 # IGMPv1 join, refresh, and leave process
 
-[← Module index](README.md) · [↑ Multicast master index](../Multicast_Deep_Dive.md)
+
 
 ---
 
