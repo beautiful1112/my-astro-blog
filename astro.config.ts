@@ -6,12 +6,16 @@ import rehypeKatex from 'rehype-katex';
 import { unified } from '@astrojs/markdown-remark';
 import { remarkRewriteMdLinks } from './src/utils/remarkRewriteMdLinks';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'http://localhost:4321',
   integrations: [mdx()],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   markdown: {
     processor: unified({
       remarkPlugins: [remarkMath, remarkRewriteMdLinks],
@@ -22,4 +26,6 @@ export default defineConfig({
       wrap: true,
     },
   },
+
+  adapter: cloudflare(),
 });
