@@ -7,3 +7,4 @@
 3. [Interview questions: PIM and RP](03_PIM_and_RP.md)
 4. [Interview questions: trading and performance](04_Trading_and_Performance.md)
 5. [Interview questions: troubleshooting](05_Troubleshooting.md)
+6. [Interview questions: multicast BGP, MVPN, and EVPN](06_BGP_MVPN_and_EVPN.md)

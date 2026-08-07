@@ -10,3 +10,4 @@
 6. [Lab 6: Application gap recovery](06_Gap_Recovery.md)
 7. [Lab 7: Host bottleneck](07_Host_Bottleneck.md)
 8. [Design exercise](08_Design_Exercise.md)
+9. [Lab 9: MBGP, MSDP, and interdomain PIM](09_MBGP_MSDP_Interdomain_Lab.md)

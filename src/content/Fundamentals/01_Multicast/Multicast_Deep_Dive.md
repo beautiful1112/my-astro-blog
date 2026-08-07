@@ -2,8 +2,8 @@
 
 > **Audience:** Network-engineering and quantitative-trading infrastructure interviews  
 > **Goal:** Understand packet behavior, control-plane state, design trade-offs, failure modes, and low-latency market-data applications—not merely configuration syntax.  
-> **Revision:** 2.0 - 2026-08-05
-> **Structure:** 142 focused knowledge-point documents in 22 numbered modules.
+> **Revision:** 2.1 - 2026-08-07
+> **Structure:** 166 focused knowledge-point documents in 22 numbered modules.
 
 The original monolithic guide has been divided so each topic can be studied, discussed, and revised independently.
 
@@ -80,6 +80,10 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Layer-2 design for market data](06_Layer2_Snooping/05_Market_Data_L2_Design.md)
 - [IGMP/MLD snooping complete process](06_Layer2_Snooping/06_IGMP_MLD_Snooping_Complete_Process.md)
 - [Mrouter ports, snooping querier, and proxying](06_Layer2_Snooping/07_Mrouter_Ports_Querier_and_Proxying.md)
+- [Snooping control and data forwarding rules](06_Layer2_Snooping/08_Snooping_Control_and_Data_Forwarding_Rules.md)
+- [Multicast VLAN Registration and multicast VLANs](06_Layer2_Snooping/09_MVR_and_Multicast_VLANs.md)
+- [Layer-2 multicast redundancy: MLAG, stacks, and topology changes](06_Layer2_Snooping/10_L2_Redundancy_MLAG_Stack_and_Topology_Changes.md)
+- [Layer-2 multicast hardware scaling and replication](06_Layer2_Snooping/11_L2_Multicast_Hardware_Scaling.md)
 
 ### [07. Multicast forwarding and RPF](07_RPF_and_Forwarding/README.md)
 
@@ -106,6 +110,7 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [SPT switchover and RPT prune](08_PIM/11_SPT_Switchover_and_RPT_Prune.md)
 - [PIM timers and convergence](08_PIM/12_PIM_Timers_and_Convergence.md)
 - [PIM message formats and capture decoding](08_PIM/13_PIM_Message_Formats.md)
+- [Layer-3 multicast protocol role matrix](08_PIM/14_L3_Multicast_Protocol_Role_Matrix.md)
 
 ### [09. Rendezvous Points and resilience](09_Rendezvous_Point/README.md)
 
@@ -123,6 +128,10 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Multicast VPNs over MPLS](10_Interdomain_and_Overlays/03_Multicast_VPNs.md)
 - [Multicast with VXLAN and EVPN](10_Interdomain_and_Overlays/04_VXLAN_and_EVPN.md)
 - [Public cloud and virtualization](10_Interdomain_and_Overlays/05_Cloud_and_Virtualization.md)
+- [Interdomain ASM complete control-plane flow](10_Interdomain_and_Overlays/06_Interdomain_ASM_Complete_Flow.md)
+- [BGP MVPN route types and PMSI bindings](10_Interdomain_and_Overlays/07_BGP_MVPN_Route_Types_and_PMSI.md)
+- [EVPN tenant multicast control plane](10_Interdomain_and_Overlays/08_EVPN_Tenant_Multicast_Control_Plane.md)
+- [Multicast BGP troubleshooting workflow](10_Interdomain_and_Overlays/09_Multicast_BGP_Troubleshooting.md)
 
 ### [11. Host, transport, and application behavior](11_Host_and_Application/README.md)
 
@@ -156,11 +165,16 @@ The original monolithic guide has been divided so each topic can be studied, dis
 
 - [Linux multicast inspection](14_Configuration_and_Observation/01_Linux_Inspection.md)
 - [Router and switch state to inspect](14_Configuration_and_Observation/02_Network_Device_State.md)
-- [Minimal PIM-SSM configuration pattern](14_Configuration_and_Observation/03_PIM_SSM_Config_Pattern.md)
-- [Minimal PIM-SM ASM configuration pattern](14_Configuration_and_Observation/04_PIM_SM_ASM_Config_Pattern.md)
+- [Routed PIM-SSM configuration patterns](14_Configuration_and_Observation/03_PIM_SSM_Config_Pattern.md)
+- [Routed PIM-SM ASM configuration patterns](14_Configuration_and_Observation/04_PIM_SM_ASM_Config_Pattern.md)
 - [Safe multicast testing tools](14_Configuration_and_Observation/05_Testing_Tools.md)
 - [PIM BSR configuration pattern](14_Configuration_and_Observation/06_PIM_BSR_Config_Pattern.md)
 - [Anycast RP configuration and validation pattern](14_Configuration_and_Observation/07_Anycast_RP_Config_and_Validation.md)
+- [Layer-2 snooping configuration patterns](14_Configuration_and_Observation/08_L2_Snooping_Configuration_Patterns.md)
+- [MBGP multicast-RPF configuration pattern](14_Configuration_and_Observation/09_MBGP_Multicast_RPF_Config_Pattern.md)
+- [MSDP peering and SA-filter configuration](14_Configuration_and_Observation/10_MSDP_Peering_and_Filtering_Config.md)
+- [MVPN and EVPN multicast state inspection](14_Configuration_and_Observation/11_MVPN_EVPN_State_Inspection.md)
+- [Interdomain ASM end-to-end configuration pattern](14_Configuration_and_Observation/12_Interdomain_ASM_End_to_End_Config.md)
 
 ### [15. Deterministic troubleshooting](15_Troubleshooting/README.md)
 
@@ -183,6 +197,14 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Case 8: Wrong multicast MAC calculation](16_Practical_Cases/08_Wrong_Multicast_MAC.md)
 - [Case 9: TTL confusion](16_Practical_Cases/09_TTL_Confusion.md)
 - [Case 10: Sequence gap without packet loss](16_Practical_Cases/10_False_Sequence_Gap.md)
+- [Case 11: Unicast works while MBGP multicast RPF fails](16_Practical_Cases/11_Unicast_Works_MBGP_RPF_Fails.md)
+- [Case 12: MSDP session is up but Source-Active messages are rejected](16_Practical_Cases/12_MSDP_Up_But_SA_Rejected.md)
+- [Case 13: Anycast RP reachability survives a synchronization partition](16_Practical_Cases/13_Anycast_RP_Synchronization_Partition.md)
+- [Case 14: MVR leaks a feed into an unauthorized receiver VLAN](16_Practical_Cases/14_MVR_Cross_VLAN_Leak.md)
+- [Case 15: MLAG multicast failover causes duplicates followed by loss](16_Practical_Cases/15_MLAG_Failover_Duplicates_and_Loss.md)
+- [Case 16: MVPN I-PMSI to S-PMSI transition loses packets](16_Practical_Cases/16_MVPN_I_PMSI_to_S_PMSI_Transition.md)
+- [Case 17: EVPN SMET route exists but tenant multicast is not delivered](16_Practical_Cases/17_EVPN_SMET_Present_No_Delivery.md)
+- [Case 18: BSR partition creates inconsistent RP mappings](16_Practical_Cases/18_BSR_RP_Mapping_Partition.md)
 
 ### [17. Interview questions](17_Interview_Questions/README.md)
 
@@ -191,6 +213,7 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Interview questions: PIM and RP](17_Interview_Questions/03_PIM_and_RP.md)
 - [Interview questions: trading and performance](17_Interview_Questions/04_Trading_and_Performance.md)
 - [Interview questions: troubleshooting](17_Interview_Questions/05_Troubleshooting.md)
+- [Interview questions: multicast BGP, MVPN, and EVPN](17_Interview_Questions/06_BGP_MVPN_and_EVPN.md)
 
 ### [18. Labs and mastery exercises](18_Labs/README.md)
 
@@ -202,6 +225,7 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [Lab 6: Application gap recovery](18_Labs/06_Gap_Recovery.md)
 - [Lab 7: Host bottleneck](18_Labs/07_Host_Bottleneck.md)
 - [Design exercise](18_Labs/08_Design_Exercise.md)
+- [Lab 9: MBGP, MSDP, and interdomain PIM](18_Labs/09_MBGP_MSDP_Interdomain_Lab.md)
 
 ### [19. Memorization sheets](19_Memorization/README.md)
 

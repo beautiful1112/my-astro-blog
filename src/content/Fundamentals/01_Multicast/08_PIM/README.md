@@ -15,3 +15,4 @@
 11. [SPT switchover and RPT prune](11_SPT_Switchover_and_RPT_Prune.md)
 12. [PIM timers and convergence](12_PIM_Timers_and_Convergence.md)
 13. [PIM message formats and capture decoding](13_PIM_Message_Formats.md)
+14. [Layer-3 multicast protocol role matrix](14_L3_Multicast_Protocol_Role_Matrix.md)

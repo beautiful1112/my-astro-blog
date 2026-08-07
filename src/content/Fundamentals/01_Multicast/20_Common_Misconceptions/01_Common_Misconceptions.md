@@ -12,4 +12,9 @@
 | No switch drops means no loss | NIC, driver, kernel, socket, bypass stack, and application can drop. |
 | More buffering solves loss | It can convert loss into stale-data latency. |
 | TTL secures scope | TTL is a hop bound; use boundaries and policy. |
-
+| MBGP advertises multicast groups | Multicast SAFI advertises source/RP IP prefixes for RPF, not receiver groups. |
+| BGP session up proves multicast routing | The AFI/SAFI, NLRI policy, best path, MRIB, PIM, tunnel, and MFIB must still work. |
+| MSDP carries multicast data | It advertises active IPv4 ASM sources; native multicast follows a PIM tree. |
+| MVPN route present means packets can flow | The PMSI tunnel, label/VRF binding, and hardware forwarding must also be ready. |
+| EVPN SMET is a data tunnel | SMET signals receiver interest; ingress replication or another tunnel carries packets. |
+| VXLAN underlay multicast provides tenant routing | It can replicate BUM frames, but cross-subnet tenant multicast needs a separate L3/control-plane design. |
