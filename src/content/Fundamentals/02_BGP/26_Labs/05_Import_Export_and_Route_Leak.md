@@ -2,23 +2,38 @@
 
 ## Topology
 
-AS 65010 connects to customer AS 65020 and providers AS 65030 and 65040.
+Cust —— You —— Prov-A and Prov-B. You learn full table from A; accidentally export it to B.
 
 ## Objectives
 
-- Build valley-free policy.
-- Demonstrate and contain a route leak.
+- Create a leak; observe advertised count and transit traceroute.
+- Fix with outbound prefix/community policy (customer+own only).
+- Optionally mark OTC / roles and show peer rejection.
+
+## Config touchpoints
+
+```text
+route-map TO-PROV-B permit 10
+ match ip address prefix-list CUST-AND-OWN
+route-map TO-PROV-B deny 100
+neighbor <B> route-map TO-PROV-B out
+```
 
 ## Tasks
 
-1. Tag routes by relationship on import.
-2. Set customer > peer > provider LOCAL_PREF.
-3. Export customer and local routes to all; export provider routes only to customers.
-4. Temporarily permit provider-65030 routes toward provider 65040.
-5. Observe the leak, prefix-count alarm, and traffic implication.
-6. Restore default-deny policy and add an automated policy test.
+1. Baseline advertised counts to A and B.
+2. Permit-all outbound to B; watch count explode; traceroute third-party pair via you.
+3. Restore strict export; soft-out; confirm baseline.
 
-Use documentation prefixes only; keep the lab isolated.
+## Failure injection
+
+Export only “no-export” communities incorrectly stripped—document another leak class.
+
+## Expected evidence
+
+Leak = foreign prefixes in `advertised-routes` to B. Fix restores counts. See [leak case](../24_Practical_Cases/07_Route_Leak_Creates_Unintended_Transit.md).
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

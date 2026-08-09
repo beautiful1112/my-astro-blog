@@ -1,18 +1,42 @@
 # Safe BGP Change Workflow
 
-Before a BGP policy change:
+Treat every policy edit as a controlled experiment with a predicted delta.
 
-1. State the intended received, selected, and advertised route deltas.
-2. Snapshot peer state, prefix counts, exact paths, and traffic.
-3. Validate policy offline against representative routes.
-4. Confirm rollback syntax and access path.
-5. Apply to one bounded peer/family where possible.
-6. Use route refresh or soft policy re-evaluation instead of a hard reset.
-7. Verify external observations and forwarding.
+## Before
 
-Avoid **clear bgp all** as a routine policy tool. It disrupts unrelated families and peers.
+1. State intended received / selected / advertised route deltas (include VIP prefixes).
+2. Snapshot peer state, prefix counts, exact paths, traffic, and latency baselines.
+3. Validate policy offline (prefix-list simulation, Junos `test policy`, dry-run where available).
+4. Confirm rollback syntax, out-of-band access, and abort thresholds.
+5. Note interactions: max-prefix, RPKI, `local-as`, SoO, ORF, conditional advertisement, AIGP enablement.
 
-For high-value trading paths, schedule around market activity and define abort thresholds for loss, latency, route count, and convergence.
+## During
+
+1. Apply to one bounded peer/family when possible.
+2. Prefer route-refresh / soft re-evaluation over `clear bgp *`.
+3. Watch BMP/collector and local counters for unexpected cliffs.
+4. Verify FIB and bidirectional forwarding for VIP destinations.
+
+## After
+
+1. Compare snapshots to intent (attributes, not only prefix presence).
+2. External looking-glass confirmation for advertisement changes (prepend, communities).
+3. Close only when control plane, FIB, and service metrics agree.
+
+## VIP change template (checklist)
+
+- [ ] Predicted best NH for each VIP
+- [ ] Predicted advertised deltas to Internet vs exchange
+- [ ] Abort: loss > X ms equivalent / latency > Y / prefix cliff
+- [ ] Rollback peer/AF mapped
+- [ ] Market window OK
+
+## Explicitly avoid
+
+- `clear bgp all` / `clear bgp *` as a routine policy tool.
+- Enabling `allowas-in` or `as-override` without SoO on dual-homed VPN sites.
+- Changing LOCAL_PREF and AIGP in the same window without a predicted winner.
+
+For trading calendars, schedule around market hours—see [Change Control and Evidence](../22_Quant_Trading_Networks/10_Change_Control_and_Evidence.md).
 
 ---
-

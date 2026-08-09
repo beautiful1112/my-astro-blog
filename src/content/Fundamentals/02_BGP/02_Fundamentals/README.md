@@ -1,5 +1,7 @@
 # 02. Fundamentals
 
+What BGP is, why it exists, path-vector + policy, control versus data plane, and core vocabulary used in every later module.
+
 ## Knowledge points
 
 1. [What BGP is](01_What_BGP_Is.md)

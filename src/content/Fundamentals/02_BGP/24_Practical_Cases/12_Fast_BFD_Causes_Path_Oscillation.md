@@ -1,24 +1,38 @@
 # Case: Aggressive BFD Causes Path Oscillation
 
-## Symptom
+## Scenario
 
-A congested interconnect repeatedly drops and restores its BGP session, moving latency-sensitive traffic between paths.
+BFD multipliers set extremely low on a microwave/exchange handoff. Microbursts cause BFD Down → BGP withdraw → traffic shifts → BFD Up → revert. Strategies see periodic loss; BGP prefix counters look “healthy” between events.
 
-## Reasoning
+## Expected evidence
 
-BFD timers are tighter than the platform and congested control path can reliably sustain.
+```text
+show bgp ipv4 unicast neighbors <peer>
+! flaps correlate with BFD
+show logging | include BFD|BGP
+! Down/Up pairs every N seconds
+# Latency controller also toggles LP on the same interval → worse
+```
 
-## Proof
+## Config touchpoints
 
-BFD expires without physical loss; control-plane queue drops and CPU spikes align with session resets.
+```text
+! Relax BFD; fix Layer-1; add dampening/hysteresis to LP automation
+neighbor 192.0.2.1 fall-over bfd
+! bfd interval 300 min_rx 300 multiplier 5   ! example — validate platform
+```
 
-## Correction
+Disable performance-based LP changes during BFD instability. Prefer PIC on a stable primary over oscillating “optimal” path.
 
-Protect/control-prioritize BFD traffic, tune timers to tested limits, and add policy hysteresis. Verify real link-failure loss after tuning.
+## Verification
+
+BFD remains Up under load tests; VIP next hop stable for hours; loss interval under controlled fail meets SLO. See [Fast Failover vs Stability](../22_Quant_Trading_Networks/05_Fast_Failover_vs_Stability.md).
 
 ## Lesson
 
-Fast detection that creates false failures reduces availability.
+Detection speed without hysteresis becomes self-inflicted churn.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

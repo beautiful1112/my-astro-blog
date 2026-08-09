@@ -1,5 +1,7 @@
 # 04. Sessions and transport
 
+TCP/179 transport, direct versus multihop eBGP, loopback update-sources, collision/passive mode, and session authentication plus GTSM.
+
 ## Knowledge points
 
 1. [BGP transport over TCP 179](01_TCP_179.md)

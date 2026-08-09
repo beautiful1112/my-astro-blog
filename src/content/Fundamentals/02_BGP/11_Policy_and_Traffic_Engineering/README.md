@@ -10,3 +10,6 @@
 6. [Outbound vs Inbound Traffic Engineering](06_Outbound_and_Inbound_Traffic_Engineering.md)
 7. [Aggregation and Discard Routes](07_Aggregation_and_Discard_Routes.md)
 8. [Maximum-Prefix and Route-Flap Dampening](08_Maximum_Prefix_and_Dampening.md)
+9. [Outbound Route Filtering (ORF)](09_ORF.md)
+10. [Conditional Advertisement](10_Conditional_Advertisement.md)
+11. [Link Bandwidth Community](11_Link_Bandwidth_Community.md)

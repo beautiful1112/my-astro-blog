@@ -1,5 +1,7 @@
 # 06. Messages and capabilities
 
+Common header and message types, OPEN/UPDATE/KEEPALIVE/NOTIFICATION, Route Refresh, capability negotiation, and RFC 7606 treat-as-withdraw.
+
 ## Knowledge points
 
 1. [BGP common message header](01_Common_Message_Header.md)

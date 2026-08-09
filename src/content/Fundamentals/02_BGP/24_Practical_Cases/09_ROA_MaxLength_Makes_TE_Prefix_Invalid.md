@@ -1,24 +1,37 @@
-# Case: ROA maxLength Invalidates a TE Prefix
+# Case: ROA maxLength Makes TE Prefix Invalid
 
-## Symptom
+## Scenario
 
-A newly advertised /24 is rejected by ROV-enabled networks, while its covering /22 remains reachable.
+You announce 203.0.113.0/24 (ROA maxLength 24) plus a /25 for inbound TE. Validators mark the /25 Invalid. Peers with “Invalid = reject” drop the TE prefix; only the /24 remains—TE fails or traffic shifts unexpectedly.
 
-## Reasoning
+## Expected evidence
 
-The ROA authorizes the ASN for the /22 with maxLength /22. The /24 is therefore Invalid even though the origin ASN matches.
+```text
+show bgp ipv4 unicast 203.0.113.0/25
+! path state Invalid (RPKI)
+show bgp ipv4 unicast 203.0.113.0/24
+! Valid
+```
 
-## Proof
+## Config touchpoints
 
-Validator output shows a covering VRP, matching ASN, and failing prefix-length condition.
+- Re-issue ROA with maxLength ≥ TE more-specific, **or**
+- Stop announcing longer than ROA allows.
+- Never “fix” by setting Invalid = accept on Internet edges.
 
-## Correction
+## Verification
 
-Publish a least-permissive ROA that authorizes the planned /24, wait for validation propagation, confirm Valid state, and only then rely on the advertisement.
+After ROA update propagates via RTR: /25 Valid; peers accept; inbound TE works. See [ROA MaxLength Risks](../17_RPKI_and_Leak_Prevention/05_ROA_MaxLength_Risks.md).
+
+## Config / verification touchpoints
+
+Capture pre/post `show bgp` (attributes), looking-glass or collector view, and a data-plane probe. Soft-clear only the affected peer/AF after policy edits; avoid global clears during proof.
 
 ## Lesson
 
-Origin validation checks both ASN and maximum length.
+Origin validation is length-sensitive. TE more-specifics need ROA coverage.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

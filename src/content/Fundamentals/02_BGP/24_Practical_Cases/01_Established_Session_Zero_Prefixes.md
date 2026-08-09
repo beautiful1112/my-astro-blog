@@ -1,24 +1,41 @@
 # Case: Established Session, Zero Prefixes
 
-## Symptom
+## Scenario
 
-An eBGP peer has been Established for hours, but both accepted and advertised prefix counts are zero.
+An eBGP peer has been Established for hours. Accepted and advertised prefix counts are both zero. On-call assumes “BGP is fine.”
 
-## Reasoning
+## Expected evidence
 
-Transport and OPEN negotiation work. The failure must be at family activation, origination, or policy.
+```text
+show bgp ipv4 unicast neighbors 192.0.2.1
+! State: Established; Prefixes: 0/0/0
+show bgp ipv4 unicast neighbors 192.0.2.1 advertised-routes
+! empty
+show bgp ipv4 unicast <local-prefix>
+! local prefix exists in Loc-RIB
+```
 
-## Proof
+OPEN shows IPv4 unicast negotiated. Local table has the intended prefix; outbound policy has no permit term (default-reject / RFC 8212 posture).
 
-The IPv4-unicast capability is negotiated. The local BGP table contains the intended prefix, but outbound policy has no permit term and the platform follows default-reject behavior.
+## Config touchpoints
 
-## Correction
+```text
+route-map TO-PEER permit 10
+ match ip address prefix-list ORIGINATE-OK
+route-map TO-PEER deny 100
+neighbor 192.0.2.1 route-map TO-PEER out
+neighbor 192.0.2.1 route-map FROM-PEER in
+```
 
-Add an exact authorized-prefix permit, retain a reject default, request outbound policy re-evaluation, and verify the peer's received/accepted route.
+## Verification
+
+After adding exact permit and soft-out refresh: advertised-routes shows the prefix; peer’s received/accepted increments. Do **not** solve with permit-any.
 
 ## Lesson
 
-Session state and route exchange are separate. Never solve this by adding permit-any.
+Session state ≠ route exchange. See [Established but No Routes](../23_Troubleshooting/03_Established_but_No_Routes.md).
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

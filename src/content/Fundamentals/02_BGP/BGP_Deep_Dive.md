@@ -2,8 +2,8 @@
 
 > **Audience:** Network-engineering and quantitative-trading infrastructure interviews  
 > **Goal:** Master BGP wire behavior, policy, path selection, scaling, security, service families, failure modes, and low-latency applications—not merely configuration syntax.  
-> **Revision:** 1.0 - 2026-07-24  
-> **Structure:** 204 focused knowledge-point documents in 30 numbered modules.
+> **Revision:** 1.1 - 2026-08-09  
+> **Structure:** 218 focused knowledge-point documents in 30 numbered modules (configs, interactions, and advanced PE-CE / attribute mechanisms included).
 
 Each topic is a separate document so it can be studied, discussed, tested, and revised independently.
 
@@ -83,6 +83,7 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [Multi-Exit Discriminator](08_Path_Attributes/08_MED.md)
 - [ATOMIC_AGGREGATE and AGGREGATOR](08_Path_Attributes/09_ATOMIC_AGGREGATE_and_AGGREGATOR.md)
 - [Unknown Attributes and the Partial Bit](08_Path_Attributes/10_Unknown_Attributes_and_Partial_Bit.md)
+- [AIGP (Accumulated IGP Metric)](08_Path_Attributes/11_AIGP.md)
 
 ### [09. Communities](09_Communities/README.md)
 
@@ -113,6 +114,9 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [Outbound vs Inbound Traffic Engineering](11_Policy_and_Traffic_Engineering/06_Outbound_and_Inbound_Traffic_Engineering.md)
 - [Aggregation and Discard Routes](11_Policy_and_Traffic_Engineering/07_Aggregation_and_Discard_Routes.md)
 - [Maximum-Prefix and Route-Flap Dampening](11_Policy_and_Traffic_Engineering/08_Maximum_Prefix_and_Dampening.md)
+- [Outbound Route Filtering (ORF)](11_Policy_and_Traffic_Engineering/09_ORF.md)
+- [Conditional Advertisement](11_Policy_and_Traffic_Engineering/10_Conditional_Advertisement.md)
+- [Link Bandwidth Community](11_Policy_and_Traffic_Engineering/11_Link_Bandwidth_Community.md)
 
 ### [12. eBGP and iBGP](12_eBGP_and_iBGP/README.md)
 
@@ -121,6 +125,11 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [next-hop-self](12_eBGP_and_iBGP/03_Next_Hop_Self.md)
 - [IGP and BGP Interaction](12_eBGP_and_iBGP/04_IGP_and_BGP_Interaction.md)
 - [Route Origination, Defaults, and Redistribution](12_eBGP_and_iBGP/05_Origination_Defaults_and_Redistribution.md)
+- [allowas-in](12_eBGP_and_iBGP/06_AllowAS_In.md)
+- [as-override](12_eBGP_and_iBGP/07_AS_Override.md)
+- [Local AS](12_eBGP_and_iBGP/08_Local_AS.md)
+- [Next Hop Unchanged](12_eBGP_and_iBGP/09_Next_Hop_Unchanged.md)
+- [Disable Connected Check, Backdoor, and Network](12_eBGP_and_iBGP/10_Disable_Connected_Check_Backdoor_Network.md)
 
 ### [13. Route reflection and confederations](13_Route_Reflection_and_Confederations/README.md)
 
@@ -181,6 +190,8 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [VPN Labels and Forwarding](18_MPLS_L3VPN/04_VPN_Labels_and_Forwarding.md)
 - [Inter-VRF Route Leaking](18_MPLS_L3VPN/05_Inter_VRF_Leaking.md)
 - [Route-Target Constraint](18_MPLS_L3VPN/06_Route_Target_Constraint.md)
+- [Site-of-Origin (SoO)](18_MPLS_L3VPN/07_Site_of_Origin.md)
+- [PE-CE AS-Loop Toolkit](18_MPLS_L3VPN/08_PE_CE_AS_Loop_Toolkit.md)
 
 ### [19. Ethernet VPN](19_EVPN/README.md)
 
@@ -271,6 +282,7 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [Interview: Explain Route-Reflector Path Hiding](25_Interview_Questions/10_Route_Reflector_Path_Hiding.md)
 - [Interview: Debug Established but No Routes](25_Interview_Questions/11_Debug_Established_No_Routes.md)
 - [Interview: Design BGP for a Low-Latency Trading Site](25_Interview_Questions/12_Low_Latency_BGP_Design.md)
+- [Interview: allowas-in, as-override, and AIGP](25_Interview_Questions/13_AllowAS_In_AS_Override_AIGP.md)
 
 ### [26. Labs and mastery exercises](26_Labs/README.md)
 
@@ -291,6 +303,7 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [Path-Attribute Memory Table](27_Memorization/02_Attribute_Memory_Table.md)
 - [BGP Troubleshooting Chain to Memorize](27_Memorization/03_Troubleshooting_Chain.md)
 - [RPKI and Route-Leak Memory Card](27_Memorization/04_RPKI_and_Leak_Memory_Card.md)
+- [allowas-in, as-override, AIGP, and SoO Memory Card](27_Memorization/05_Advanced_PECE_and_AIGP_Memory_Card.md)
 
 ### [28. Common misconceptions](28_Common_Misconceptions/README.md)
 
@@ -298,6 +311,7 @@ Each topic is a separate document so it can be studied, discussed, tested, and r
 - [Misconception: Shortest AS Path Is Fastest](28_Common_Misconceptions/02_Shortest_AS_Path_Is_Fastest.md)
 - [Misconception: RPKI Valid Means Safe](28_Common_Misconceptions/03_RPKI_Valid_Means_Safe.md)
 - [Misconception: More BGP Peers Always Mean More Resilience](28_Common_Misconceptions/04_More_Peers_Always_Mean_More_Resilience.md)
+- [Misconception: allowas-in or as-override Alone Is Enough](28_Common_Misconceptions/05_AllowAS_In_Without_SoO.md)
 
 ### [29. Primary references](29_References/README.md)
 

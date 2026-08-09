@@ -1,24 +1,38 @@
 # Case: Graceful Restart Preserves a Blackhole
 
-## Symptom
+## Scenario
 
-After an edge-router failure, its peers keep routes for several minutes while traffic is dropped.
+Edge restarts with Graceful Restart. Peers retain stale forwarding to the edge while its FIB is empty or mid-relearn. VIP traffic blackholes until stale timer expires—longer than a hard-fail + backup LP convergence would have taken.
 
-## Reasoning
+## Expected evidence
 
-Graceful Restart told helpers to retain stale routes, but the failed router did not preserve forwarding.
+```text
+show bgp ipv4 unicast neighbors <edge>
+! GR helper; stale paths marked
+show ip route <vip>
+! still points at restarting edge
+# probes lose packets; backup path not chosen because stale path looks valid
+```
 
-## Proof
+## Config touchpoints
 
-Peers mark the paths stale; the next hop is still selected; hardware and link evidence show the forwarding node is gone.
+- Bound stale timers tightly on helpers for VIP edges.
+- Prefer BFD + PIC with preinstalled backup when hard fail is acceptable.
+- Disable GR on sessions where stale risk > restart benefit (trading edges often).
 
-## Correction
+## Verification
 
-Disable or shorten GR for this failure model, ensure alternatives are preferred, and test total node failure separately from process restart.
+Lab: kill forwarding on GR speaker without killing TCP immediately; measure loss duration with GR on vs hard reset. See [Interview: GR risk](../25_Interview_Questions/09_Graceful_Restart_Risk.md) and [lab](../26_Labs/07_Graceful_Restart_vs_Hard_Failure.md).
+
+## Config / verification touchpoints
+
+Capture pre/post `show bgp` (attributes), looking-glass or collector view, and a data-plane probe. Soft-clear only the affected peer/AF after policy edits; avoid global clears during proof.
 
 ## Lesson
 
-Graceful Restart assumes forwarding survives. If that premise is false, faster withdrawal is safer.
+GR preserves forwarding **statefulness assumptions**; stale ≠ working.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

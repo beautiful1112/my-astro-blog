@@ -1,5 +1,7 @@
 # 03. ASNs and peering
 
+ASN space and four-octet interop, eBGP versus iBGP defaults, commercial peering relationships, and private-AS scrubbing at Internet edges.
+
 ## Knowledge points
 
 1. [Autonomous System numbers](01_AS_Number_Space.md)

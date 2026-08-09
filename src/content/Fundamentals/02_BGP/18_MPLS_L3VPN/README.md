@@ -8,3 +8,5 @@
 4. [VPN Labels and Forwarding](04_VPN_Labels_and_Forwarding.md)
 5. [Inter-VRF Route Leaking](05_Inter_VRF_Leaking.md)
 6. [Route-Target Constraint](06_Route_Target_Constraint.md)
+7. [Site-of-Origin (SoO)](07_Site_of_Origin.md)
+8. [PE-CE AS-Loop Toolkit](08_PE_CE_AS_Loop_Toolkit.md)

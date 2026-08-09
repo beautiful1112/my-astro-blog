@@ -9,3 +9,5 @@
 5. [eBGP vs iBGP and IGP Cost to Next Hop](05_eBGP_iBGP_and_IGP_Cost.md)
 6. [Final BGP Tie-Breakers](06_Final_Tie_Breakers.md)
 7. [BGP Multipath and ECMP](07_Multipath_and_ECMP.md)
+
+AIGP placement in the decision process is covered in [02](02_Vendor_Neutral_Selection_Model.md) and [05](05_eBGP_iBGP_and_IGP_Cost.md), with full attribute detail in [AIGP](../08_Path_Attributes/11_AIGP.md).

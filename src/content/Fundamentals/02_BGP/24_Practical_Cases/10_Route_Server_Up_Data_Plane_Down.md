@@ -1,24 +1,36 @@
 # Case: IXP Route-Server Session Up, Data Plane Down
 
-## Symptom
+## Scenario
 
-The route server advertises a participant prefix, but packets to that prefix fail.
+BGP to the route server is Established; many prefixes installed with NEXT_HOP = bilateral peer MAC/IP on the IX fabric. Ping to a peer prefix fails. Operators blame BGP policy.
 
-## Reasoning
+## Expected evidence
 
-The route server is not in the forwarding path. NEXT_HOP is the participant address, which is unresolved on the exchange LAN.
+```text
+show bgp ipv4 unicast <prefix>
+! NH = 192.0.2.50 (peer on IX LAN), next-hop-unchanged path
+ping 192.0.2.50                 # may fail — L2/fabric/ACL
+ping <prefix>                  # fails
+# RS session healthy the whole time
+```
 
-## Proof
+Route servers do not forward packets. Data plane is bilateral on the IX fabric.
 
-BGP next-hop lookup points to the IXP interface, but ARP/ND fails or the participant VLAN/ACL is wrong.
+## Config touchpoints
 
-## Correction
+- [next-hop-unchanged](../12_eBGP_and_iBGP/09_Next_Hop_Unchanged.md) toward RS is expected.
+- Verify IX MAC learning, port ACLs, storm control, and bilateral physical.
+- Optional bilateral BGP session as backup to RS.
 
-Repair bilateral layer-2 reachability, addressing, or filtering. Do not change the route-server next hop unless the design explicitly requires it.
+## Verification
+
+Fix fabric/ACL; ARP/ND resolves; CEF to NH completes; traffic flows without RS involvement in forwarding. See [Route Server Behavior](../20_Advanced_Families/07_Route_Server_Behavior.md).
 
 ## Lesson
 
-Route-server control-plane success does not prove participant-to-participant forwarding.
+RS control plane ≠ RS data plane. Debug the IX LAN next hop.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

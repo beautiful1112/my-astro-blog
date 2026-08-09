@@ -2,23 +2,38 @@
 
 ## Topology
 
-Two VTEPs attach a movable test host in one tenant VNI.
+Two VTEPs/PEs in same EVPN VNI/VLAN; host moves from PE1 to PE2 (or dual-attach then move).
 
 ## Objectives
 
-- Observe EVPN type 2 and type 3 routes.
-- Move a MAC between VTEPs.
-- Inspect mobility sequence and ARP/ND suppression.
+- Observe Type-2 MAC/IP routes and sequence number / mobility community behavior.
+- Show old PE withdraw or lose best after move.
+- Confirm data-plane updates (ARP/ND suppression interactions optional).
+
+## Config touchpoints
+
+Platform EVPN MAC VRF / VNI config; BGP L2VPN EVPN address-family between PEs/RR.
+
+```text
+show bgp l2vpn evpn <mac>
+show evpn mac <mac>    ! vendor-specific
+```
 
 ## Tasks
 
-1. Verify underlay reachability and EVPN family.
-2. Learn the host on VTEP A and inspect its type 2 route.
-3. Move it to VTEP B.
-4. Confirm the new type 2 has a higher mobility sequence.
-5. Generate rapid alternating moves and observe duplicate/mobility protection.
+1. Learn MAC on PE1; document sequence and next hop.
+2. Move host to PE2; capture mobility update.
+3. Verify PE1 no longer owns forwarding for that MAC.
 
-Keep loop-prevention controls enabled during the test.
+## Failure injection
+
+ asymmetric move detection delay—measure blackhole window.
+
+## Expected evidence
+
+Higher sequence wins; traffic follows new VTEP. See [MAC Mobility](../19_EVPN/05_MAC_Mobility.md).
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

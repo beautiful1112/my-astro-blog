@@ -2,11 +2,22 @@
 
 ## Question
 
-Why does ordinary iBGP require a full mesh, and how does route reflection change it?
+Why does classic iBGP require a full mesh? How do route reflectors and confederations change that?
 
 ## Strong answer
 
-iBGP does not prepend the local ASN, so a route learned from one ordinary iBGP peer is not advertised to another. A full mesh ensures every speaker receives routes directly. Route reflectors relax that rule for clients and add ORIGINATOR_ID and CLUSTER_LIST loop protection. They reduce session count but can hide alternate paths and choose from the reflector's topology viewpoint.
+iBGP speakers do not re-advertise routes learned from one iBGP peer to another iBGP peer (split horizon). Without an alternate distribution mechanism, every iBGP speaker must learn external routes directly from every other speaker that injects them—hence \(n(n-1)/2\) sessions.
+
+**Route reflectors** relax split horizon under RR client/non-client rules so clients need only sessions to RRs (and carefully designed RR redundancy). Cost: path hiding unless ADD-PATH/diverse design. **Confederations** split one AS into member ASes so eBGP-like rules apply between members while presenting one ASN externally.
+
+## Follow-ups
+
+- What is an RR cluster-list loop?
+- When is next-hop-self still required with RRs?
+- How does path hiding hurt low-latency designs?
+
+## Cross-links
+
+[iBGP split horizon](../12_eBGP_and_iBGP/02_iBGP_Split_Horizon_and_Full_Mesh.md), [RR path hiding interview](10_Route_Reflector_Path_Hiding.md).
 
 ---
-

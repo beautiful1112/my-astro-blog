@@ -1,5 +1,7 @@
 # 07. RIBs and UPDATE processing
 
+Conceptual Adj-RIB-In / Loc-RIB / Adj-RIB-Out, NLRI versus FIB LPM, advertise/withdraw/replace, next-hop resolution, and soft-reconfig versus Route Refresh.
+
 ## Knowledge points
 
 1. [Adj-RIB-In, Loc-RIB, and Adj-RIB-Out](01_Three_Conceptual_RIBs.md)

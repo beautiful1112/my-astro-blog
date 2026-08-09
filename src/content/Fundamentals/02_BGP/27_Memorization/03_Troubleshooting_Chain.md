@@ -1,22 +1,30 @@
 # BGP Troubleshooting Chain to Memorize
 
-For one exact prefix:
+**transport → session → capability → received → policy → eligible → best → RIB/FIB → export → remote → forwarding**
 
-**Peer → Family → Received → Accepted → Eligible → Best → RIB → FIB → Advertised → Remote → Return**
+## Per-stage one-liners
 
-Questions:
+1. **Transport:** ping/traceroute peer; ACL/CoPP; update-source; TTL/GTSM; MD5/AO.
+2. **Session:** FSM state; last NOTIFICATION; ASN/local-as match.
+3. **Capability:** AFI/SAFI activated; refresh/GR/ADD-PATH/ORF negotiated.
+4. **Received:** Adj-RIB-In / received-routes / receive-protocol / BMP.
+5. **Policy:** prefix, AS-path, RPKI, first-AS, max-prefix, allowas-in count.
+6. **Eligible / best:** LP, AIGP, MED scope, RR hiding, weight.
+7. **RIB/FIB:** NH recursion; AD vs static; CEF/FT; labels.
+8. **Export:** outbound map; split horizon; SoO; conditional adv; ORF.
+9. **Remote:** peer’s import; looking glass.
+10. **Forwarding:** bidirectional probe; uRPF; asymmetry.
 
-1. Is transport/session up?
-2. Is the AFI/SAFI negotiated?
-3. Did the peer send the route?
-4. Did import policy accept it?
-5. Is the next hop and route valid?
-6. Why did it win or lose?
-7. Did another protocol win the RIB?
-8. Did hardware install it?
-9. Did export policy advertise it?
-10. What did the remote side select?
-11. Does the return path work?
+## Five views flash card
+
+Received → Accepted → Best → Installed → Advertised.
+
+## PE-CE fork
+
+If same-ASN CE sites: verify allowas-in **or** as-override design, then SoO on PE→CE—see [toolkit](../18_MPLS_L3VPN/08_PE_CE_AS_Loop_Toolkit.md).
+
+## Ops order
+
+Mirror [Operational Inspection Order](../21_Operations_and_Observability/01_Operational_Inspection_Order.md).
 
 ---
-

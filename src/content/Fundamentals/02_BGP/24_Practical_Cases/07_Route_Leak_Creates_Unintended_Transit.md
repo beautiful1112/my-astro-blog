@@ -1,24 +1,41 @@
 # Case: Route Leak Creates Unintended Transit
 
-## Symptom
+## Scenario
 
-A small edge AS receives a full table from provider A and advertises it to provider B. Traffic surges and links congest.
+Customer AS accidentally exports a full table learned from Provider-A toward Provider-B (or an IX peer). Your AS becomes free transit; CPU/FIB pressure rises; third parties send traffic through you.
 
-## Reasoning
+## Expected evidence
 
-Export policy failed to distinguish provider-learned routes from customer routes.
+```text
+show bgp ipv4 unicast summary
+! advertised count explodes toward B
+show bgp ipv4 unicast neighbors <B> advertised-routes | count
+! includes prefixes whose AS_PATH shows A as upstream, not your customers
+```
 
-## Proof
+RPKI may still be Valid—origin can be correct while the path violates valley-free export. OTC/roles would have marked or dropped the leak on supporting peers.
 
-Leaked advertisements retain tags showing provider-A ingress and appear in provider B's route view with the edge AS added.
+## Config touchpoints
 
-## Correction
+```text
+! Outbound to providers/peers: only customer + own prefixes
+route-map TO-PROVIDER deny 10
+ match community FOREIGN-TRANSIT
+route-map TO-PROVIDER permit 20
+ match ip address prefix-list CUSTOMER-AND-OWN
+```
 
-Withdraw the leak, enforce a relationship-based export matrix, set maximum-prefix limits, and deploy BGP Roles/OTC where supported.
+Enable [BGP Roles / OTC](../17_RPKI_and_Leak_Prevention/08_BGP_Roles_and_OTC.md) where peers support it.
+
+## Verification
+
+Advertised count returns to baseline; external traceroutes no longer traverse you for unrelated pairs. See [Interview: RPKI ≠ leak stop](../25_Interview_Questions/07_RPKI_Does_Not_Stop_Leaks.md).
 
 ## Lesson
 
-RPKI can show these routes Valid because their origins remain legitimate. Leak prevention is relationship policy.
+Export policy and OTC address leaks; ROAs address origin spoofing.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

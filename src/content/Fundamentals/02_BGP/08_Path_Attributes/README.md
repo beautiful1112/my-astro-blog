@@ -12,3 +12,4 @@
 8. [Multi-Exit Discriminator](08_MED.md)
 9. [ATOMIC_AGGREGATE and AGGREGATOR](09_ATOMIC_AGGREGATE_and_AGGREGATOR.md)
 10. [Unknown Attributes and the Partial Bit](10_Unknown_Attributes_and_Partial_Bit.md)
+11. [AIGP (Accumulated IGP Metric)](11_AIGP.md)

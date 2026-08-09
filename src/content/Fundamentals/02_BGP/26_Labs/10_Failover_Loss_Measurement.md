@@ -2,24 +2,38 @@
 
 ## Topology
 
-A source and destination communicate through primary and backup eBGP edges.
+Primary and backup eBGP/iBGP exits toward a VIP sink. Continuous probe (icmp/udp/twamp) from source.
 
 ## Objectives
 
-Break convergence into measurable stages.
+- Quantify packet-loss interval for: interface shut, BFD-triggered BGP, and process restart (GR on/off).
+- Compare to business SLO—not to “session reconverged” time alone.
+- Add PIC/preinstall if platform supports; re-measure.
+
+## Config touchpoints
+
+```text
+neighbor <primary> fall-over bfd
+! LP primary 300 / backup 100
+! Optional: BGP PIC edge
+```
 
 ## Tasks
 
-1. Send sequence-numbered traffic at a known rate.
-2. Synchronize device and measurement clocks.
-3. Record physical/BFD detection, BGP invalidation, best-path selection, RIB, and FIB times.
-4. Fail the primary link, node, and upstream next hop separately.
-5. Repeat with BFD and PIC/backup installation changes.
-6. Calculate lost packets and maximum consecutive-loss interval.
+1. Baseline steady-state loss = 0.
+2. Fail primary link; timestamp first/last lost probe; note new NH.
+3. Repeat with slower Hold-only detection vs BFD.
+4. Plot loss interval vs detection method.
 
-## Lesson
+## Failure injection
 
-The operational metric is data-plane loss under each failure model, not one protocol timer.
+Oscillate BFD ([case](../24_Practical_Cases/12_Fast_BFD_Causes_Path_Oscillation.md)); show loss from churn exceeds single-fail loss.
+
+## Expected evidence
+
+Numeric loss duration per method; backup NH and FIB update timestamps recorded. Ties to [Fast failover vs stability](../22_Quant_Trading_Networks/05_Fast_Failover_vs_Stability.md).
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

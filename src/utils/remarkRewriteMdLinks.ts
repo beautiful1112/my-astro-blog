@@ -88,9 +88,19 @@ function rewriteMarkdownUrl(ctx: NoteContext, url: string): string | null {
     );
   }
 
-  if (!/\.mdx?$/i.test(rawPath)) return null;
+  // Directory / module index refs without a file: treat as README
+  // e.g. ../18_MPLS_L3VPN/  →  ../18_MPLS_L3VPN/README.md
+  let pathForResolve = rawPath;
+  if (!/\.mdx?$/i.test(pathForResolve)) {
+    if (pathForResolve.endsWith('/')) {
+      pathForResolve = `${pathForResolve}README.md`;
+    } else {
+      // Bare relative paths without extension are not rewritten
+      return null;
+    }
+  }
 
-  const withoutExt = rawPath.replace(/\.mdx?$/i, '');
+  const withoutExt = pathForResolve.replace(/\.mdx?$/i, '');
   const resolved = path.posix.normalize(path.posix.join(ctx.fileDir, withoutExt));
   return toSiteHref(ctx.basePath, resolved, hash);
 }

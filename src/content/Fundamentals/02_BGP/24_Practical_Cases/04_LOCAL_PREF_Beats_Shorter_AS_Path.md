@@ -1,24 +1,37 @@
 # Case: LOCAL_PREF Beats a Shorter AS Path
 
-## Symptom
+## Scenario
 
-The router selects AS_PATH “64510 64520 64530” instead of the shorter “64540”.
+Operator prepends outbound AS_PATH three times toward Provider-A expecting inbound shift. Inbound traffic stays on Provider-B because Provider-B’s customer sets LOCAL_PREF higher for B’s path. Shorter path never gets compared.
 
-## Reasoning
+## Expected evidence
 
-The longer route arrived from a customer and received LOCAL_PREF 200. The shorter provider route has LOCAL_PREF 80.
+```text
+! Looking glass at remote AS:
+! Path via B: LP 200, AS_PATH length 2
+! Path via A: LP 100, AS_PATH length 5 (with your prepend)
+! Best: B
+```
 
-## Proof
+Locally, your advertisement looks correct; remote policy dominates inbound.
 
-Both paths are eligible; LOCAL_PREF is the first differing criterion.
+## Config touchpoints
 
-## Correction
+Prefer provider communities / selective advertisement / MED (same AS only) over blind prepend. Document that prepend is a hint, not a contract—see [Interview: prepend limits](../25_Interview_Questions/08_AS_Prepending_Limitations.md).
 
-No protocol fix is required if commercial policy is intentional. If latency intent differs, adjust the documented relationship/per-prefix policy, not an arbitrary later attribute.
+## Verification
+
+After applying provider “prefer this peer” community (if offered), looking glass shows LP change and traffic shifts. Prepend-only change does not move the needle.
+
+## Config / verification touchpoints
+
+Capture pre/post `show bgp` (attributes), looking-glass or collector view, and a data-plane probe. Soft-clear only the affected peer/AF after policy edits; avoid global clears during proof.
 
 ## Lesson
 
-BGP selection is lexicographic. A later shorter AS path cannot overcome an earlier LOCAL_PREF difference.
+LOCAL_PREF is evaluated before AS_PATH length. Inbound TE requires influencing the remote AS’s policy.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

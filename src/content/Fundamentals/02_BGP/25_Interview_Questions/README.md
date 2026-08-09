@@ -14,3 +14,4 @@
 10. [Interview: Explain Route-Reflector Path Hiding](10_Route_Reflector_Path_Hiding.md)
 11. [Interview: Debug Established but No Routes](11_Debug_Established_No_Routes.md)
 12. [Interview: Design BGP for a Low-Latency Trading Site](12_Low_Latency_BGP_Design.md)
+13. [Interview: allowas-in, as-override, and AIGP](13_AllowAS_In_AS_Override_AIGP.md)

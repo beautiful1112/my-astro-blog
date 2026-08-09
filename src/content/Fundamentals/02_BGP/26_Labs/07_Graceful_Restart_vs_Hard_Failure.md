@@ -1,22 +1,39 @@
 # Lab: Graceful Restart vs Hard Failure
 
+## Topology
+
+Sender —— DUT (GR-capable) —— Receiver/helper. Backup path exists via alternate DUT-B with lower LP.
+
 ## Objectives
 
-Compare a BGP process restart with complete forwarding failure.
+- Measure VIP loss with GR helper preserving stale path while DUT FIB is empty.
+- Compare to hard session reset where backup LP path installs quickly.
+- Tune or disable GR; re-measure.
+
+## Config touchpoints
+
+```text
+router bgp 65000
+ bgp graceful-restart
+ neighbor <peer> fall-over bfd
+! Helper stale timer platform-specific — set aggressively for the lab
+```
 
 ## Tasks
 
-1. Establish redundant paths and enable GR.
-2. Send continuous timestamped traffic.
-3. Restart only the BGP process while forwarding remains active.
-4. Record stale routes, End-of-RIB, and packet loss.
-5. Repeat by shutting the data-plane interface or device.
-6. Observe whether helpers retain a blackholing stale path.
-7. Repeat with GR disabled or stale timers reduced.
+1. Enable GR; simulate control-plane restart with forwarding stopped on DUT.
+2. Capture loss duration and whether backup becomes best.
+3. Disable GR; hard-fail DUT; measure again.
 
-## Result
+## Expected evidence
 
-Document which failure modes satisfy the core GR assumption: preserved forwarding.
+GR can extend blackhole vs hard fail + backup. Matches [GR case](../24_Practical_Cases/08_Graceful_Restart_Stale_Blackhole.md).
+
+## Pass criteria
+
+Record loss interval (ms), whether backup became best before stale expiry, and final runbook recommendation (GR on/off + stale bound) for this platform.
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-

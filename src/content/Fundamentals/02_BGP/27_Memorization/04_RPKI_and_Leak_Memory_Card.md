@@ -1,19 +1,37 @@
 # RPKI and Route-Leak Memory Card
 
-RPKI origin states:
+## RPKI states
 
-- **Valid:** covering VRP, origin matches, length allowed.
-- **Invalid:** covering VRP, origin or length fails.
-- **NotFound:** no covering VRP.
+| State | Meaning | Typical edge action |
+|---|---|---|
+| Valid | ROA covers prefix/origin/length | Prefer |
+| Invalid | Origin/length disagrees with ROA | Reject |
+| NotFound | No covering ROA | Accept with care / lower LP |
 
-ROV validates origin authorization, not the entire AS path.
+- ROA **maxLength** must cover TE more-specifics or they become Invalid.
+- RTR feeds VRPs from validators to routers.
 
-Leak memory rule:
+## What RPKI does *not* do
 
-- Customer routes may commonly go up, sideways, and down.
-- Peer/provider routes should normally go only down to customers.
+- Does not validate the full AS_PATH.
+- Does not stop valley-free / customer-provider **leaks** of Valid origins.
+- Is not BGPsec.
 
-BGP Roles and OTC help signal this relationship constraint. Prefix/export policy remains essential.
+## Leak prevention toolkit
+
+| Tool | Role |
+|---|---|
+| Strict export prefix lists | Primary |
+| Peer/customer communities | Classification |
+| BGP Roles + OTC | Signal/drop leak paths |
+| Max-prefix | Blast-radius limit |
+
+## Flash questions
+
+1. Valid origin leaked to two providers—RPKI state? → Still Valid.
+2. /25 TE under ROA maxLength 24—state? → Invalid.
+3. Who must filter exports—you or RPKI? → You (and OTC helpers).
+
+Cross-links: [RPKI module](../17_RPKI_and_Leak_Prevention/README.md), [Interview](../25_Interview_Questions/07_RPKI_Does_Not_Stop_Leaks.md).
 
 ---
-

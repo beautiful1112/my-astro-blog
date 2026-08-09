@@ -1,5 +1,7 @@
 # 05. Finite state machine and timers
 
+FSM states, OPEN negotiation, Hold/Keepalive, ConnectRetry/backoff, and NOTIFICATION/Cease reset reasons.
+
 ## Knowledge points
 
 1. [BGP finite-state machine](01_Finite_State_Machine.md)

@@ -1,24 +1,40 @@
 # Case: Route Reflector Hides the Low-Latency Path
 
-## Symptom
+## Scenario
 
-A trading-site client exits through a remote edge even though a local edge has lower IGP cost and latency.
+Two edges learn the same VIP: Edge-A (low-latency exchange) and Edge-B (cheaper transit). The RR prefers Edge-B (higher RID / IGP quirks / LP tie). Clients only receive Edge-B’s path. Strategies miss the low-latency exit.
 
-## Reasoning
+## Expected evidence
 
-The RR chose the remote path from its own topology position and advertised only that path. The client never saw the local alternative.
+```text
+! On RR:
+show bgp ipv4 unicast <vip>
+! two paths; best is Edge-B
+! On client:
+show bgp ipv4 unicast <vip>
+! only Edge-B path present
+```
 
-## Proof
+## Config touchpoints
 
-The RR holds both paths; the client receives one. Simulating selection with the client's IGP cost would choose the hidden path.
+- Align LOCAL_PREF so Edge-A wins when that is intent.
+- Or enable ADD-PATH / diverse-path so clients see both.
+- Or place clients in a topology that peers with both edges for that VIP class.
 
-## Correction
+```text
+neighbor <client> capability additional-paths send
+neighbor <client> advertise additional-paths best 2
+```
 
-Use topology-aware RR placement, ADD-PATH, or another design that exposes the required path diversity. Validate failure-state paths too.
+## Verification
+
+Clients list both paths (or the intended best). Active latency probe matches Edge-A when LP prefers A.
 
 ## Lesson
 
-Route reflection changes visibility, so RR location can affect data-plane quality.
+RR advertises its best (unless ADD-PATH). Path hiding is by design—see [Interview](../25_Interview_Questions/10_Route_Reflector_Path_Hiding.md).
+## Cross-links
+
+Use the matching troubleshooting or interview note if this case appears in an incident; keep evidence (show output + probe) with the ticket.
 
 ---
-
