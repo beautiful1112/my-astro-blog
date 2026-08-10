@@ -34,3 +34,5 @@ Some routers map a v1/v2 group-only join to a statically configured source for S
 
 When static state or a proxy exists, identify which device generated the report seen upstream. A correct upstream report does not prove the original receiver sent a correct message.
 
+Configuration sketches (static join, proxy, SSM mapping): [IGMP/MLD configuration patterns](../14_Configuration_and_Observation/13_IGMP_MLD_Config_Patterns.md).
+

@@ -14,3 +14,7 @@
 10. [MSDP peering and SA-filter configuration](10_MSDP_Peering_and_Filtering_Config.md)
 11. [MVPN and EVPN multicast state inspection](11_MVPN_EVPN_State_Inspection.md)
 12. [Interdomain ASM end-to-end configuration pattern](12_Interdomain_ASM_End_to_End_Config.md)
+13. [IGMP and MLD configuration patterns](13_IGMP_MLD_Config_Patterns.md)
+14. [BIDIR-PIM configuration pattern](14_BIDIR_PIM_Config_Pattern.md)
+15. [Auto-RP configuration pattern](15_Auto_RP_Config_Pattern.md)
+16. [Multicast boundary and ACL configuration](16_Multicast_Boundary_and_ACL_Config.md)

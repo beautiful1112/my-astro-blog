@@ -28,3 +28,7 @@
 24. [IGMP and MLD message-destination matrix](24_IGMP_MLD_Destination_Matrix.md)
 25. [IGMPv3 report size, packing, and MTU behavior](25_IGMPv3_Report_Size_and_MTU.md)
 26. [IGMP/MLD security and message validation](26_IGMP_MLD_Security_and_Validation.md)
+
+## Configuration
+
+- [IGMP and MLD configuration patterns](../14_Configuration_and_Observation/13_IGMP_MLD_Config_Patterns.md)

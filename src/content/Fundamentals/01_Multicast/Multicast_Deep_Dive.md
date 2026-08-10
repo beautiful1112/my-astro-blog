@@ -2,8 +2,8 @@
 
 > **Audience:** Network-engineering and quantitative-trading infrastructure interviews  
 > **Goal:** Understand packet behavior, control-plane state, design trade-offs, failure modes, and low-latency market-data applications—not merely configuration syntax.  
-> **Revision:** 2.1 - 2026-08-07
-> **Structure:** 166 focused knowledge-point documents in 22 numbered modules.
+> **Revision:** 2.2 - 2026-08-10
+> **Structure:** 170 focused knowledge-point documents in 22 numbered modules.
 
 The original monolithic guide has been divided so each topic can be studied, discussed, and revised independently.
 
@@ -175,6 +175,10 @@ The original monolithic guide has been divided so each topic can be studied, dis
 - [MSDP peering and SA-filter configuration](14_Configuration_and_Observation/10_MSDP_Peering_and_Filtering_Config.md)
 - [MVPN and EVPN multicast state inspection](14_Configuration_and_Observation/11_MVPN_EVPN_State_Inspection.md)
 - [Interdomain ASM end-to-end configuration pattern](14_Configuration_and_Observation/12_Interdomain_ASM_End_to_End_Config.md)
+- [IGMP and MLD configuration patterns](14_Configuration_and_Observation/13_IGMP_MLD_Config_Patterns.md)
+- [BIDIR-PIM configuration pattern](14_Configuration_and_Observation/14_BIDIR_PIM_Config_Pattern.md)
+- [Auto-RP configuration pattern](14_Configuration_and_Observation/15_Auto_RP_Config_Pattern.md)
+- [Multicast boundary and ACL configuration](14_Configuration_and_Observation/16_Multicast_Boundary_and_ACL_Config.md)
 
 ### [15. Deterministic troubleshooting](15_Troubleshooting/README.md)
 

@@ -49,3 +49,5 @@ If a new query requests an earlier response than an already-running timer, the h
 
 Lowering QI or LMQI can reduce stale traffic, but raises report/query rate and sensitivity to packet loss, slow CPUs, control-plane policing, and snooping bugs. Tune the entire link consistently and verify the actual query fields in a capture.
 
+Vendor timer knobs and lab checks: [IGMP/MLD configuration patterns](../14_Configuration_and_Observation/13_IGMP_MLD_Config_Patterns.md).
+
