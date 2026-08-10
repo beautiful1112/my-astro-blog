@@ -9,6 +9,7 @@ A modern blog theme built with Astro 6 + Tailwind CSS v4. Supports light/dark mo
 ## Features
 
 - **Markdown / MDX** — Standard Markdown and embedded JSX components
+- **Mermaid diagrams** — Topologies and protocol flows render to SVG at build time
 - **KaTeX math** — Inline and block LaTeX rendering
 - **Code highlighting** — Shiki syntax highlighting + one-click copy
 - **Dark mode** — System preference + manual toggle, persisted in `localStorage`
@@ -28,6 +29,7 @@ A modern blog theme built with Astro 6 + Tailwind CSS v4. Supports light/dark mo
 | [Astro 6](https://astro.build) | Static site generation |
 | [Tailwind CSS v4](https://tailwindcss.com) | CSS framework |
 | [Shiki](https://shiki.style) | Code syntax highlighting |
+| [Mermaid](https://mermaid.js.org) / [rehype-mermaid](https://github.com/remcohaszing/rehype-mermaid) | Diagram → SVG at build time |
 | [KaTeX](https://katex.org) | Math rendering |
 | [MDX](https://mdxjs.com) | Markdown + JSX |
 | [Waline](https://waline.js.org) | Comment system |
@@ -44,6 +46,7 @@ A modern blog theme built with Astro 6 + Tailwind CSS v4. Supports light/dark mo
 git clone <your-repo-url> my-blog
 cd my-blog
 npm install
+npx playwright install chromium   # required once for Mermaid → SVG at build time
 ```
 
 ### Local development
@@ -162,6 +165,37 @@ issue: 1
 cover: https://example.com/cover.jpg
 ---
 ```
+
+### Diagrams (Mermaid)
+
+Fundamentals notes and posts can embed topologies as fenced Mermaid blocks. They are rendered to static SVG during `npm run build` (Playwright + Chromium), so Cloudflare only needs the prebuilt `dist/`.
+
+Example in a note:
+
+~~~~markdown
+## Topology
+
+CE1 dual-homed to PE-A and PE-B.
+
+```mermaid
+flowchart LR
+    CE["CE-Site1"] --- PEA["PE-A"]
+    CE --- PEB["PE-B"]
+    PEA -->|"VPNv4"| Core["SP core"]
+    Core --> PEB
+```
+~~~~
+
+House style:
+
+| Use | Diagram type |
+|---|---|
+| Lab / VPN / RR topologies | `flowchart LR` or `flowchart TB` |
+| Protocol message exchange | `sequenceDiagram` |
+| Node labels | Always quote: `A["PE-A"]` |
+| Placement | Immediately after the prose the diagram illustrates |
+
+Prefer one compact diagram (≤ ~10 nodes) per concept. Put a one-line topology summary above the fence when the section is titled Topology.
 
 ## MDX and components
 

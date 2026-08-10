@@ -4,6 +4,12 @@
 
 Speaker with RTR to a validator cache; peer announces Valid, Invalid, and NotFound prefixes (lab ROAs).
 
+```mermaid
+flowchart LR
+    Peer["Peer<br/>Valid / Invalid / NotFound"] -->|"BGP"| Speaker["Speaker"]
+    Speaker -->|"RTR"| Validator["Validator cache"]
+```
+
 ## Objectives
 
 - Observe validation state on each path.

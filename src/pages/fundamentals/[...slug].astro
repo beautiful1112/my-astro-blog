@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import FundamentalsNav from '../../components/FundamentalsNav.astro';
 import {
   buildNoteTopics,
   noteTitle,
@@ -30,12 +31,21 @@ const topics = buildNoteTopics(
     .map((n) => ({ id: n.id, title: noteTitle(n.id, n.body, n.data.title) })),
 );
 const nav = resolveNoteNav(note.id, topics);
+const topic = nav ? topics.find((t) => t.id === nav.topicId) : undefined;
 
 const title = noteTitle(note.id, note.body, note.data.title);
 const { Content, headings } = await render(note);
 ---
 
-<PostLayout title={title} description={note.data.description} headings={headings}>
+<PostLayout
+  title={title}
+  description={note.data.description}
+  headings={headings}
+  variant="docs"
+>
+  {topic && <FundamentalsNav slot="aside" topic={topic} currentId={note.id} />}
+  {topic && <FundamentalsNav slot="drawer" topic={topic} currentId={note.id} />}
+
   <header class="mb-6">
     <div class="flex flex-wrap items-center gap-2 mb-3">
       <a

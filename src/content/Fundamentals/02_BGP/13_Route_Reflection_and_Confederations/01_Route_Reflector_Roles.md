@@ -11,6 +11,13 @@ A route reflector (RR) relaxes classic iBGP split horizon for configured **clien
 | **Route reflector** | Speaker that reflects among clients / between clients and non-clients |
 | **Cluster** | Logical set of RRs (and their clients) identified by CLUSTER_ID |
 
+```mermaid
+flowchart TB
+    NC["Non-client"] --- RR["Route reflector"]
+    RR --- C1["Client-1"]
+    RR --- C2["Client-2"]
+```
+
 ## Advertisement rules (RFC 4456)
 
 Simplified reflection rules for an **iBGP-learned** route on the RR:

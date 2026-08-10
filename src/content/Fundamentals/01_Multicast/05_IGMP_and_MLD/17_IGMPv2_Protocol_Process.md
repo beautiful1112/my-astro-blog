@@ -13,7 +13,7 @@ The join/periodic process resembles v1:
 
 The host also tracks whether it was the **last reporter** heard for G.
 
-~~~mermaid
+```mermaid
 sequenceDiagram
     participant R as "IGMPv2 querier"
     participant A as "Host A: G1 and G2"
@@ -27,7 +27,7 @@ sequenceDiagram
     Note over B: "Cancel pending G1 Report"
     A->>R: "Separate 0x16 Report to G2"
     Note over R: "Refresh G1 and G2 link state"
-~~~
+```
 
 The General Query and its responses therefore use different destinations:
 
@@ -47,7 +47,7 @@ When the last local socket leaves G:
 
 With defaults, LMQI = 1 second and LMQC = 2, so verification is about 2 seconds.
 
-~~~mermaid
+```mermaid
 sequenceDiagram
     participant L as "Leaving host"
     participant R as "IGMP querier"
@@ -61,7 +61,7 @@ sequenceDiagram
     else "No listener answers"
         Note over R: "Expire G after last-member query time"
     end
-~~~
+```
 
 ## Why the Leave is not an immediate prune
 

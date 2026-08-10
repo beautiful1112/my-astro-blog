@@ -4,6 +4,14 @@
 
 Sender —— DUT (GR-capable) —— Receiver/helper. Backup path exists via alternate DUT-B with lower LP.
 
+```mermaid
+flowchart LR
+    Sender["Sender"] --> DUT["DUT GR-capable"]
+    DUT --> Receiver["Receiver / helper"]
+    Sender --> DUTB["DUT-B backup"]
+    DUTB --> Receiver
+```
+
 ## Objectives
 
 - Measure VIP loss with GR helper preserving stale path while DUT FIB is empty.

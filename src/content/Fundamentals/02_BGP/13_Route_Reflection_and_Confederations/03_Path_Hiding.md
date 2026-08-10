@@ -4,13 +4,15 @@ An RR normally advertises only its **selected best path** for each NLRI. Clients
 
 ## Why it happens
 
-```text
-PE-West -- low IGP cost -- RR -- high IGP cost -- PE-East
-                |
-             Client-East
-```
-
 Both PE-West and PE-East advertise `10.0.0.0/8` to the RR. The RR’s IGP prefers PE-West and reflects only that path. Client-East would have preferred PE-East (hot-potato / local exit) but never sees it.
+
+```mermaid
+flowchart TB
+    PEW["PE-West"] -->|"10.0.0.0/8"| RR["RR<br/>selects PE-West"]
+    PEE["PE-East"] -->|"10.0.0.0/8"| RR
+    RR -->|"reflects PE-West only"| CE["Client-East<br/>never sees PE-East"]
+    PEE -.->|"preferred locally<br/>(hidden)"| CE
+```
 
 ## Consequences
 

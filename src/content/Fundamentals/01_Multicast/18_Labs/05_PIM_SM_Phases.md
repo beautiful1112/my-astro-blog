@@ -14,6 +14,11 @@ Use separate source, RP, and receiver locations with captures on:
 - LHR RPT-facing and source-SPT-facing interfaces; and
 - receiver LAN.
 
+```mermaid
+flowchart LR
+  S["Source"] --- FHR["FHR"] --- RP["RP"] --- LHR["LHR"] --- R["Receiver"]
+```
+
 Generate sequenced UDP packets slowly enough that captures remain readable. Record the initial MRIB result toward both `S` and RP on every router.
 
 ## Exercise A: receiver first

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
+import FundamentalsNav from '../../../components/FundamentalsNav.astro';
 import { buildNoteTopics, noteHref, noteTitle } from '../../../utils/notes';
 
 export async function getStaticPaths() {
@@ -23,91 +24,106 @@ const noteCount = topic.modules.reduce(
 );
 ---
 
-<BlogLayout title={`${topic.label} · Fundamentals`}>
-  <header class="mb-8">
-    <a
-      href="/fundamentals"
-      class="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-4"
-    >
-      Fundamentals
-    </a>
-    <h1 class="text-2xl font-bold capitalize mb-2">{topic.label}</h1>
-    <p class="text-sm text-gray-400 dark:text-gray-500">
-      Master index · {topic.modules.length} modules · {noteCount} notes
-    </p>
-  </header>
+<BlogLayout title={`${topic.label} · Fundamentals`} variant="docs">
+  <FundamentalsNav slot="drawer" topic={topic} />
 
-  <nav class="space-y-8">
-    {
-      topic.modules.map((mod) => (
-        <section class="rounded-2xl border border-gray-200 dark:border-gray-700 p-5">
-          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
-            {mod.indexId ? (
-              <a
-                href={noteHref('/fundamentals', mod.indexId)}
-                class="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-primary transition-colors"
-              >
-                {mod.label}
-              </a>
-            ) : (
-              <h2 class="text-lg font-semibold">{mod.label}</h2>
-            )}
-            <span class="text-xs text-gray-400">
-              {mod.notes.length} note{mod.notes.length === 1 ? '' : 's'}
-            </span>
-          </div>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-            {mod.notes.map((note) => (
-              <li>
-                <a
-                  href={noteHref('/fundamentals', note.id)}
-                  class="text-sm text-primary hover:underline"
-                >
-                  {note.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
-    }
-
-    {
-      topic.looseNotes.length > 0 && (
-        <section class="rounded-2xl border border-gray-200 dark:border-gray-700 p-5">
-          <h2 class="text-lg font-semibold mb-3">Other notes</h2>
-          <ul class="space-y-2">
-            {topic.looseNotes.map((note) => (
-              <li>
-                <a
-                  href={noteHref('/fundamentals', note.id)}
-                  class="text-sm text-primary hover:underline"
-                >
-                  {note.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
-  </nav>
-
-  {
-    topic.deepDive && (
-      <p class="mt-10 text-sm text-gray-400">
-        Prefer the original document layout?{' '}
+  <div class="flex flex-col xl:flex-row gap-6">
+    <div class="flex-1 min-w-0">
+      <header class="mb-8">
         <a
-          href={noteHref('/fundamentals', topic.deepDive.id)}
-          class="text-primary hover:underline"
+          href="/fundamentals"
+          class="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-4"
         >
-          Open {topic.deepDive.title}
+          Fundamentals
         </a>
-      </p>
-    )
-  }
+        <h1 class="text-2xl font-bold capitalize mb-2">{topic.label}</h1>
+        <p class="text-sm text-gray-400 dark:text-gray-500">
+          Master index · {topic.modules.length} modules · {noteCount} notes
+        </p>
+      </header>
 
-  <p class="mt-6 text-sm">
-    <a href="/fundamentals" class="text-gray-400 hover:text-primary">← All topics</a>
-  </p>
+      <nav class="space-y-8">
+        {
+          topic.modules.map((mod) => (
+            <section
+              id={mod.id.split('/').pop()?.toLowerCase()}
+              class="rounded-2xl border border-gray-200 dark:border-gray-700 p-5 scroll-mt-24"
+            >
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+                {mod.indexId ? (
+                  <a
+                    href={noteHref('/fundamentals', mod.indexId)}
+                    class="text-lg font-semibold text-gray-900 dark:text-gray-100 hover:text-primary transition-colors"
+                  >
+                    {mod.label}
+                  </a>
+                ) : (
+                  <h2 class="text-lg font-semibold">{mod.label}</h2>
+                )}
+                <span class="text-xs text-gray-400">
+                  {mod.notes.length} note{mod.notes.length === 1 ? '' : 's'}
+                </span>
+              </div>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                {mod.notes.map((note) => (
+                  <li>
+                    <a
+                      href={noteHref('/fundamentals', note.id)}
+                      class="text-sm text-primary hover:underline"
+                    >
+                      {note.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+
+        {
+          topic.looseNotes.length > 0 && (
+            <section class="rounded-2xl border border-gray-200 dark:border-gray-700 p-5">
+              <h2 class="text-lg font-semibold mb-3">Other notes</h2>
+              <ul class="space-y-2">
+                {topic.looseNotes.map((note) => (
+                  <li>
+                    <a
+                      href={noteHref('/fundamentals', note.id)}
+                      class="text-sm text-primary hover:underline"
+                    >
+                      {note.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+      </nav>
+
+      {
+        topic.deepDive && (
+          <p class="mt-10 text-sm text-gray-400">
+            Prefer the original document layout?{' '}
+            <a
+              href={noteHref('/fundamentals', topic.deepDive.id)}
+              class="text-primary hover:underline"
+            >
+              Open {topic.deepDive.title}
+            </a>
+          </p>
+        )
+      }
+
+      <p class="mt-6 text-sm">
+        <a href="/fundamentals" class="text-gray-400 hover:text-primary">← All topics</a>
+      </p>
+    </div>
+
+    <aside class="hidden xl:block w-72 shrink-0">
+      <div class="sticky top-24 max-h-[calc(100vh-6.5rem)] overflow-y-auto pr-1">
+        <FundamentalsNav topic={topic} />
+      </div>
+    </aside>
+  </div>
 </BlogLayout>

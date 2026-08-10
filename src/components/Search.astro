@@ -9,7 +9,7 @@
         <input
           id="search-input"
           type="text"
-          placeholder="Search posts..."
+          placeholder="Search notes and posts..."
           class="flex-1 bg-transparent border-none outline-none text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400"
           autocomplete="off"
         />
@@ -20,7 +20,7 @@
         </button>
       </div>
       <div id="search-results" class="max-h-80 overflow-y-auto p-2">
-        <div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search posts</div>
+        <div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search</div>
       </div>
     </div>
   </div>
@@ -62,7 +62,22 @@
     const input = document.getElementById('search-input') as HTMLInputElement;
     if (input) input.value = '';
     const results = document.getElementById('search-results');
-    if (results) results.innerHTML = '<div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search posts</div>';
+    if (results) results.innerHTML = '<div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search</div>';
+  }
+
+  function typeLabel(type: string) {
+    if (type === 'weekly') return 'Weekly';
+    if (type === 'fundamentals') return 'Fundamentals';
+    if (type === 'linux') return 'Linux';
+    return 'Blog';
+  }
+
+  function itemHref(item: any) {
+    if (item.href) return item.href;
+    if (item.type === 'weekly') return `/weekly/${item.slug}`;
+    if (item.type === 'fundamentals') return `/fundamentals/${String(item.slug).toLowerCase()}`;
+    if (item.type === 'linux') return `/linux/${String(item.slug).toLowerCase()}`;
+    return `/post/${item.slug}`;
   }
 
   function search(query: string) {
@@ -75,7 +90,7 @@
     }
 
     if (!query.trim()) {
-      results.innerHTML = '<div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search posts</div>';
+      results.innerHTML = '<div class="px-3 py-8 text-center text-sm text-gray-400">Type keywords to search</div>';
       return;
     }
 
@@ -97,14 +112,14 @@
     results.innerHTML = filtered.map((item: any) => {
       const snippet = buildSnippet(item, terms);
       return `
-      <a href="${item.type === 'weekly' ? '/weekly/' : '/post/'}${item.slug}" class="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+      <a href="${itemHref(item)}" class="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
         <div class="flex-1 min-w-0">
           <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors line-clamp-1">${highlight(item.title, highlightRe)}</div>
           ${snippet ? `<div class="text-xs text-gray-400 dark:text-gray-500 mt-0.5 line-clamp-2">${highlight(snippet, highlightRe)}</div>` : ''}
           <div class="flex items-center gap-2 mt-0.5">
             ${item.category ? `<span class="text-xs text-primary/70">${escapeHtml(item.category)}</span>` : ''}
             ${item.category ? '<span class="w-px h-2.5 bg-gray-300 dark:bg-gray-600"></span>' : ''}
-            <span class="text-xs text-gray-400 dark:text-gray-500">${item.type === 'weekly' ? 'Weekly' : 'Blog'}</span>
+            <span class="text-xs text-gray-400 dark:text-gray-500">${typeLabel(item.type)}</span>
           </div>
         </div>
         <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 shrink-0 mt-1 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

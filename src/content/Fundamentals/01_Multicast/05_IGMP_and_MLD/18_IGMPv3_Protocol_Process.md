@@ -31,7 +31,7 @@ Interface state changes from INCLUDE {S1} to INCLUDE {}:
 3. Host sends MODE_IS_INCLUDE or MODE_IS_EXCLUDE records for current interface state.
 4. Router refreshes group/source timers.
 
-~~~mermaid
+```mermaid
 sequenceDiagram
     participant A as "Application"
     participant K as "Host kernel"
@@ -49,7 +49,7 @@ sequenceDiagram
         K->>R: "MODE_IS_INCLUDE {S1}"
         Note over R: "Retain source state"
     end
-~~~
+```
 
 ## ASM join representation
 

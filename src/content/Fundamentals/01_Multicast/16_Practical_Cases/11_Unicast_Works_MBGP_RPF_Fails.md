@@ -8,10 +8,13 @@
 
 Unicast traffic reaches source `192.0.2.10` through Transit-A. Multicast is engineered through Transit-M using IPv4 multicast SAFI. Ping and TCP recovery sessions work, but the receiver gets no `(192.0.2.10,232.10.10.10)` data after a routing change.
 
-```text
-unicast RIB: 192.0.2.0/24 -> Transit-A
-MBGP SAFI 2: 192.0.2.0/24 -> Transit-M (withdrawn/missing)
-data still arrives from Transit-M
+```mermaid
+flowchart LR
+  S["S 192.0.2.10"] --> TA["Transit-A"]
+  S --> TM["Transit-M"]
+  TA -->|"unicast RIB / ping"| Rec["Receiver"]
+  TM -->|"data; SAFI 2 withdrawn"| Rec
+  Rec -.->|"PIM Join via unicast RPF"| TA
 ```
 
 ## Failure mechanism

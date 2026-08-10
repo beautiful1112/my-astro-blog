@@ -51,13 +51,13 @@ For most operators today: enforce ROV, deploy Roles/OTC where peers support it, 
 
 ## Where BGPsec would sit in a stack
 
-```text
-TCP-AO / GTSM     → protect the session
-Prefix filters    → contractual allow-list
-ROV (RPKI)        → origin ASN/length authorization
-BGPsec            → cryptographic AS-path propagation (rare)
-Roles / OTC       → relationship leak detection
-Export policy     → do not become accidental transit
+```mermaid
+flowchart TB
+    TCP["TCP-AO / GTSM<br/>protect the session"] --> Filters["Prefix filters<br/>contractual allow-list"]
+    Filters --> ROV["ROV (RPKI)<br/>origin ASN/length"]
+    ROV --> BGPsec["BGPsec<br/>AS-path signatures (rare)"]
+    BGPsec --> OTC["Roles / OTC<br/>relationship leak detection"]
+    OTC --> Export["Export policy<br/>do not become accidental transit"]
 ```
 
 Skipping export policy because “we will do BGPsec someday” is not a plan.

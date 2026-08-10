@@ -16,12 +16,14 @@ MPLS L3VPN separates **customer routing** (per VRF on PEs) from **provider trans
 
 ## Control-plane flow
 
-```text
-CE-A advertises 10.1.0.0/16 to PE-A (VRF CUST)
-PE-A exports with RT, attaches VPN label, RD
-MP-BGP → RR → PE-B
-PE-B imports by RT into VRF CUST
-PE-B advertises to CE-B (optional as-override / SoO)
+CE-A originates a VRF prefix; PE-A exports it as VPNv4 (RD, RT, VPN label) via MP-BGP to the RR and onward to PE-B, which imports by RT and may advertise to CE-B.
+
+```mermaid
+flowchart LR
+    CEA["CE-A<br/>10.1.0.0/16"] --> PEA["PE-A<br/>export RT, RD, VPN label"]
+    PEA -->|"MP-BGP VPNv4"| RR["RR"]
+    RR -->|"MP-BGP VPNv4"| PEB["PE-B<br/>import by RT"]
+    PEB --> CEB["CE-B"]
 ```
 
 Data plane: CE-B → PE-B pushes transport(+VPN) labels → core swap transport → PE-A pops → VRF lookup → CE-A.

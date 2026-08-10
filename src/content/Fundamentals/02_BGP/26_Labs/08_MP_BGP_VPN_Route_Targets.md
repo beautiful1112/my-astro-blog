@@ -4,6 +4,14 @@
 
 CE1 —— PE1 —— (VPNv4 RR/core) —— PE2 —— CE2. VRF CUST-A on both PEs.
 
+```mermaid
+flowchart LR
+    CE1["CE1"] --- PE1["PE1<br/>VRF CUST-A"]
+    PE1 -->|"VPNv4"| RR["RR / core"]
+    RR -->|"VPNv4"| PE2["PE2<br/>VRF CUST-A"]
+    PE2 --- CE2["CE2"]
+```
+
 ## Objectives
 
 - Export/import RT so CE1↔CE2 reachability works.

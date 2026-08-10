@@ -25,6 +25,26 @@ PE-C VRF without that import ignores it (may still receive if no RTC)
 
 Hub-and-spoke without careful RT design creates spoke-spoke paths via hub only—or accidental full mesh if mis-imported.
 
+```mermaid
+flowchart LR
+    subgraph any["Any-to-any"]
+        A1["VRF A<br/>imp/exp RT:100"] --- A2["VRF B<br/>imp/exp RT:100"]
+        A2 --- A3["VRF C<br/>imp/exp RT:100"]
+        A1 --- A3
+    end
+```
+
+```mermaid
+flowchart TB
+    Hub["Hub VRF<br/>export Hub-RT<br/>import Spoke-RTs"]
+    S1["Spoke1<br/>export Spoke-RT1<br/>import Hub-RT"]
+    S2["Spoke2<br/>export Spoke-RT2<br/>import Hub-RT"]
+    S1 -->|"Spoke-RT1"| Hub
+    S2 -->|"Spoke-RT2"| Hub
+    Hub -->|"Hub-RT"| S1
+    Hub -->|"Hub-RT"| S2
+```
+
 ## Configuration
 
 ### Cisco

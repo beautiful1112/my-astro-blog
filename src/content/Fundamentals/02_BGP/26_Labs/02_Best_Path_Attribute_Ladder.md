@@ -4,6 +4,14 @@
 
 R_dst originates one prefix. R_test receives two paths via R_a and R_b (same or different AS as needed per step).
 
+```mermaid
+flowchart LR
+    R_dst["R_dst originates"] --> R_a["R_a"]
+    R_dst --> R_b["R_b"]
+    R_a --> R_test["R_test"]
+    R_b --> R_test
+```
+
 ## Objectives
 
 Prove ordered influence: Weight (if Cisco) → LOCAL_PREF → AS_PATH → ORIGIN → MED (same AS) → eBGP vs iBGP → IGP cost → RID.

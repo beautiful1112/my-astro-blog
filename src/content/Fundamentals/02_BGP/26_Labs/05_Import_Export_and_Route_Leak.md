@@ -4,6 +4,13 @@
 
 Cust —— You —— Prov-A and Prov-B. You learn full table from A; accidentally export it to B.
 
+```mermaid
+flowchart LR
+    Cust["Cust"] --- You["You"]
+    You --- ProvA["Prov-A"]
+    You --- ProvB["Prov-B"]
+```
+
 ## Objectives
 
 - Create a leak; observe advertised count and transit traceroute.

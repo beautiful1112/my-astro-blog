@@ -4,6 +4,14 @@
 
 Primary and backup eBGP/iBGP exits toward a VIP sink. Continuous probe (icmp/udp/twamp) from source.
 
+```mermaid
+flowchart LR
+    Source["Source probe"] --> Primary["Primary exit"]
+    Source --> Backup["Backup exit"]
+    Primary --> VIP["VIP sink"]
+    Backup --> VIP
+```
+
 ## Objectives
 
 - Quantify packet-loss interval for: interface shut, BFD-triggered BGP, and process restart (GR on/off).

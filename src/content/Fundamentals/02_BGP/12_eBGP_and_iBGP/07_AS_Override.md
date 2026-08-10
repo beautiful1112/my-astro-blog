@@ -12,6 +12,13 @@ AS_PATH as seen by CE-B without override:  65001
 
 CE-B’s ASN is `65001`, so standard loop prevention rejects the route. The sites cannot communicate through the VPN even though the topology is intentional.
 
+```mermaid
+flowchart LR
+    CEA["CE-A<br/>ASN 65001<br/>10.1.0.0/16"] --> PEA["PE-A"]
+    PEA -->|"VPNv4"| PEB["PE-B<br/>as-override"]
+    PEB -->|"AS_PATH = provider ASN"| CEB["CE-B<br/>ASN 65001"]
+```
+
 With as-override on PE-B toward CE-B:
 
 ```text

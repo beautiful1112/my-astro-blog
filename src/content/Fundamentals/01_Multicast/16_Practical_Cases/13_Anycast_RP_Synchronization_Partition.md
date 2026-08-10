@@ -8,6 +8,15 @@
 
 RP-A and RP-B advertise shared anycast address `10.255.0.1`. Sources near site A register to RP-A; receivers near site B join RP-B. The unique-address MSDP session or RFC 4610 Register-copy path between the RPs fails, but both anycast routes stay installed.
 
+```mermaid
+flowchart LR
+  SA["Source A"] --> FHRA["FHR-A"]
+  FHRA -->|"Register"| RPA["RP-A anycast 10.255.0.1"]
+  RB["Receiver B"] --> LHRB["LHR-B"]
+  LHRB -->|"*,G Join"| RPB["RP-B anycast 10.255.0.1"]
+  RPA -.->|"MSDP / Register-copy X"| RPB
+```
+
 ## Symptom pattern
 
 | Source | Receiver | Result |

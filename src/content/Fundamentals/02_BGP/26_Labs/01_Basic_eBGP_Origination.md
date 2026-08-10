@@ -4,6 +4,11 @@
 
 R1 (AS 65001) —— R2 (AS 65002), direct eBGP, IPv4 unicast.
 
+```mermaid
+flowchart LR
+    R1["R1 AS65001<br/>/32 loopback"] -->|"eBGP"| R2["R2 AS65002<br/>/32 loopback"]
+```
+
 ## Objectives
 
 - Establish eBGP with explicit import/export prefix policy.

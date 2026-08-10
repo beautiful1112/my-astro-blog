@@ -6,6 +6,15 @@ Site-of-Origin is an BGP **extended community** (type often called Origin / SoO)
 
 CE-Site1 is dual-homed to PE-A and PE-B. Prefix `10.1.0.0/16` is learned from CE on PE-A, exported as VPNv4, and imported on PE-B. Without SoO, PE-B may advertise `10.1.0.0/16` back to the same CE site. The CE (or site IGP) can then prefer the VPN path over the local path, creating a loop or suboptimal hairpin through the SP core.
 
+```mermaid
+flowchart LR
+    CE["CE-Site1<br/>10.1.0.0/16"] --- PEA["PE-A"]
+    CE --- PEB["PE-B"]
+    PEA -->|"VPNv4"| Core["SP core"]
+    Core -->|"VPNv4"| PEB
+    PEB -.->|"hairpin risk"| CE
+```
+
 AS_PATH alone may not save you when:
 
 - the site uses a private ASN that is overridden;
@@ -17,6 +26,13 @@ AS_PATH alone may not save you when:
 1. On the PE→CE (or VRF neighbor) attachment, configure a unique SoO value per site, e.g. `origin:65000:1001` or `origin:192.0.2.1:1`.
 2. Routes learned **from that site** are tagged with that SoO when redistributed/advertised into MP-BGP.
 3. When advertising from PE **to** a CE, the PE suppresses any route whose SoO matches the SoO configured for that CE attachment.
+
+```mermaid
+flowchart LR
+    PE["PE"] -->|"SoO match?"| Filter["SoO filter"]
+    Filter -->|"suppress"| Drop["Do not advertise to CE"]
+    Filter -->|"no match"| CE["CE"]
+```
 
 SoO is therefore a **per-site filter**, not a per-prefix password. Two sites must not share a SoO value.
 

@@ -4,6 +4,13 @@
 
 Two edges (A low-latency, B backup) + one RR + one client. Both edges advertise the same VIP to the RR.
 
+```mermaid
+flowchart TB
+    EdgeA["Edge A<br/>low-latency VIP"] --> RR["RR"]
+    EdgeB["Edge B<br/>backup VIP"] --> RR
+    RR --> Client["Client"]
+```
+
 ## Objectives
 
 - Observe client receiving only the RR’s best path.

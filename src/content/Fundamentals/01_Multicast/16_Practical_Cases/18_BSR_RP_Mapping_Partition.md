@@ -8,6 +8,19 @@
 
 A PIM domain is partitioned between sites A and B long enough for each side to elect a different BSR and learn a different candidate-RP set. After partial connectivity returns, FHRs register group `G` to RP-A while some LHRs still Join RP-B. New ASM flows fail inconsistently; established SPTs continue.
 
+```mermaid
+flowchart TB
+  subgraph SiteA["Site A"]
+    BSRA["BSR-A"] -.->|"RP(G)=RP-A"| FHR["FHR"]
+    FHR -->|"Register G"| RPA["RP-A"]
+  end
+  subgraph SiteB["Site B"]
+    BSRB["BSR-B"] -.->|"RP(G)=RP-B"| LHR["LHR"]
+    LHR -->|"*,G Join"| RPB["RP-B"]
+  end
+  SiteA -.->|"partition / stale mapping"| SiteB
+```
+
 ## State split
 
 ```text

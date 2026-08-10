@@ -25,14 +25,14 @@ They do **not**:
 5. The router exposes the interest to PIM or another multicast-routing component.
 6. A snooping switch may inspect the same messages to constrain Layer-2 forwarding.
 
-~~~mermaid
+```mermaid
 flowchart LR
     A["Application socket"] --> B["Host interface state"]
     B -->|"IGMP or MLD report"| C["Local querier"]
     C --> D["Outgoing-interface interest"]
     D --> E["PIM or multicast RIB"]
     C -. "Observed by snooping switch" .-> F["Layer-2 port state"]
-~~~
+```
 
 Membership is scoped by **interface + group**, and in source-filtering versions by a mode and source list. Joining the correct group on the wrong interface produces a valid report on the wrong VLAN.
 

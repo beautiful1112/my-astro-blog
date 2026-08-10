@@ -12,6 +12,13 @@ The classic AS_PATH loop check assumes that seeing your own ASN means the route 
 
 Without `allowas-in`, the spoke PE/CE rejects the remote spoke’s routes even though the data path is intentional and loop-free at the VPN layer (Site-of-Origin or RT design usually provides the real loop prevention).
 
+```mermaid
+flowchart LR
+    CE1["CE-Spoke1<br/>ASN 65001"] --> PEA["PE-A"]
+    PEA -->|"VPNv4"| PEB["PE-B"]
+    PEB -->|"AS_PATH … 65001"| CE2["CE-Spoke2<br/>ASN 65001<br/>allowas-in"]
+```
+
 ## Interaction with other mechanisms
 
 | Mechanism | Relationship |

@@ -26,7 +26,7 @@ IGMPv1 sends no leave message:
 
 This makes leave latency roughly a membership-aging problem, not a fast verification process.
 
-~~~mermaid
+```mermaid
 sequenceDiagram
     participant H1 as "Host 1"
     participant H2 as "Host 2"
@@ -38,7 +38,7 @@ sequenceDiagram
     H1-->>H2: "Report is also heard on the LAN"
     Note over H2: "Cancel timer: report suppression"
     Note over R: "Refresh group G timer"
-~~~
+```
 
 ## Operational consequence
 

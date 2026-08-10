@@ -10,9 +10,16 @@ Build or model an IPv4 ASM flow whose source and receiver live in different PIM/
 
 ## Topology
 
-```text
-Source S -- FHR/RP-A -- Border-A ===== Border-B -- RP-B/LHR -- Receiver
-                 AS 65010             AS 65020
+```mermaid
+flowchart LR
+  subgraph AS65010["AS 65010"]
+    S["Source S"] --- FHRA["FHR / RP-A"] --- BA["Border-A"]
+  end
+  subgraph AS65020["AS 65020"]
+    BB["Border-B"] --- RPB["RP-B / LHR"] --- R["Receiver"]
+  end
+  BA <-->|"MBGP + PIM"| BB
+  FHRA -.->|"MSDP"| RPB
 ```
 
 Use:

@@ -14,12 +14,18 @@ interface Props {
   description?: string;
   headings: MarkdownHeading[];
   cover?: string;
+  /** Docs mode: room for a right-hand page-nav rail. */
+  variant?: 'default' | 'docs';
 }
 
-const { title, description, headings, cover } = Astro.props;
+const { title, description, headings, cover, variant = 'default' } = Astro.props;
+const isDocs = variant === 'docs';
+const hasToc = headings && headings.filter((h) => h.depth >= 2 && h.depth <= 3).length > 0;
 ---
 
-<BlogLayout title={title} description={description} ogType="article" image={cover}>
+<BlogLayout title={title} description={description} ogType="article" image={cover} variant={variant}>
+  <slot name="drawer" slot="drawer" />
+
   {
     cover && (
       <div class="rounded-2xl overflow-hidden mb-8 aspect-[2/1] bg-gray-100 dark:bg-gray-800">
@@ -44,10 +50,11 @@ const { title, description, headings, cover } = Astro.props;
     </div>
 
     {
-      headings && headings.length > 0 && (
-        <aside class="hidden xl:block w-52 shrink-0">
-          <div class="sticky top-24">
-            <TableOfContents headings={headings} />
+      (isDocs || hasToc) && (
+        <aside class={`hidden xl:block shrink-0 ${isDocs ? 'w-72' : 'w-52'}`}>
+          <div class="sticky top-24 space-y-4 max-h-[calc(100vh-6.5rem)] overflow-y-auto pr-1">
+            <slot name="aside" />
+            {hasToc && <TableOfContents headings={headings} />}
           </div>
         </aside>
       )

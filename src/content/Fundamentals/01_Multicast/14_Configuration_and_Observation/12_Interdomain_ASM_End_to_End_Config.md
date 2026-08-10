@@ -8,18 +8,18 @@ This annotated Cisco IOS-like example combines local PIM-SM, multicast SAFI BGP,
 
 ## Topology
 
-```text
-AS 65010                                      AS 65020
-S 192.0.2.10 -- RP-A/Border-A ============== RP-B/Border-B -- Receiver
-                 Lo0 10.255.1.1   transit       Lo0 10.255.2.1
-                 203.0.113.1/30                 203.0.113.2/30
+RP loopbacks are unique addresses here, not Anycast. Ordinary unicast routing must make the two loopbacks reachable for MSDP TCP and peer-RPF processing. Group `239.10.10.10`; RP-A `10.255.1.1`; RP-B `10.255.2.1`.
 
-Group: 239.10.10.10
-Local RP in AS65010: 10.255.1.1
-Local RP in AS65020: 10.255.2.1
+```mermaid
+flowchart LR
+  subgraph AS65010["AS 65010"]
+    S["S 192.0.2.10"] --- RPA["RP-A / Border-A 10.255.1.1"]
+  end
+  subgraph AS65020["AS 65020"]
+    RPB["RP-B / Border-B 10.255.2.1"] --- Rec["Receiver"]
+  end
+  RPA <-->|"203.0.113.0/30 MBGP+PIM+MSDP"| RPB
 ```
-
-RP loopbacks are unique addresses here, not Anycast. Ordinary unicast routing must make the two loopbacks reachable for MSDP TCP and peer-RPF processing.
 
 ## RP-A / source AS
 

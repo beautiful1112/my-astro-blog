@@ -4,6 +4,13 @@
 
 Two VTEPs/PEs in same EVPN VNI/VLAN; host moves from PE1 to PE2 (or dual-attach then move).
 
+```mermaid
+flowchart LR
+    Host["Host"] -.->|"moves"| PE1["PE1 / VTEP"]
+    Host -->|"attaches"| PE2["PE2 / VTEP"]
+    PE1 --- PE2
+```
+
 ## Objectives
 
 - Observe Type-2 MAC/IP routes and sequence number / mobility community behavior.

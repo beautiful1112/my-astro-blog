@@ -16,13 +16,15 @@ No single mechanism replaces the other two.
 
 ## Topology
 
-```text
-S -- FHR/RP-A -- AS 65010 edge ==== AS 65020 edge -- RP-B/LHR -- R
-       |              MBGP + PIM interconnect            |
-       +================ MSDP SA =========================+
-```
-
 `S` is in AS 65010. Receiver `R` requests ASM group `G` in AS 65020. Each domain has its own RP.
+
+```mermaid
+flowchart LR
+  S["S"] --- FHRA["FHR / RP-A"] --- EA["AS 65010 edge"]
+  EA <-->|"MBGP + PIM"| EB["AS 65020 edge"]
+  EB --- RPB["RP-B / LHR"] --- R["R"]
+  FHRA -.->|"MSDP SA"| RPB
+```
 
 ## Source-side sequence
 

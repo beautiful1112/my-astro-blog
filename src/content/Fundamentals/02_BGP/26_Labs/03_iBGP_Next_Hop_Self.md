@@ -4,6 +4,12 @@
 
 CE/eBGP peer —— Edge —— (iBGP) —— Core/RR client. Edge learns external prefix; client must install it.
 
+```mermaid
+flowchart LR
+    CE["CE / eBGP peer"] -->|"eBGP"| Edge["Edge"]
+    Edge -->|"iBGP"| Core["Core / RR client"]
+```
+
 ## Objectives
 
 - Show unresolved NEXT_HOP when edge does not set next-hop-self and IGP lacks the eBGP peering IP.
