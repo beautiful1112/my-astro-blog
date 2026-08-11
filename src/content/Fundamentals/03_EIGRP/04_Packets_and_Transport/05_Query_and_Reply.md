@@ -4,17 +4,14 @@ When a router loses its **successor** for a prefix and has **no feasible success
 
 ## Sequence
 
-```mermaid
-sequenceDiagram
-  participant R as Router_R
-  participant N1 as Neighbor1
-  participant N2 as Neighbor2
-  Note over R: Successor lost, no FS → Active
-  R->>N1: Query(P)
-  R->>N2: Query(P)
-  N1->>R: Reply(P, metric or inf)
-  N2->>R: Reply(P, metric or inf)
-  Note over R: New successor / Passive
+```text
+Router_R / Neighbor1 / Neighbor2
+  [Successor lost, no FS → Active]
+R -> N1: Query(P)
+R -> N2: Query(P)
+N1 -> R: Reply(P, metric or inf)
+N2 -> R: Reply(P, metric or inf)
+  [New successor / Passive]
 ```
 
 Queries propagate: a neighbor that also lacks a loop-free answer may Query *its* neighbors before Replying—this is the **query domain**. Stub and summarization exist largely to **bound** that domain. Related: [Passive versus Active routes](../06_Topology_Table_and_RIB/04_Passive_vs_Active_Routes.md), [SIA-Query and SIA-Reply](07_SIA_Query_and_SIA_Reply.md).

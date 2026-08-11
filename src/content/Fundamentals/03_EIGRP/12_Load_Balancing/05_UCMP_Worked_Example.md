@@ -39,11 +39,10 @@ maximum-paths 4
 ! N3 remains in topology as non-FS (or unused) until Active/FD changes
 ```
 
-```mermaid
-flowchart LR
-  R["R FD=50"] -->|"metric 50"| N1["N1 RD=20 successor"]
-  R -->|"metric 80 UCMP"| N2["N2 RD=40 FS"]
-  R -.->|"metric 75 blocked FC"| N3["N3 RD=55"]
+```text
+R FD=50 --metric 50--> N1 RD=20 successor
+R --metric 80 UCMP--> N2 RD=40 FS
+R --metric 75 blocked FC--> N3 RD=55
 ```
 
 ### If we need N3

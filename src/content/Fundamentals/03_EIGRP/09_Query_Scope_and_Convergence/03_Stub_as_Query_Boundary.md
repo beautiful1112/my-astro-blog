@@ -13,12 +13,11 @@ In hub-and-spoke, a spoke rarely has useful alternate paths to remote enterprise
 
 With stub, the hub typically does not wait on spokes as transit solvers; spokes reply appropriately and do not extend the diffusion.
 
-```mermaid
-flowchart LR
-  Core["Core Active"] --> Hub["Hub"]
-  Hub -->|"Query"| Dist["Distribution"]
-  Hub -.->|"no transit Query"| Spoke["Spoke stub"]
-  Spoke -->|"Reply / no further"| Hub
+```text
+Core Active --> Hub
+Hub --Query--> Distribution
+Hub --no transit Query--> Spoke stub
+Spoke --Reply / no further--> Hub
 ```
 
 ## Stub is not a substitute for filtering everything

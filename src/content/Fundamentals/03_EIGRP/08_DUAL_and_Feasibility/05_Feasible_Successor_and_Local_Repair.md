@@ -13,15 +13,12 @@ When the successor is lost or its metric worsens such that another FS is better:
 
 This is the operational win of keeping FS entries warm in the topology table: failover is local and typically sub-second from a control-plane perspective (detection time still depends on hello/hold, BFD, or link down).
 
-```mermaid
-sequenceDiagram
-  participant R as Router
-  participant S as Successor
-  participant FS as Feasible successor
-  S--xR: Path fails
-  R->>R: Select best FS
-  R->>FS: Install as new successor
-  Note over R: Stay Passive — no Query
+```text
+Router / Successor / Feasible successor
+S--xR: Path fails
+R -> R: Select best FS
+R -> FS: Install as new successor
+  [Stay Passive — no Query]
 ```
 
 ## What must already be true

@@ -27,10 +27,9 @@ Authentication ≠ encryption. Packet captures still show prefixes; use IPsec/MA
 3. Campus distribution links between administrative domains.
 4. Lab and unmanaged access VLANs (often better: **passive-interface** + no EIGRP on access).
 
-```mermaid
-flowchart TB
-  Rogue["Rogue router"] -->|Hello without valid digest| Drop["Discard"]
-  Good["Authorized peer"] -->|Hello with key-id digest| Adj["Adjacency OK"]
+```text
+Rogue router --Hello without valid digest--> Discard
+Authorized peer --Hello with key-id digest--> Adjacency OK
 ```
 
 ## Defense in depth
@@ -58,11 +57,10 @@ Before calling a link “production ready,” require:
 
 ## Mermaid threat path
 
-```mermaid
-flowchart TB
-  Attacker["Unauthorized router"] -->|proto 88 hello| Seg["Broadcast segment"]
-  Seg -->|no auth| Adj["Adjacency + inject"]
-  Seg -->|auth mismatch| Drop["Ignored hello"]
+```text
+Unauthorized router --proto 88 hello--> Broadcast segment
+Seg --no auth--> Adjacency + inject
+Seg --auth mismatch--> Ignored hello
 ```
 
 ## Related reading for reviewers

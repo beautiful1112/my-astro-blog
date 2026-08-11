@@ -24,19 +24,16 @@ t4  New successor installed; Passive; Updates flood
 
 Time ≈ detection + Σ(query/reply latency along slowest branch) + processing. In a large unbounded domain this reaches seconds to SIA-scale minutes.
 
-```mermaid
-sequenceDiagram
-  participant Det as Detection
-  participant DUAL as DUAL
-  participant N as Neighbors
-  Det->>DUAL: Successor lost
-  alt FS exists
-    DUAL->>DUAL: Local repair Passive
-  else No FS
-    DUAL->>N: Query
-    N-->>DUAL: Reply (maybe nested Active)
-    DUAL->>DUAL: New successor Passive
-  end
+```text
+Detection / DUAL / Neighbors
+Det -> DUAL: Successor lost
+alt FS exists
+DUAL -> DUAL: Local repair Passive
+else No FS
+DUAL -> N: Query
+N- -> DUAL: Reply (maybe nested Active)
+DUAL -> DUAL: New successor Passive
+end
 ```
 
 ## Detection vs DUAL

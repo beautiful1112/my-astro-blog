@@ -16,15 +16,13 @@ SIA is primarily a **design and failure-domain** symptom: unbounded queries, mis
 
 ## Sequence sketch
 
-```mermaid
-sequenceDiagram
-  participant Q as Querier
-  participant N as Neighbor
-  Q->>N: Query(P)
-  Note over N: Slow / querying onward
-  Q->>N: SIA-Query(P)
-  N->>Q: SIA-Reply(P)
-  N->>Q: Reply(P)
+```text
+Querier / Neighbor
+Q -> N: Query(P)
+  [Slow / querying onward]
+Q -> N: SIA-Query(P)
+N -> Q: SIA-Reply(P)
+N -> Q: Reply(P)
 ```
 
 ## Operational response

@@ -24,14 +24,11 @@ NBMA / static neighbor:
   Often unicast Hellos/Updates only (multicast disabled to that peer)
 ```
 
-```mermaid
-sequenceDiagram
-  participant A as RouterA
-  participant M as 224.0.0.10
-  participant B as RouterB
-  A->>M: Update (seq N)
-  M->>B: Update delivered
-  B->>A: ACK (unicast)
+```text
+RouterA / 224.0.0.10 / RouterB
+A -> M: Update (seq N)
+M -> B: Update delivered
+B -> A: ACK (unicast)
 ```
 
 ## Path and middlebox hazards

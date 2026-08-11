@@ -28,13 +28,12 @@ Related: [Bandwidth and delay components](02_Bandwidth_and_Delay_Components.md),
 | K3 | Delay |
 | K4 / K5 | Reliability scaling pair |
 
-```mermaid
-flowchart LR
-  BW[Min bandwidth] --> C[Composite]
-  DLY[Cumulative delay] --> C
-  LD[Load if K2] --> C
-  REL[Reliability if K5] --> C
-  C --> DUAL[DUAL metrics / FD]
+```text
+Min bandwidth --> Composite
+Cumulative delay --> C
+Load if K2 --> C
+Reliability if K5 --> C
+C --> DUAL metrics / FD
 ```
 
 ## Configuration patterns

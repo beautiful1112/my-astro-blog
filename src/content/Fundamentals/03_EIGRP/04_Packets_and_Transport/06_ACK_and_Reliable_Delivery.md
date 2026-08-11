@@ -23,14 +23,12 @@ Send Update seq=N to multicast
   -> B ACKs or neighbor declared unreliable/down
 ```
 
-```mermaid
-sequenceDiagram
-  participant S as Sender
-  participant B as NeighborB
-  S->>B: Reliable Update seq N
-  Note over B: Loss / delay
-  S->>B: Retransmit seq N
-  B->>S: ACK N
+```text
+Sender / NeighborB
+S -> B: Reliable Update seq N
+  [Loss / delay]
+S -> B: Retransmit seq N
+B -> S: ACK N
 ```
 
 ## Why ops care

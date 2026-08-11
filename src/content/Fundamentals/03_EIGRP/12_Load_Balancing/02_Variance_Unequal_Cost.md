@@ -13,13 +13,12 @@ Variance alone never installs a path that fails FC. This is the classic intervie
 variance multiplier n  (integer ≥ 1; 1 = ECMP only)
 ```
 
-```mermaid
-flowchart TB
-  C["Candidate path"] --> V{"metric ≤ variance × FD?"}
-  V -->|no| Drop1["Not installed"]
-  V -->|yes| FC{"RD < FD?"}
-  FC -->|no| Drop2["Not installed<br/>even if in window"]
-  FC -->|yes| Inst["Install next hop<br/>UCMP"]
+```text
+Candidate path --> metric ≤ variance × FD?
+V --no--> Not installed
+V --yes--> RD < FD?
+FC --no--> Not installed / even if in window
+FC --yes--> Install next hop / UCMP
 ```
 
 ## Configuration

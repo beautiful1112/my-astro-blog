@@ -33,11 +33,10 @@ Log patterns mention SIA and the prefix/neighbor involved—capture them in chan
 4. Ensure ACLs allow EIGRP multicast/unicast (protocol 88) on relevant interfaces.
 5. Stabilize detection (carrier-delay, BFD) to avoid false Active events—but do not “fix” SIA by only lengthening timers.
 
-```mermaid
-flowchart LR
-  Leaf["Leaf failure"] --> Hub["Hub Active"]
-  Hub -->|bad| Core["Query floods core"]
-  Hub -->|good stub+summary| Bound["Query stops at boundary"]
+```text
+Leaf failure --> Hub Active
+Hub --bad--> Query floods core
+Hub --good stub+summary--> Query stops at boundary
 ```
 
 ## Configuration pointers

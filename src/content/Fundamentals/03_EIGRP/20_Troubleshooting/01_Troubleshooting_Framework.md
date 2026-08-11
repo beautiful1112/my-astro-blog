@@ -19,11 +19,10 @@ Evidence first; change only what the failing stage implicates.
 | RIB | `show ip route P` | AD competition, distribute-list, same prefix better source |
 | Forwarding | ping/traceroute/CEF | Asymmetry, Null0, wrong NH, ACL data-plane |
 
-```mermaid
-flowchart LR
-  N["Neighbor"] --> T["Topology"]
-  T --> R["RIB"]
-  R --> F["Forwarding"]
+```text
+Neighbor --> Topology
+T --> RIB
+R --> Forwarding
 ```
 
 ## Evidence rules

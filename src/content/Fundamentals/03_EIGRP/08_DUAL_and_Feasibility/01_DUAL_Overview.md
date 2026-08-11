@@ -11,13 +11,12 @@
 
 Local repair is the fast path operators want. Diffusing computation is correct but slower and can span a large query domain.
 
-```mermaid
-flowchart TB
-  Event["Successor lost or metric worsens"] --> FS{"Feasible successor<br/>in topology table?"}
-  FS -->|yes| Local["Local computation<br/>install FS as successor"]
-  FS -->|no| Active["Go Active<br/>send Query"]
-  Active --> Wait["Collect Replies"]
-  Wait --> Pick["Select new successor<br/>return Passive"]
+```text
+Successor lost or metric worsens --> Feasible successor / in topology table?
+FS --yes--> Local computation / install FS as successor
+FS --no--> Go Active / send Query
+Active --> Collect Replies
+Wait --> Select new successor / return Passive
 ```
 
 ## Loop freedom property

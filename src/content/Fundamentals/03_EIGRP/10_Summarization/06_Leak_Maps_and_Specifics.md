@@ -40,10 +40,9 @@ Every leaked specific:
 - Can be Queried independently → **partially reopens query domain** for that prefix.
 - Adds policy complexity—document every leak.
 
-```mermaid
-flowchart LR
-  R["Summarizing router"] -->|"10.10.0.0/16"| U["Upstream"]
-  R -->|"leak 10.10.8.0/24"| U
+```text
+Summarizing router --10.10.0.0/16--> Upstream
+R --leak 10.10.8.0/24--> U
 ```
 
 ## Verification

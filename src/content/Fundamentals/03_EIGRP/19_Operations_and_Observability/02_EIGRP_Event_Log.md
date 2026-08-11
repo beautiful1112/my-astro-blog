@@ -38,11 +38,10 @@ Correlate timestamps with syslog and interface counters.
 4. Inspect that neighbor’s CPU, link errors, stub config, filters.
 5. Only then consider targeted debug.
 
-```mermaid
-flowchart LR
-  T["Symptom time"] --> E["Event log"]
-  E --> N["Suspect neighbor"]
-  N --> L["Link/CPU/stub"]
+```text
+Symptom time --> Event log
+E --> Suspect neighbor
+N --> Link/CPU/stub
 ```
 
 ## Limits

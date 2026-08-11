@@ -8,10 +8,9 @@ Spoke1 LAN 10.1.0.0/16    Hub LAN 10.0.0.0/16    Spoke2 LAN 10.2.0.0/16
 Hub Tunnel0 is multipoint; split horizon default enabled
 ```
 
-```mermaid
-flowchart LR
-  S1["Spoke1"] --- H["Hub multipoint"]
-  H --- S2["Spoke2"]
+```text
+Spoke1 --> Hub multipoint
+H --> Spoke2
 ```
 
 ## Symptom

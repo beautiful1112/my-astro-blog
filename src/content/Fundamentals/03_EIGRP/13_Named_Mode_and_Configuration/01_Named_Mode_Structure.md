@@ -21,13 +21,12 @@ router eigrp <NAME>
     …
 ```
 
-```mermaid
-flowchart TB
-  Proc["router eigrp NAME"] --> AF4["address-family ipv4 AS"]
-  Proc --> AF6["address-family ipv6 AS"]
-  AF4 --> AFI["af-interface …"]
-  AF4 --> Top["topology base"]
-  AF4 --> Net["network / stub / RID"]
+```text
+router eigrp NAME --> address-family ipv4 AS
+Proc --> address-family ipv6 AS
+AF4 --> af-interface …
+AF4 --> topology base
+AF4 --> network / stub / RID
 ```
 
 ## Why named mode

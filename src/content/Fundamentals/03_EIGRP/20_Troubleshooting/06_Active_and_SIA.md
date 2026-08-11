@@ -31,11 +31,10 @@ Note which neighbor did not reply and which prefix.
 3. Ensure hubs not overloaded with debug.
 4. Only then consider `timers active-time` changes (masking).
 
-```mermaid
-flowchart TB
-  Loss["Successor lost, no FS"] --> Q["Query domain"]
-  Q --> OK["Replies → new successor"]
-  Q --> SIA["Timeout → SIA"]
+```text
+Successor lost, no FS --> Query domain
+Q --> Replies → new successor
+Q --> Timeout → SIA
 ```
 
 ## Temporary ops actions

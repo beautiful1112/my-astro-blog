@@ -20,13 +20,12 @@ When EIGRP loses its successor and has no feasible successor, it goes **Active**
 | **AS boundary** | Separate EIGRP AS / redistribute carefully |
 | **Filter** | Reduce learned prefixes that can go Active |
 
-```mermaid
-flowchart LR
-  Core["Core"] --> H["Hub"]
-  H --> St1["Stub spoke"]
-  H --> St2["Stub spoke"]
-  Core -.->|query bounded| H
-  H -.->|no fanout| St1
+```text
+Core --> Hub
+H --> Stub spoke
+H --> Stub spoke
+Core --query bounded--> H
+H --no fanout--> St1
 ```
 
 ## Architecture patterns

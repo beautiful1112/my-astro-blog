@@ -19,10 +19,9 @@ EIGRP for IPv6 uses the same **DUAL**, K-values, FS/FC, stub, and summarization 
 | Router ID | **Required** 32-bit RID (next lesson) |
 | Summaries | IPv6 summary prefixes under AF/interface |
 
-```mermaid
-flowchart LR
-  A["R1 Gi0/0"] -->|"EIGRP IPv6<br/>link-local nbr"| B["R2 Gi0/0"]
-  A -->|"advertise globals<br/>2001:db8:1::/64"| B
+```text
+R1 Gi0/0 --EIGRP IPv6 / link-local nbr--> R2 Gi0/0
+A --advertise globals / 2001:db8:1::/64--> B
 ```
 
 ## Multicast / protocol

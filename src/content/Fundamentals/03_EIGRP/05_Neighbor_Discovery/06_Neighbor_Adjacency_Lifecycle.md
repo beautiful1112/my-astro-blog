@@ -4,15 +4,14 @@ An EIGRP adjacency moves from discovery through database exchange into steady He
 
 ## Stages
 
-```mermaid
-flowchart TD
-  A[Hello heard / sent] --> B{Params match?}
-  B -->|No| Z[No adjacency]
-  B -->|Yes| C[Neighbor up]
-  C --> D[Update exchange / sync]
-  D --> E[Steady: Hellos + event Updates]
-  E -->|Hold expire / reset / link down| F[Neighbor down]
-  F --> G[Topology via peer removed / Active possible]
+```text
+Hello heard / sent --> Params match?
+B --No--> No adjacency
+B --Yes--> Neighbor up
+C --> Update exchange / sync
+D --> Steady: Hellos + event Updates
+E --Hold expire / reset / link down--> Neighbor down
+F --> Topology via peer removed / Active possible
 ```
 
 | Stage | What succeeds | What is unproven |

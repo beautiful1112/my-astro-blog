@@ -11,15 +11,14 @@ When a router goes Active, **Queries** fan out to neighbors that might know an a
 5. At a **summary boundary**, queries for a component prefix often terminate because remote routers only know the summary (details in next lessons).
 6. Split horizon / next-hop / filtering can suppress Query toward some interfaces.
 
-```mermaid
-flowchart TB
-  A["A Active"] --> B["B"]
-  A --> C["C stub"]
-  B --> D["D"]
-  B --> E["E"]
-  C --> R["Reply only<br/>no further Query"]
-  D --> R2["Reply"]
-  E --> R3["Reply"]
+```text
+A Active --> B
+A --> C stub
+B --> D
+B --> E
+C --> Reply only / no further Query
+D --> Reply
+E --> Reply
 ```
 
 ## What expands the domain

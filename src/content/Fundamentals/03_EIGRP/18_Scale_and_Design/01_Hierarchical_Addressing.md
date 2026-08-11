@@ -24,12 +24,11 @@ EIGRP does not require VLSM hierarchy the way early OSPF myths claimed—but **w
 
 Hub advertises `10.0.0.0/16` toward other regions; site routers summarize `/20` toward hub.
 
-```mermaid
-flowchart TB
-  C["Core summary 10.0.0.0/12"] --> RA["Region A 10.0.0.0/16"]
-  C --> RB["Region B 10.1.0.0/16"]
-  RA --> S1["Site /20"]
-  RA --> S2["Site /20"]
+```text
+Core summary 10.0.0.0/12 --> Region A 10.0.0.0/16
+C --> Region B 10.1.0.0/16
+RA --> Site /20
+RA --> Site /20
 ```
 
 ## Summary placement

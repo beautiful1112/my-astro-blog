@@ -39,11 +39,10 @@ router eigrp CORP
 
 ## Design usage
 
-```mermaid
-flowchart TB
-  D["Distribution"] --- C["Core link: not passive"]
-  D --- A1["Access VLAN: passive"]
-  D --- A2["Access VLAN: passive"]
+```text
+Distribution --> Core link: not passive
+D --> Access VLAN: passive
+D --> Access VLAN: passive
 ```
 
 - Access SVIs: passive (advertise VLAN subnets upward, no user adjacency).

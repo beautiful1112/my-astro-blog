@@ -13,11 +13,10 @@ EIGRP over WAN differs from LAN cores: lower bandwidth, NBMA semantics, hub-spok
 | Tunnels (GRE/DMVPN/IPsec) | Logical BW/delay often wrong; NHRP dynamics |
 | Large query domain | SIA when spoke/WAN links flap |
 
-```mermaid
-flowchart TB
-  H["Hub"] --- S1["Spoke1"]
-  H --- S2["Spoke2"]
-  S1 -. "no direct L3" .-> S2
+```text
+Hub --> Spoke1
+H --> Spoke2
+S1 -. "no direct L3" .-> S2
 ```
 
 Spoke-to-spoke traffic often goes hub-hairpin at Layer 3 even if DMVPN builds a shortcut tunnel—control plane design must still advertise reachability correctly.

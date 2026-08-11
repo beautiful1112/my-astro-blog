@@ -28,14 +28,13 @@ A redistributed OSPF prefix that enters EIGRP is **external (170)** everywhere i
 | iBGP | 200 |
 | Unknown / incomplete | 255 (not installed) |
 
-```mermaid
-flowchart LR
-  S["Static AD 1"] --> RIB
-  Sum["EIGRP summary AD 5"] --> RIB
-  Int["EIGRP internal AD 90"] --> RIB
-  OSPF["OSPF AD 110"] --> RIB
-  Ext["EIGRP external AD 170"] --> RIB
-  RIB["RIB winner = lowest AD"]
+```text
+Static AD 1 --> RIB
+EIGRP summary AD 5 --> RIB
+EIGRP internal AD 90 --> RIB
+OSPF AD 110 --> RIB
+EIGRP external AD 170 --> RIB
+* RIB winner = lowest AD
 ```
 
 ## Why external is 170

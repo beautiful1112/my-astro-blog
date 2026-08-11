@@ -23,14 +23,13 @@ neighbors → Reply(dest, metric or unreachable) → Active router
 
 Neighbors that cannot answer immediately (they also go Active) will Query further—this is how the search **propagates** through the query domain.
 
-```mermaid
-flowchart TB
-  A["Router A Active for D"] --> Q["Send Query for D"]
-  Q --> B["Neighbor B"]
-  Q --> C["Neighbor C"]
-  B --> R1["Reply immediately<br/>if Passive / knows"]
-  C --> Act2["C goes Active<br/>queries its neighbors"]
-  Act2 --> R2["Eventually Reply to A"]
+```text
+Router A Active for D --> Send Query for D
+Q --> Neighbor B
+Q --> Neighbor C
+B --> Reply immediately / if Passive / knows
+C --> C goes Active / queries its neighbors
+Act2 --> Eventually Reply to A
 ```
 
 ## Stub and summary boundaries

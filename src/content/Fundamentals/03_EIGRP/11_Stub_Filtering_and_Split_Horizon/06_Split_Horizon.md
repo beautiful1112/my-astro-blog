@@ -12,11 +12,10 @@ Hub learns 10.1.1.0/24 from A on Tunnel0
 Split horizon: do not advertise 10.1.1.0/24 out Tunnel0 → B never learns it
 ```
 
-```mermaid
-flowchart LR
-  A["Spoke A"] --- H["Hub multipoint"]
-  B["Spoke B"] --- H
-  H -.->|"blocked by SH"| B
+```text
+Spoke A --> Hub multipoint
+Spoke B --> H
+H --blocked by SH--> B
 ```
 
 ## Disabling carefully

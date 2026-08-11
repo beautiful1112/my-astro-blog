@@ -12,13 +12,12 @@ Hub → Core:   summarized spoke space
 
 Spokes should not learn full enterprise tables unless required. Hubs should not Query spokes for random remote prefixes.
 
-```mermaid
-flowchart TB
-  C["Core"] --> H1["Hub1"]
-  C --> H2["Hub2"]
-  H1 --> S1["Spoke stub"]
-  H2 --> S1
-  H1 --> S2["Spoke stub"]
+```text
+Core --> Hub1
+C --> Hub2
+H1 --> Spoke stub
+H2 --> S1
+H1 --> Spoke stub
 ```
 
 ## Dual-hub spoke

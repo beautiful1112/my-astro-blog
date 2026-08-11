@@ -11,15 +11,14 @@ Related: [Query and Reply](../04_Packets_and_Transport/05_Query_and_Reply.md), [
 
 ## State machine (prefix-centric)
 
-```mermaid
-flowchart TD
-  P[Passive] -->|Successor OK| P
-  P -->|Successor lost, FS exists| P2[Passive with new successor]
-  P -->|Successor lost, no FS| A[Active]
-  A -->|All Replies in| P3[Passive new successor or unreach]
-  A -->|Too long| S[SIA handling]
-  P2 --> P
-  P3 --> P
+```text
+Passive --Successor OK--> P
+P --Successor lost, FS exists--> Passive with new successor
+P --Successor lost, no FS--> Active
+A --All Replies in--> Passive new successor or unreach
+A --Too long--> SIA handling
+P2 --> P
+P3 --> P
 ```
 
 ## Ops implications

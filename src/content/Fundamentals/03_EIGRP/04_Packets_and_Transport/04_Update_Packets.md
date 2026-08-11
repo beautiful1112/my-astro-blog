@@ -22,12 +22,11 @@ Related: [Advanced distance vector](../02_Fundamentals/03_Advanced_Distance_Vect
 
 ## Update versus Query
 
-```mermaid
-flowchart LR
-  C[Change] --> U[Update]
-  L[Successor lost no FS] --> Q[Query]
-  U --> T[Neighbors refresh topology]
-  Q --> R[Reply search]
+```text
+Change --> Update
+Successor lost no FS --> Query
+U --> Neighbors refresh topology
+Q --> Reply search
 ```
 
 Do not call every EIGRP message an “update.” Queries are a different DUAL mechanism.

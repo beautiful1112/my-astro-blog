@@ -36,11 +36,10 @@ router eigrp CORP
 - Creating a summary installs a **Null0** route for the aggregate locally (next lesson).
 - Summary metric is derived from component metrics (metric lesson).
 
-```mermaid
-flowchart LR
-  Comp["Components<br/>10.10.1.0/24 …"] --> R["Router"]
-  R -->|"summary 10.10.0.0/16"| Upstream["Upstream neighbor"]
-  R -->|"Null0 for 10.10.0.0/16"| Local["Local RIB"]
+```text
+Components / 10.10.1.0/24 … --> Router
+R --summary 10.10.0.0/16--> Upstream neighbor
+R --Null0 for 10.10.0.0/16--> Local RIB
 ```
 
 ## Verification

@@ -25,13 +25,12 @@ When all outstanding replies are in:
 
 If every reply is unreachable, the route is removed from the topology/RIB (destination unknown).
 
-```mermaid
-flowchart TB
-  Wait["Wait for all Replies"] --> Eval["Evaluate metrics"]
-  Eval --> Any{"Any reachable<br/>candidates?"}
-  Any -->|yes| Succ["Install successor<br/>Passive"]
-  Any -->|no| Gone["Flush route"]
-  Succ --> Upd["Send Updates"]
+```text
+Wait for all Replies --> Evaluate metrics
+Eval --> Any reachable / candidates?
+Any --yes--> Install successor / Passive
+Any --no--> Flush route
+Succ --> Send Updates
 ```
 
 ## Nested Active

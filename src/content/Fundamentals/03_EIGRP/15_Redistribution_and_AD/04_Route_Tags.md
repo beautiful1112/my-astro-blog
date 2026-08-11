@@ -45,11 +45,10 @@ route-map OSPF-TO-EIGRP permit 20
  set metric 100000 100 255 1 1500
 ```
 
-```mermaid
-flowchart LR
-  E["EIGRP AS 100"] -->|"set tag 100"| O["OSPF"]
-  O -->|"match tag 100 deny"| E
-  O -->|"set tag 110"| E2["EIGRP import"]
+```text
+EIGRP AS 100 --set tag 100--> OSPF
+O --match tag 100 deny--> E
+O --set tag 110--> EIGRP import
 ```
 
 ## Verification

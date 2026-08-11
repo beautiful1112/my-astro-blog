@@ -17,18 +17,17 @@ If an access router loses `10.1.1.0/24` and goes Active:
 
 Exact platform behavior depends on topology and whether components exist elsewhere; the design intent is: **do not leak specifics past the summary plane**, so remote routers cannot be useful (or harmful) participants in that specific’s diffusion.
 
-```mermaid
-flowchart TB
-  subgraph access [Access]
-    A1["10.1.1.0/24"]
-    A2["10.1.2.0/24"]
-  end
-  Dist["Dist summarizes<br/>10.1.0.0/16"]
-  Core["Core: summary only"]
-  A1 --> Dist
-  A2 --> Dist
-  Dist --> Core
-  Core -.->|"Query for /24 stops<br/>as useful domain"| Dist
+```text
+[Access]
+* 10.1.1.0/24
+* 10.1.2.0/24
+
+* Dist summarizes / 10.1.0.0/16
+* Core: summary only
+A1 --> Dist
+A2 --> Dist
+Dist --> Core
+Core --Query for /24 stops / as useful domain--> Dist
 ```
 
 ## Dual role of Null0

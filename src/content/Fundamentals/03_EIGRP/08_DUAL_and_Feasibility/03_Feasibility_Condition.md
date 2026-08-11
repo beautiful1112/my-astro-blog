@@ -2,9 +2,9 @@
 
 The **feasibility condition (FC)** is the loop-freedom test DUAL applies before trusting a neighbor as a backup (or alternate) next hop:
 
-\[
-\text{RD}_{\text{neighbor}}(\text{dest}) < \text{FD}_{\text{local}}(\text{dest})
-\]
+```text
+RD_neighbor(dest)  <  FD_local(dest)
+```
 
 If a neighbor’s reported distance is **strictly less** than this router’s feasible distance, that neighbor is a **feasible successor** (FS) for the destination (assuming the path is otherwise usable).
 
@@ -40,11 +40,13 @@ FC is **sufficient** for loop freedom, not **necessary**. A neighbor with RD ≥
 show ip eigrp topology 192.0.2.0/24
 ```
 
-```mermaid
-flowchart TB
-  RD["Neighbor RD"] --> Cmp{"RD < local FD?"}
-  Cmp -->|yes| FS["Mark feasible successor"]
-  Cmp -->|no| NoFS["Keep in topology only<br/>needs Active to use safely"]
+```text
+Neighbor RD
+   |
+   v
+RD < local FD?
+   |-- yes --> mark feasible successor (FS)
+   |-- no  --> keep in topology only (needs Active to use safely)
 ```
 
 ## Common numeric trap

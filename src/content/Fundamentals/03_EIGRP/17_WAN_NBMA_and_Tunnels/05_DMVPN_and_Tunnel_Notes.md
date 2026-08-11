@@ -11,11 +11,10 @@ EIGRP is a common DMVPN overlay IGP. Treat the tunnel as a WAN NBMA/multipoint f
 | EIGRP | Overlay routing |
 | Spoke stub | Bound queries at hub |
 
-```mermaid
-flowchart TB
-  H["Hub mGRE"] --- S1["Spoke1"]
-  H --- S2["Spoke2"]
-  S1 -. "NHRP shortcut optional" .-> S2
+```text
+Hub mGRE --> Spoke1
+H --> Spoke2
+S1 -. "NHRP shortcut optional" .-> S2
 ```
 
 ## EIGRP over tunnels

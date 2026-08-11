@@ -27,15 +27,13 @@ OSPF:   flood link state -> every router SPF -> converge on tree
 IS-IS:  flood LSPs -> every router SPF -> converge on tree
 ```
 
-```mermaid
-flowchart LR
-  subgraph eigrp [EIGRP]
-    N1[Neighbor updates] --> D[DUAL]
-    D --> Q[Optional queries]
-  end
-  subgraph ls [OSPF / IS-IS]
-    F[Flood LSDB] --> S[SPF]
-  end
+```text
+[EIGRP]
+Neighbor updates --> DUAL
+D --> Optional queries
+
+[OSPF / IS-IS]
+Flood LSDB --> SPF
 ```
 
 ## When interviews expect a crisp pick

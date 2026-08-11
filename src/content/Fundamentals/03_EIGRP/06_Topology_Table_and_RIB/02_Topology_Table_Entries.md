@@ -28,11 +28,10 @@ Related: [Successor and feasible successor](03_Successor_and_Feasible_Successor.
 | Local originated / connected injections | Arbitrary non-EIGRP routes (until redistributed in) |
 | Infeasible paths in `all-links` | Guaranteed visibility of alternate physical paths never advertised |
 
-```mermaid
-flowchart LR
-  N1[Neighbor1 Update] --> T[Topology entry P]
-  N2[Neighbor2 Update] --> T
-  T --> D[DUAL successor / FS]
+```text
+Neighbor1 Update --> Topology entry P
+Neighbor2 Update --> T
+T --> DUAL successor / FS
 ```
 
 ## Configuration patterns

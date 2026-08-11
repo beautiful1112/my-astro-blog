@@ -10,12 +10,11 @@ The **successor** is the neighbor that provides the best (lowest composite metri
 4. Set **FD** to that successor metric.
 5. Mark other neighbors with `RD < FD` as **feasible successors**; keep them in the topology table for local repair / UCMP.
 
-```mermaid
-flowchart LR
-  Cand["Candidate paths<br/>from neighbors"] --> Met["Compute local metrics"]
-  Met --> Best["Lowest metric → successor"]
-  Best --> FD["Record FD"]
-  FD --> FC["RD < FD → feasible successors"]
+```text
+Candidate paths / from neighbors --> Compute local metrics
+Met --> Lowest metric → successor
+Best --> Record FD
+FD --> RD < FD → feasible successors
 ```
 
 ## Topology table vs RIB vs FIB

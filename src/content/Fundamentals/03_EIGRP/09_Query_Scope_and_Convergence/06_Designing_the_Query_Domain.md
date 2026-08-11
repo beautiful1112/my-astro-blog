@@ -26,21 +26,20 @@ Access  -- specifics -->  Distribution  -- summary -->  Core
 - Prefer topologies where each edge router always has an FS via the other uplink.
 - If not FC-eligible, expect Active; bound it so Active stays inside the pop.
 
-```mermaid
-flowchart TB
-  subgraph spokes [Spokes stub]
-    S1["Spoke"]
-    S2["Spoke"]
-  end
-  H1["Hub"]
-  H2["Hub"]
-  Dist["Dist summary"]
-  Core["Core"]
-  S1 --> H1
-  S2 --> H2
-  H1 --> Dist
-  H2 --> Dist
-  Dist --> Core
+```text
+[Spokes stub]
+* Spoke
+* Spoke
+
+* Hub
+* Hub
+* Dist summary
+* Core
+S1 --> H1
+S2 --> H2
+H1 --> Dist
+H2 --> Dist
+Dist --> Core
 ```
 
 ## Addressing rules of thumb

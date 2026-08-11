@@ -4,22 +4,21 @@
 
 ## Topology pattern
 
-```mermaid
-flowchart TB
-  subgraph Campus
-    E1["EIGRP AS 100"]
-  end
-  subgraph WAN
-    O1["OSPF 1"]
-  end
-  R1["Border-1"]
-  R2["Border-2"]
-  E1 --- R1
-  E1 --- R2
-  O1 --- R1
-  O1 --- R2
-  R1 -->|"redistribute both ways"| O1
-  R2 -->|"redistribute both ways"| O1
+```text
+[Campus]
+* EIGRP AS 100
+
+[WAN]
+* OSPF 1
+
+* Border-1
+* Border-2
+E1 --> R1
+E1 --> R2
+O1 --> R1
+O1 --> R2
+R1 --redistribute both ways--> O1
+R2 --redistribute both ways--> O1
 ```
 
 Two borders multiply the failure modes: each can re-learn the other’s redistributed copy.

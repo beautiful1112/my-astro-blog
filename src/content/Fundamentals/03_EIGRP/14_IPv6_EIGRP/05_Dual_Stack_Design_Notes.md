@@ -10,18 +10,17 @@ Running EIGRP for IPv4 and IPv6 together should keep **failure domains, stub pol
 4. **Timer/BFD parity**: mismatched hello/BFD between stacks causes one family to black-hole while the other looks fine.
 5. **ACL parity**: v6 ACLs must permit EIGRP; copying only IPv4 ACL updates breaks IPv6 neighbors.
 
-```mermaid
-flowchart TB
-  subgraph edge [Edge]
-    V4["EIGRP IPv4 stub"]
-    V6["EIGRP IPv6 stub"]
-  end
-  subgraph dist [Distribution]
-    S4["IPv4 summary"]
-    S6["IPv6 summary"]
-  end
-  V4 --> S4
-  V6 --> S6
+```text
+[Edge]
+* EIGRP IPv4 stub
+* EIGRP IPv6 stub
+
+[Distribution]
+* IPv4 summary
+* IPv6 summary
+
+V4 --> S4
+V6 --> S6
 ```
 
 ## Named vs classic dual-stack

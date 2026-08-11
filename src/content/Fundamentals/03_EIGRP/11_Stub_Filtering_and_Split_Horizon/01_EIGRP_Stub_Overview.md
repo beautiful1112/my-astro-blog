@@ -8,11 +8,10 @@
 2. **Query behavior**: stub router does not propagate Queries as a transit diffusion point; hubs avoid treating it as a path to remote enterprise prefixes.
 3. **Topology role**: spoke/access edge—not a multi-site transit core node.
 
-```mermaid
-flowchart LR
-  Hub["Hub non-stub"] <-->|"EIGRP"| Spoke["Spoke stub"]
-  Hub <--> Core["Core"]
-  Spoke -.->|"does not transit<br/>remote prefixes"| Hub
+```text
+* Hub non-stub
+Hub <--> Core["Core"]
+Spoke --does not transit / remote prefixes--> Hub
 ```
 
 ## When to use

@@ -18,15 +18,14 @@ Older references also mention **Request** packets; modern ops focus on the table
 
 ## DUAL-oriented flow
 
-```mermaid
-flowchart TD
-  H[Hello] --> N[Neighbor up]
-  N --> U[Update exchange]
-  U --> P[Prefixes Passive]
-  P -->|Successor lost, no FS| Q[Query]
-  Q --> R[Reply]
-  R --> P
-  Q -->|Active too long| S[SIA-Query / SIA-Reply]
+```text
+Hello --> Neighbor up
+N --> Update exchange
+U --> Prefixes Passive
+P --Successor lost, no FS--> Query
+Q --> Reply
+R --> P
+Q --Active too long--> SIA-Query / SIA-Reply
 ```
 
 ## Conditional updates vs queries

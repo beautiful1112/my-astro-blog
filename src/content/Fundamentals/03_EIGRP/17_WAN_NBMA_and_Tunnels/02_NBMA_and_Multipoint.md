@@ -6,10 +6,9 @@
 
 EIGRP split horizon: do not advertise a route out the interface it was learned on. On a **multipoint** hub interface, routes learned from Spoke-1 are not advertised out that same multipoint interface to Spoke-2.
 
-```mermaid
-flowchart LR
-  S1["Spoke1 10.1.0.0/16"] -->|learn| H["Hub multipoint"]
-  H -->|split horizon blocks| S2["Spoke2"]
+```text
+Spoke1 10.1.0.0/16 --learn--> Hub multipoint
+H --split horizon blocks--> Spoke2
 ```
 
 Symptoms: spokes can reach hub LANs but not each other’s sites.

@@ -27,15 +27,14 @@ Related: [What EIGRP is](01_What_EIGRP_Is.md), [Topology table entries](../06_To
 
 ## DUAL in one diagram
 
-```mermaid
-flowchart TD
-  A[Successor OK / Passive] -->|Successor lost| B{FS exists?}
-  B -->|Yes| C[Install FS immediately]
-  B -->|No| D[Active: send Query]
-  D --> E[Collect Replies]
-  E --> F[New successor or unreach]
-  C --> A
-  F --> A
+```text
+Successor OK / Passive --Successor lost--> FS exists?
+B --Yes--> Install FS immediately
+B --No--> Active: send Query
+D --> Collect Replies
+E --> New successor or unreach
+C --> A
+F --> A
 ```
 
 Queries are **not** “mini LSA floods.” They are DV searches for an alternate path, and they can **propagate** until stub/summary/design bounds them—or until SIA.

@@ -9,12 +9,11 @@ Both BR1 and BR2 redistribute EIGRP↔OSPF without tags
 Test prefix 10.99.99.0/24 sourced in EIGRP behind campus
 ```
 
-```mermaid
-flowchart TB
-  E["EIGRP"] --- BR1
-  E --- BR2
-  O["OSPF"] --- BR1
-  O --- BR2
+```text
+EIGRP --> BR1
+E --> BR2
+OSPF --> BR1
+O --> BR2
 ```
 
 ## Symptom

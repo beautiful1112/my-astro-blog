@@ -7,9 +7,8 @@ R1 Gi0/0 ---- Gi0/0 R2
 EIGRP AS 100 on both; same subnet 10.0.0.0/30
 ```
 
-```mermaid
-flowchart LR
-  R1["R1 K=1 0 1 0 0"] --- R2["R2 K=1 0 1 1 0"]
+```text
+R1 K=1 0 1 0 0 --> R2 K=1 0 1 1 0
 ```
 
 ## Symptom
