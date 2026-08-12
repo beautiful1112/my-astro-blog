@@ -89,6 +89,7 @@ export const SITE_TAGS = [
   'NETCONF',
   'EIGRP',
   'OSPF',
+  'CCDE',
 ];
 
 export const npmCDN = '';
