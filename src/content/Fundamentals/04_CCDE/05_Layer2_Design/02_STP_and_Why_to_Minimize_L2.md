@@ -1,28 +1,96 @@
 # STP and why to minimize L2
 
-Spanning Tree is a **loop-prevention protocol**, not a load-balancing fabric. Large STP domains are slow to converge, hard to reason about, and famous for company-wide outages.
+Spanning Tree protects loops by **blocking**; it does not make large L2 domains safe. CCDE default: shrink L2 to the smallest closet or leaf pair that real applications require.
 
-## Design stance
+## What STP buys and costs
 
-1. Prefer **L3** at the earliest point that applications allow.
-2. Where L2 remains, keep it **small** and use **multichassis LAG** so STP sees a loop-free triangle, not a blocking diamond.
-3. Do not mix STP modes and extensions casually across a merged company.
+| Buys | Costs |
+|---|---|
+| Loop prevention on redundant L2 | Slow or surprising reconvergence |
+| Familiar VLAN model | Large blast radius on BPDUs/storms |
+| Works with dumb endpoints | Underutilized links (classic STP) |
 
 ```text
-Worse:  Access -- Dist -- Core -- Dist -- Access   (one STP for campus)
-Better: Access L2 local; L3 from distribution/access up
+Big L2 domain + "we have STP"  ≠  HA design
+Big L2 domain + storm          =  wide outage
 ```
 
-## When STP still appears
+## Why minimize
 
-Brownfield campuses, some OT/IoT rings, and vendor bundles that still assume a VLAN per app. Your job is **containment**: MST/RPVST scope, root placement, BPDU guard, and no VLAN 1 as a production transit.
+1. Broadcast/unknown unicast containment.
+2. Faster, clearer failure domains (L3 ECMP).
+3. Fewer STP topology surprises across buildings.
+4. Cleaner security segmentation.
+5. Better use of bandwidth (routed ECMP / fabric).
 
-## Load balancing
+## When L2 remains justified
 
-STP blocks links. If you need both uplinks forwarding, that is **L3 ECMP** or **MLAG/vPC**, not “tune STP costs until it feels like ECMP.”
+| Case | Bound it by |
+|---|---|
+| Cluster heartbeat / legacy app | Single pair/rack, not campus |
+| Migration brownfield | Temporary, time-boxed |
+| Wireless controller adjacency quirks | Documented exception |
+
+## Real-world — hospital campus after STP meltdown
+
+**Brief:** Root bridge flap black-holed three buildings; clinical scanners share user VLANs; leadership wants “more redundant links.”
+
+| R / C / A | Statement |
+|---|---|
+| R | Clinical devices recover in <60 s for distribution uplink loss |
+| C | Some biomedical gear is L2-sticky for 18 months |
+| A | “Add more trunks and tune STP” fixes root cause — false |
+
+**Decision:** L3 between buildings immediately; keep L2 only inside floor closets; isolate biomedical VLANs. Reject campus-wide VLAN with MST “optimization” as the strategy.
+
+## Design habits
+
+| Habit | Detail |
+|---|---|
+| BPDU Guard / Root Guard | On access edges |
+| Storm control | Baseline, not hero |
+| Prefer L3 access or tiny L2 | Default pattern |
+| vPC/MLAG | Still not an excuse to stretch VLANs across DCs |
+
+## Risks
+
+- Treating MST/RPVST tuning as architecture.
+- Stretching VLANs “for vMotion” without domain math.
+- Disabling STP protections for “convenience.”
 
 ## Interview framing
 
-“STP is a safety net for a small L2 island. I do not build a campus or DC out of a large spanning-tree domain and then call it HA.”
+“I minimize L2 because STP bounds loops, not blast radius—I route between buildings and keep L2 exceptions tiny and time-boxed.”
+
+## Related
+
+- [L2 failure domains](01_L2_Failure_Domains.md)
+- [L2 versus L3 access](04_L2_vs_L3_Access.md)
+- [VLAN and broadcast design](05_VLAN_and_Broadcast_Design.md)
+
+## Decision checklist
+
+1. Which numbered requirement does this choice serve?
+2. Which constraint forbids the popular alternative?
+3. What failure domain did we shrink or accept?
+4. What is the migration/rollback story?
+5. How will ops prove it on a Tuesday night?
+## Failure modes to narrate
+
+| Fault | Bad design reaction | Good design reaction |
+|---|---|---|
+| Link/node loss | Timers only; no alternate | Diverse path + detect + repair |
+| Control-plane churn | Flood detail everywhere | Summary/stub/level + bounded domain |
+| Human change error | No canary / huge blast | Module seams + staged change |
+| Dependency outage | Silent shared fate | Named fate-share + residual risk |
+## What to discard
+
+Discard slogan-driven picks (“modern,” “vendor preferred,” “more redundant”) that cannot cite R/C/A. Discard designs that cannot state what still works when one module fails.
+
+## How you prove it
+
+- Whiteboard the module borders and plane roles in <3 minutes
+- Pull a link/node in a lab or maintenance window and compare to RTO
+- Show the discarded option and the requirement that killed it
 
 ---

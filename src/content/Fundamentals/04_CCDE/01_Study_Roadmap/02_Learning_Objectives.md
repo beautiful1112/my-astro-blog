@@ -1,59 +1,83 @@
 # CCDE learning objectives
 
-These objectives define “done” for a serious CCDE path. Linked modules are the primary study homes.
+By the end of this library you should **design and defend**, not merely recognize technologies. Objectives map to how Written and Practical grade answers.
 
-## Mindset and business
+## Outcome objectives
 
-You should be able to:
+| ID | You can… | Evidence of mastery |
+|---|---|---|
+| O1 | Translate business need into R/C/A | Numbered list; no “we want VXLAN” as a requirement |
+| O2 | Compare ≥2 designs with an explicit loser | Table: buy / spend / discarded option |
+| O3 | Bound failure domains | Diagram + blast-radius sentence |
+| O4 | Place control, data, management (and policy) | Plane sketch under load and under outage |
+| O5 | Choose IGP/BGP/MPLS/L2 tools by fit | “When not” as clear as “when” |
+| O6 | Map RTO/RPO to HA mechanisms | Cold vs hot path justification |
+| O7 | Segment for security/compliance | PEP placement and trust boundaries |
+| O8 | Plan brownfield migration | Phases, risk, rollback |
+| O9 | Design for ops and automation | Change velocity without cowboy risk |
+| O10 | Speak under interview/Practical time | 60 s defense + scenario method |
 
-- explain CCDE as **expert network design**, not expert configuration ([What CCDE is](../02_Design_Mindset/01_What_CCDE_Is.md));
-- separate HLD from LLD and know which exam cares about which ([HLD vs LLD](../02_Design_Mindset/05_HLD_vs_LLD.md));
-- extract requirements, constraints, and assumptions from messy stakeholder text ([R/C/A](../02_Design_Mindset/03_Requirements_Constraints_Assumptions.md));
-- map CAPEX/OPEX, RPO/RTO, risk, and sustainability into design choices (module 03);
-- discuss AI/ML as a **traffic, data-location, and governance** problem, not a buzzword ([AI/ML](../03_Business_Strategy/06_AI_ML_as_Business_Driver.md)).
+## Blueprint alignment (v3.1 style)
 
-## Planes, topology, and protocols
+```text
+Business / governance     → O1, O6, O7
+Architecture / planes     → O3, O4
+Layer 2–3 / routing       → O5
+WAN / campus / DC / cloud → O2, O5, O6
+Security / automation     → O7, O9
+Migration / method        → O8, O10
+```
 
-You should be able to:
+Exact topic lists change; the **skills** above do not. Study technologies as levers for these outcomes.
 
-- draw end-to-end flow and say which plane owns each hop (module 04);
-- choose centralized, distributed, or hybrid control and name the fate-share (module 04);
-- bound L2 domains and justify L2 vs L3 access (module 05);
-- pick OSPF vs IS-IS vs EIGRP vs BGP with topology and operational reasons (modules 06–09);
-- design MPLS/EVPN/SR as **service constructs**, not as “labels are cool” (module 10);
-- place multicast and QoS as application contracts (module 11);
-- make addressing hierarchical so summarization is possible (module 12).
+## Depth targets by module type
 
-## Architectures and operations
+| Module type | Objective depth |
+|---|---|
+| Mindset / business | R/C/A fluency; trade-off vocabulary |
+| Planes / L2 / routing | Topology + failure + summarization |
+| MPLS / EVPN / multicast | When tool fits; control vs data roles |
+| Campus / WAN / DC / cloud | End-to-end HA and seam design |
+| Security / auto / migrate | Policy points, CI/CD, cutover plan |
+| Cases / interview | Timed synthesis of all above |
 
-You should be able to:
+## Real-world — hiring a staff network architect
 
-- design campus, WAN/SD-WAN, Internet edge, DC, and cloud connectivity as modules (modules 13–14);
-- convert RTO into HA mechanisms without accidental fate sharing (module 15);
-- place segmentation, NAC/zero trust, and enforcement points (module 16);
-- design automation and telemetry so Day-2 matches Day-0 intent (module 17);
-- write a migration that does not require a single big-bang ([migration](../18_Migration_and_Practical_Method/01_Implementation_and_Migration_Plans.md)).
+**Brief:** Company wants “CCDE-ready” thinkers for a multi-region hybrid estate.
 
-## Exam and interview bar
+| R / C / A | Statement |
+|---|---|
+| R | Candidate can defend a campus+WAN+cloud HLD in 20 minutes |
+| C | Interviewers are not CCIE lab graders |
+| A | Cert alone proves O1–O10 — false without scenario work |
 
-You should be able to:
+**Screen:** Ask for one discarded design and one fate-share they refused. Score O2 and O3 first; protocol trivia last.
 
-- contrast Written (HLD + business in enterprise context) vs Practical (scenario + elective);
-- discard an option that meets the tech goal but violates a stated constraint;
-- defend one design in 60 seconds, then name the first thing you would monitor.
+## Self-check rubric
 
-## Self-check format
+| Score | Meaning |
+|---|---|
+| 0 | Slogan only (“use leaf-spine”) |
+| 1 | Can list pros/cons from memory |
+| 2 | Applies to a given scenario with R/C/A |
+| 3 | Names risk, migration, and measurement |
 
-For each objective, demand three artifacts:
+Aim for **2** on every O before booking Practical; **3** on O1–O4 and O8.
 
-1. A one-sentence definition accurate enough for an interview.
-2. A sketch or R/C/A table for a real or invented scenario.
-3. One failure mode and how the design contains it.
+## Risks
 
-If you can only recite the sentence, the objective is not met.
+- Treating objectives as a reading checklist instead of a performance checklist.
+- Over-investing in one protocol library while O1/O2 stay weak.
+- Confusing “I know the blueprint list” with “I can design under constraint.”
 
 ## Interview framing
 
-“My CCDE bar is: extract R/C/A, pick a modular design, name the failure domain and the policy point, and explain the migration—without hiding behind a favorite protocol.”
+“My learning goal is not more protocols—it is to map any brief to R/C/A, pick a fit design, and show why the popular alternative loses.”
+
+## Related
+
+- [How to study CCDE](01_How_to_Study_CCDE.md)
+- [Written versus Practical](03_Written_vs_Practical.md)
+- [Official CCDE topics](../23_References/01_Official_CCDE_Blueprint.md)
 
 ---

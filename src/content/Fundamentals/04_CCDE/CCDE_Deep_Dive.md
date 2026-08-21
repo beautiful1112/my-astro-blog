@@ -2,10 +2,12 @@
 
 > **Audience:** CCDE Written (400-007) v3.1, CCDE Practical, and design interviews  
 > **Goal:** Think like a designer—map business to constraints, choose technologies with explicit trade-offs, and defend a design under failure, scale, security, and operations—not memorize CLI.  
-> **Revision:** 1.0 - 2026-08-12  
+> **Revision:** 1.1 depth pass with real-world examples (2026-08-21) — scenarios, R/C/A decision tables, ASCII diagrams, risks, interview framing  
 > **Structure:** Focused knowledge-point documents in 24 numbered modules (practical cases, interview drills, memorization, misconceptions, and references included).
 
 These notes are **original study material** aligned to the public [Cisco CCDE v3.1 unified exam topics](https://learningnetwork.cisco.com/s/ccde-v3-1-unified-exam-topics) and classic enterprise/SP design practice. They are **not** a reproduction of any commercial book. Protocol mechanics already live in [Multicast](../01_Multicast/Multicast_Deep_Dive.md), [BGP](../02_BGP/BGP_Deep_Dive.md), and [EIGRP](../03_EIGRP/EIGRP_Deep_Dive.md)—this library asks *when and why* those tools belong in a design.
+
+Each major note should give you: the design rule, a topology, **at least one concrete industry scenario**, what to discard, and how you would prove the design. If a page still feels like a slogan list, treat it as incomplete and expand it from a real outage or project.
 
 Each topic is a separate document so it can be studied, discussed, tested, and revised independently.
 

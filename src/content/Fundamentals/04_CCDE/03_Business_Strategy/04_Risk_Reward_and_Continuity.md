@@ -1,38 +1,103 @@
 # Risk, reward, and continuity
 
-Business continuity is a **risk budget**. The network either concentrates risk or spreads it.
+Design is risk management with packets. Continuity requirements (RTO/RPO, critical processes) set how much reward you must buy with capital and complexity.
 
-## Continuity questions
+## Risk vocabulary for designers
 
-1. What event are we designing against (site, region, provider, control-plane, human error)?
-2. What is the maximum tolerable outage (RTO) and data loss (RPO)?
-3. What is the residual risk after the design (and is it accepted)?
+| Term | Network meaning |
+|---|---|
+| Likelihood | How often a class of fault occurs |
+| Impact | Blast radius × business criticality |
+| Residual risk | What remains after controls |
+| Shared fate | Hidden correlating factor |
+| Continuity | Ability to keep critical process running |
 
 ```text
-Threat: metro fiber cut
-Mitigation: diverse entrance + second provider
-Residual: both providers in same conduit (must verify)
+Risk ≈ Likelihood × Impact
+HA spend should target high Impact first, then Likelihood
 ```
 
-If you cannot name residual risk, you sold a slogan.
+## Continuity tiers (example)
 
-## Risk/reward
+| Tier | Example process | Typical network ask |
+|---|---|---|
+| T0 | Safety / life-critical | Dual path, diverse sites, tested failover |
+| T1 | Revenue now (POS, trading) | Aggressive RTO; no single hub |
+| T2 | Important internal | Minutes–hours; warm spare |
+| T3 | Best effort | Restore from procedure |
 
-Over-engineering a low-value site wastes money that could buy real diversity for the revenue site. Under-engineering the identity plane (NAC/IdP) can take the whole campus down “securely.”
+Do not spend T0 money on T3 flows without a business owner.
 
-Reward is not only uptime: faster merger, faster branch open, ability to use SaaS. A slightly less “pretty” IGP that enables a 90-day acquisition can be the right design.
+## Reward side
 
-## Design patterns
-
-| Continuity goal | Typical network move |
+| Reward | Bought by |
 |---|---|
-| Site survives WAN loss | Local Internet + cached/SaaS breakout + critical on-prem apps |
-| Company survives DC loss | Dual DC, independent control, tested failover, DNS/GSLB |
-| Company survives vendor loss | Avoid single-cloud or single-controller lock-in where constraint says so |
-| Company survives bad change | Automation with rollback, change windows matched to risk |
+| Uptime / RTO | Diversity, FRR, dual DC |
+| Agility | Overlays, automation, cloud on-ramp |
+| Compliance | Segmentation, logging, locality |
+| Cost reduction | Consolidation—**watch fate-share** |
+
+Consolidation can be a reward and a risk amplifier at once.
+
+## Real-world — pharmacy chain continuity
+
+**Brief:** Prescription dispensing must continue if HQ WAN dies; corporate email can wait 4 hours; budget for dual MPLS only at regional hubs.
+
+| R / C / A | Statement |
+|---|---|
+| R | Store dispensing apps RTO 5 minutes without HQ |
+| C | Dual circuits only at 12 hubs; stores single-homed + LTE backup |
+| A | “Redundant HQ cores protect stores” — false for HQ-dependent apps |
+
+**Decision:** Move dispensing to regional/cloud with local breakout; keep email centralized. Reject more HQ core chassis as the continuity fix for stores.
+
+## Risk register snippet (design-owned)
+
+| Risk | Control | Residual |
+|---|---|---|
+| Hub fiber cut | Dual PE + diverse path | Regional weather correlation |
+| Control-plane meltdown | Summaries, stub, BFD storm limits | Human mis-config |
+| Cloud region loss | Multi-region for T0/T1 | Cost / complexity |
+
+## Risks
+
+- Buying redundant gear that shares power, STP, or RR fate.
+- Ignoring likelihood (daily brownouts) while chasing rare earthquakes only.
+- No tested failover—paper continuity.
 
 ## Interview framing
 
-“Continuity is an explicit risk budget: I name the event, the RTO, the mechanism, and the residual risk I am asking the business to accept.”
+“I map continuity tiers to blast radius and spend HA where impact is highest—then I record residual risk instead of claiming zero risk.”
+
+## Related
+
+- [RPO, RTO, ROI, and cost](03_RPO_RTO_ROI_and_Cost.md)
+- [Fate sharing](../15_High_Availability_and_Scale/04_Fate_Sharing.md)
+- [Failure domains](../15_High_Availability_and_Scale/01_Failure_Domains.md)
+
+## Decision checklist
+
+1. Which numbered requirement does this choice serve?
+2. Which constraint forbids the popular alternative?
+3. What failure domain did we shrink or accept?
+4. What is the migration/rollback story?
+5. How will ops prove it on a Tuesday night?
+## Failure modes to narrate
+
+| Fault | Bad design reaction | Good design reaction |
+|---|---|---|
+| Link/node loss | Timers only; no alternate | Diverse path + detect + repair |
+| Control-plane churn | Flood detail everywhere | Summary/stub/level + bounded domain |
+| Human change error | No canary / huge blast | Module seams + staged change |
+| Dependency outage | Silent shared fate | Named fate-share + residual risk |
+## What to discard
+
+Discard slogan-driven picks (“modern,” “vendor preferred,” “more redundant”) that cannot cite R/C/A. Discard designs that cannot state what still works when one module fails.
+
+## How you prove it
+
+- Whiteboard the module borders and plane roles in <3 minutes
+- Pull a link/node in a lab or maintenance window and compare to RTO
+- Show the discarded option and the requirement that killed it
 
 ---
