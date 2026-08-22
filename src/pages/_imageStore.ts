@@ -25,6 +25,13 @@ function buildMap(glob: typeof blogRaw) {
 buildMap(blogRaw);
 buildMap(weeklyRaw);
 
+function slugifyPath(p: string) {
+  return p
+    .split('/')
+    .map((segment) => segment.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
+    .join('/');
+}
+
 export function resolveCover(collection: string, entryId: string, cover?: string): string | undefined {
   if (!cover) return undefined;
   if (!cover.startsWith('./') && !cover.startsWith('../')) return cover;
@@ -32,5 +39,13 @@ export function resolveCover(collection: string, entryId: string, cover?: string
   const relativePath = cover.replace(/^\.\//, '');
   const lookupKey = `${collection}/${entryId}/${relativePath}`.replace(/\\/g, '/');
 
-  return imageMap[lookupKey] || cover;
+  if (imageMap[lookupKey]) return imageMap[lookupKey];
+
+  // Astro slugifies content IDs (spaces → hyphens). Vite glob keys keep the original folder name.
+  const slugLookup = slugifyPath(lookupKey);
+  for (const [key, url] of Object.entries(imageMap)) {
+    if (slugifyPath(key) === slugLookup) return url;
+  }
+
+  return cover;
 }
