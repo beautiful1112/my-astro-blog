@@ -10,22 +10,27 @@ const { class: className } = Astro.props;
 
 ---
 
-<div id="waline" class:list={['not-prose', className]}>
+<div
+  id="waline"
+  class:list={['not-prose', className]}
+  data-server-url={walineServer}
+>
   Comment seems stuck. Try to refresh?
 </div>
 
-<script define:vars={{ walineServer }}>
+<script>
   import { init as walineInit } from '@waline/client';
-
-  const walineMounted = { current: false };
 
   function boot() {
     const el = document.getElementById('waline');
     if (!el) return;
-    walineMounted.current = true;
+
+    const serverURL = el.dataset.serverUrl;
+    if (!serverURL) return;
+
     walineInit({
       el: '#waline',
-      serverURL: walineServer,
+      serverURL,
       lang: 'en',
       dark: 'auto',
       meta: ['nick', 'mail', 'link'],
