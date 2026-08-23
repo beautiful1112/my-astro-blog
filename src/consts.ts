@@ -72,6 +72,7 @@ export const NAV_ITEMS = BLOG_SECTIONS.map((section) => ({
 export const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/beautiful1112', icon: 'github' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-zhao-05ab54275', icon: 'linkedin' },
+  { name: 'Email', href: 'mailto:alexzhao@loopback.top', icon: 'email' },
   { name: 'RSS', href: '/rss.xml', icon: 'rss' },
 ];
 

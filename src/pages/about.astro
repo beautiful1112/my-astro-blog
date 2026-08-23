@@ -16,7 +16,13 @@ import { SITE_AUTHOR, SOCIAL_LINKS } from '../consts';
       <ul>
         {SOCIAL_LINKS.filter((link) => link.icon !== 'rss').map((link) => (
           <li>
-            <a href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</a>
+            <a
+              href={link.href}
+              target={link.icon === 'email' ? undefined : '_blank'}
+              rel={link.icon === 'email' ? undefined : 'noopener noreferrer'}
+            >
+              {link.name}
+            </a>
           </li>
         ))}
       </ul>
