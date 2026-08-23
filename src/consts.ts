@@ -92,5 +92,5 @@ export const SITE_TAGS = [
   'CCDE',
 ];
 
-export const npmCDN = '';
-export const walineServer = '';
+export const npmCDN = 'https://unpkg.com';
+export const walineServer = 'https://blog-comment-three-kappa.vercel.app';

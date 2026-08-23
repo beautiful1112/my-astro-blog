@@ -1,5 +1,6 @@
 ---
 import '@waline/client/style';
+import { walineServer } from '../../consts';
 
 interface Props {
   class?: string;
@@ -13,7 +14,7 @@ const { class: className } = Astro.props;
   Comment seems stuck. Try to refresh?
 </div>
 
-<script>
+<script define:vars={{ walineServer }}>
   import { init as walineInit } from '@waline/client';
 
   const walineMounted = { current: false };
@@ -24,7 +25,7 @@ const { class: className } = Astro.props;
     walineMounted.current = true;
     walineInit({
       el: '#waline',
-      serverURL: '',  // Waline server URL
+      serverURL: walineServer,
       lang: 'en',
       dark: 'auto',
       meta: ['nick', 'mail', 'link'],
