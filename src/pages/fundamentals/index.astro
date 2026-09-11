@@ -21,7 +21,7 @@ const topics = buildNoteTopics(metas);
     Fundamentals
   </h1>
   <p class="text-sm text-gray-400 dark:text-gray-500 mb-8">
-    Network fundamentals study notes — multicast, BGP, EIGRP, CCDE design, and related deep-dives.
+    Network fundamentals study notes — multicast, BGP, EIGRP, CCDE design, DC fabric, and related deep-dives.
   </p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -33,7 +33,7 @@ const topics = buildNoteTopics(metas);
             href={topicHref(topic.id)}
             class="block rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:border-primary/40 hover:bg-primary/5 transition-colors"
           >
-            <h2 class="text-xl font-bold capitalize mb-2">{topic.label}</h2>
+            <h2 class="text-xl font-bold mb-2">{topic.label}</h2>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
               {topic.modules.length} modules · {noteCount} notes
             </p>

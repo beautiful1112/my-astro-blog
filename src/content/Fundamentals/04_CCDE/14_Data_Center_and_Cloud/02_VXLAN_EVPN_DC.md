@@ -98,5 +98,6 @@ MTU: payload + VXLAN overhead must fit every underlay hop—or fragment and suff
 - [EVPN as unified control](../10_MPLS_VPN_and_EVPN/04_EVPN_as_Unified_Control.md)
 - [Overlay, underlay, and fabric](../04_Planes_and_Traffic_Flow/04_Overlay_Underlay_and_Fabric.md)
 - [EVPN in BGP library](../../02_BGP/19_EVPN/README.md)
+- [DC Fabric Field Guide](../../05_DC/04_EVPN_VXLAN/README.md)
 
 ---

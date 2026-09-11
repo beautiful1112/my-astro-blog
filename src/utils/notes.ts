@@ -26,11 +26,34 @@ export function topicHref(topicId: string): string {
   return `/fundamentals/topic/${topicId.toLowerCase()}`;
 }
 
+const TOPIC_ACRONYMS = new Set([
+  'bgp',
+  'ccde',
+  'dc',
+  'dci',
+  'eigrp',
+  'evpn',
+  'isis',
+  'ospf',
+  'ptp',
+  'vrf',
+  'vrfs',
+  'vxlan',
+]);
+
 export function formatRootLabel(root: string): string {
   return root
     .replace(/_/g, ' ')
     .replace(/^\d+\s+/i, '')
-    .trim();
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => {
+      const lower = word.toLowerCase();
+      if (TOPIC_ACRONYMS.has(lower)) return lower.toUpperCase();
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(' ');
 }
 
 export interface NoteMeta {

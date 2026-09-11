@@ -96,5 +96,6 @@ Ask: “If I induce a storm in DC-A’s tenant LAN, do DC-B counters move?”
 - [VXLAN EVPN data center](02_VXLAN_EVPN_DC.md)
 - [Case: DC stretch shared fate](../19_Practical_Cases/06_DC_Stretch_Shared_Fate.md)
 - [Fate sharing](../15_High_Availability_and_Scale/04_Fate_Sharing.md)
+- [DC multi-site and DCI](../../05_DC/09_Multi_Site_and_DCI/README.md)
 
 ---

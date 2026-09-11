@@ -58,7 +58,7 @@ const { Content, headings } = await render(note);
         nav && (
           <a
             href={nav.topicHref}
-            class="inline-block text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full hover:text-primary transition-colors capitalize"
+            class="inline-block text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full hover:text-primary transition-colors"
           >
             {nav.topicLabel}
           </a>
@@ -88,7 +88,7 @@ const { Content, headings } = await render(note);
 
     {
       nav?.moduleLabel && !nav.isDeepDive && (
-        <p class="text-xs text-gray-400 dark:text-gray-500 capitalize">
+        <p class="text-xs text-gray-400 dark:text-gray-500">
           {nav.topicLabel}
           {nav.moduleLabel ? ` / ${nav.moduleLabel}` : ''}
         </p>

@@ -1,5 +1,7 @@
 # 19. Ethernet VPN
 
+Protocol mechanics for EVPN. Fabric composition (underlay, symmetric IRB, service leaves, trading paths) lives in the [DC library](../../05_DC/04_EVPN_VXLAN/README.md).
+
 ## Knowledge points
 
 1. [What EVPN Provides](01_What_EVPN_Provides.md)

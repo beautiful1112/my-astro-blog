@@ -28,6 +28,7 @@ Do not re-learn every protocol from zero. Use existing libraries, then ask desig
 | EIGRP | [EIGRP library](../../03_EIGRP/EIGRP_Deep_Dive.md) | Query domain, stub/summary, hub-spoke |
 | BGP | [BGP library](../../02_BGP/BGP_Deep_Dive.md) | Policy, RR scale, PE-CE, Internet edge |
 | Multicast | [Multicast library](../../01_Multicast/Multicast_Deep_Dive.md) | ASM vs SSM, RP placement, domains |
+| DC fabric | [DC library](../../05_DC/01_Study_Roadmap/01_How_to_Use_This_Guide.md) | Clos underlay, EVPN overlay, DCI, service insertion |
 | OSPF / IS-IS / MPLS / QoS | this CCDE library | Area/level, VPN topology, marking trust |
 
 For each: one topology sketch, one “when not to use,” one failure that the choice makes worse.

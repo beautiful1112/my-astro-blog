@@ -1,5 +1,7 @@
 # 12. Quantitative-trading market data
 
+Multicast mechanics for exchange feeds. How those feeds sit on an EVPN fabric with independent A/B paths is in the [DC market-data module](../../05_DC/08_Market_Data/README.md).
+
 ## Knowledge points
 
 1. [Why exchanges use multicast](01_Why_Exchanges_Use_Multicast.md)
