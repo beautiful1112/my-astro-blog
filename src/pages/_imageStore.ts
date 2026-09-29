@@ -28,7 +28,14 @@ buildMap(weeklyRaw);
 function slugifyPath(p: string) {
   return p
     .split('/')
-    .map((segment) => segment.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
+    .map((segment) =>
+      segment
+        .toLowerCase()
+        // Astro drops apostrophes (can't → cant) instead of turning them into hyphens.
+        .replace(/['’]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, ''),
+    )
     .join('/');
 }
 

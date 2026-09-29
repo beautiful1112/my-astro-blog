@@ -6,6 +6,8 @@ import rehypeKatex from 'rehype-katex';
 import rehypeMermaid from 'rehype-mermaid';
 import { unified } from '@astrojs/markdown-remark';
 import { remarkRewriteMdLinks } from './src/utils/remarkRewriteMdLinks';
+import { remarkDefaultCodeLang } from './src/utils/remarkDefaultCodeLang';
+import { cisco } from './src/syntax/cisco';
 
 const mermaidPlugin = [
   rehypeMermaid,
@@ -34,11 +36,13 @@ export default defineConfig({
       excludeLangs: ['mermaid'],
     },
     processor: unified({
-      remarkPlugins: [remarkMath, remarkRewriteMdLinks],
+      remarkPlugins: [remarkDefaultCodeLang, remarkMath, remarkRewriteMdLinks],
       rehypePlugins: [mermaidPlugin, rehypeKatex],
     }),
     shikiConfig: {
-      theme: 'github-dark',
+      // Same highlighter engine as VS Code. dark-plus is the Dark+ palette.
+      theme: 'dark-plus',
+      langs: [cisco],
       wrap: true,
     },
   },
